@@ -5,7 +5,7 @@ $submitted = !empty($_POST);
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Form Handler Page</title>
+		<title>Access Form Handler Page</title>
 	</head>
 	
 	<body>
