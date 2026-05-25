@@ -13,10 +13,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3ECWfO20x2oAiNIxaEGyCs1mOSv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,7 +30,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "fergus__windows",
+    "git-widget-placeholder": "fergus",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/xampp/htdocs/project_vi_website",
     "vue.rearranger.settings.migration": "true"
@@ -52,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779683137608</updated>
       <workItem from="1779683138925" duration="71000" />
+      <workItem from="1779721165846" duration="48000" />
     </task>
     <servers />
   </component>
