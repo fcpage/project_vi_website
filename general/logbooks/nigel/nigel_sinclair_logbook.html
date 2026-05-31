@@ -3,6 +3,7 @@
 
 	<head>
 		<title>Project VI - Nigel Sinclair</title>
+		<link rel="stylesheet" href="../../../css/nigels_styles.css" type="text/css">
 	</head>
 	
 	<body>
@@ -10,8 +11,11 @@
 		<h1>Weekly Logbook - Nigel Sinclair</h1>
 		
 		<figure>
-		<img src="../../images/" alt="Nigel Sinclair" title="Nigel Sinclair" width="">
-		<figcaption><b>Nigel Sinclair:</b><br/>Insert clever quip here.</figcaption>
+            <img src="../../images/nigel.png" alt="Nigel Sinclair" title="Nigel Sinclair" width="">
+            <figcaption><b>Nigel Sinclair:</b><br/>
+                "There are two kinds of programming languages; the ones we like, and the ones we use"</br>
+                -- plagiarized (i don't remember)
+            </figcaption>
 		</figure>
 		
 		<h2>Logbook Index</h2>
@@ -23,14 +27,38 @@
 		</ul>
 		
 		<h3 id="week1">Week 1</h3>
+
+        <b>Main task:</b> setup CAN communication with STM32.
+
 		<ul>
-			<li>Startup activities.</li>
+			<li>Setup STM32CubeMX</li>
+			<li>Generate code for HAL using STM32CubeMX</li>
+			<li>Configure build system (CMake)</li>
+            <ul>
+                <li>Generate build system files using STM32CubeMX</li>
+                <li>Setup different builds for CMake</li>
+            </ul>
+            <li>Setup UART serial monitor via stdio functions</li>
+		</ul>
+
+        <b>Documentation:</b>
+
+		<ul>
+			<li>Updated project repo README with relavent instructions</li>
+			<li></li>
 		</ul>
 
 		<h3 id="week2">Week 2</h3>
-		<ul>
-			<li>Getting going.</li>
-		</ul>
+
+        <div id="week2content"></div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script> -->
+        <script type="module">
+            import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+            const res = await fetch("week2.md");
+            if(!res.ok) throw new Error('failed to load markdown');
+            const md = await res.text();
+            document.getElementById("week2content").innerHTML = marked.parse(md);
+        </script>
 
 		<h3 id="week3">Week 3</h3>
 		<ul>
