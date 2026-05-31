@@ -49,9 +49,16 @@
 		</ul>
 
 		<h3 id="week2">Week 2</h3>
-		<ul>
-			<li>Getting going.</li>
-		</ul>
+
+        <div id="week2content"></div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script> -->
+        <script type="module">
+            import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+            const res = await fetch("week2.md");
+            if(!res.ok) throw new Error('failed to load markdown');
+            const md = await res.text();
+            document.getElementById("week2content").innerHTML = marked.parse(md);
+        </script>
 
 		<h3 id="week3">Week 3</h3>
 		<ul>
