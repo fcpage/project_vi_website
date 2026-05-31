@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/stylesR.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/images/ryan.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +18,82 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="26" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.8705582991930538" />
+      <entry key="MS500" value="2.0709885980989515" />
+      <entry key="S2" value="3.1446021509161524" />
+      <entry key="S5" value="5.374482748010134" />
+      <entry key="S10" value="8.798031048434868" />
+      <entry key="S30" value="17.19629625259758" />
+      <entry key="S60" value="24.816756150967368" />
+      <entry key="M2" value="39.69623628557066" />
+      <entry key="M5" value="73.060513193558" />
+      <entry key="M10" value="98.04848177076879" />
+      <entry key="M15" value="109.44357664491228" />
+      <entry key="M30" value="122.93568387589899" />
+      <entry key="H1" value="130.61186624146916" />
+      <entry key="H2" value="134.71214798387098" />
+      <entry key="H4" value="136.83199504759784" />
+      <entry key="D1" value="138.6352661832873" />
+      <entry key="W1" value="138.94781117870406" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.0569811024835472E-90" />
+      <entry key="S5" value="1.3344187042248391E-36" />
+      <entry key="S10" value="1.1551704221563327E-18" />
+      <entry key="S30" value="1.0492573500376965E-6" />
+      <entry key="S60" value="0.0010243326364212442" />
+      <entry key="M2" value="0.03200519702206567" />
+      <entry key="M5" value="0.25239933248953256" />
+      <entry key="M10" value="0.5023936031534766" />
+      <entry key="M15" value="0.6319694249027857" />
+      <entry key="M30" value="0.7949650463402685" />
+      <entry key="H1" value="0.8916081237518361" />
+      <entry key="H2" value="0.9442500324341179" />
+      <entry key="H4" value="0.9717252865054614" />
+      <entry key="D1" value="0.9952310508012012" />
+      <entry key="W1" value="0.9993173249972509" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.2466710966785115" />
+      <entry key="MS500" value="1.8505379217814022" />
+      <entry key="S2" value="3.0104385537532257" />
+      <entry key="S5" value="5.261769003301804" />
+      <entry key="S10" value="8.695181703764774" />
+      <entry key="S30" value="17.127982800129825" />
+      <entry key="S60" value="24.769983555430553" />
+      <entry key="M2" value="39.69136118164065" />
+      <entry key="M5" value="73.28632943906487" />
+      <entry key="M10" value="98.53301294509171" />
+      <entry key="M15" value="110.06222400510431" />
+      <entry key="M30" value="123.7231424803261" />
+      <entry key="H1" value="131.49947882359496" />
+      <entry key="H2" value="135.6543352789256" />
+      <entry key="H4" value="137.80267213937992" />
+      <entry key="D1" value="139.63032014663528" />
+      <entry key="W1" value="139.94710314632158" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
@@ -25,20 +104,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.links.html.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/project_vi_website&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.links.html.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Project_6/project_vi_website/general/images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project_6\project_vi_website\general\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,6 +149,7 @@
       <workItem from="1779721165846" duration="48000" />
       <workItem from="1779745585543" duration="687000" />
       <workItem from="1780060744076" duration="780000" />
+      <workItem from="1780194432370" duration="1792000" />
     </task>
     <servers />
   </component>
