@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../../css/gui_style.css">
     </head>
     <body>
+        <a href="../../index.html">Home</a><br/><br/>
         <?php $last=$_POST["called_from"]; ?>
         <?php $call=$_POST["called_to"]; ?>
         <?php if($call  > $last) {$direction = "UP";}
@@ -18,6 +19,7 @@
             <input type="hidden" name="called_from" value="<?php echo $call; ?>" required /></form><br/>
         <b>Called to: </b> <?php echo $call; ?><br/>
         <b>Called from: </b> <?php echo $last; ?><br/>
-        <b>Direction: </b> <?php echo $direction; ?>
+        <b>Direction: </b> <?php echo $direction; ?><br/><br/>
+        <a href="../elevator/login.html">Back</a><br/>
     </body>
 </html>
