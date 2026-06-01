@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesF.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesF.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/resources/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/logins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "fergus",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Project_6/project_vi_website/general/images",
     "list.type.of.created.stylesheet": "CSS",
