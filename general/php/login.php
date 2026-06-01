@@ -29,7 +29,7 @@
                     echo $result;
                     fclose($file);
                 $redirect = match ($result) {
-                    "Access granted." => "gui.php",
+                    "Access granted." => "../elevator/gui.html",
                     "Access denied." => "../lockout.html", };
                 header("Location: $redirect");
 
