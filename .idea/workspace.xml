@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/general/elevator/gui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/lockout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/resources/logins.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/elevator/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/images/CAUTION_ALIVE.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/images/CAUTION_ALIVE.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/images/Diddy_Kong_SSBB.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/images/Diddy_Kong_SSBB.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/images/nigel.png" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/images/nigel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/images/ryan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/images/ryan.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/images/stooges.png" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/images/stooges.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/php/gui.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/gui.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylesF.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesF.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/logins.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

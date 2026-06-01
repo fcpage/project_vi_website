@@ -7,7 +7,7 @@
 		<title>Login Form Handler Page</title>
 	</head>
 	<?php   $dir = "../resources/logins.txt";
-            $file = new SplFileObject($dir, "r");
+            $file = fopen($dir, "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
             $username = $_POST["username"];
             $password = $_POST["password"]; ?>
 	<body>
@@ -17,24 +17,22 @@
 			<li><b>Username:</b> <?php echo $username; ?></li>
 			<li><b>Password:</b> <?php echo $password; ?></li>
 		</ul>
-        <?php
-            if($file->getExtension() === "txt") {
-                $result = "Access denied.";
-                $contents = NULL;
-                while(!feof($file)) {
-                    foreach($file as $line_num => $line) {
-                        $contents = file_get_contents($file);
-                        if(str_contains($contents, $username)
-                                && str_contains($contents, $password)) {
-                            $result = "Access granted.";
-                            break;}
-                        else { $result = "Access denied."; } }
-                    echo $result;}}
-            echo $contents;
-            $redirect = match ($result) {
-                "Access granted." => "gui.php",
-                "Access denied." => "../lockout.html", };
-            header("Location: $redirect");
-            exit(); ?>
+        <?php   $result = "Access denied.";
+                $contents = ".";
+                $line = "username:$username-password:$password";
+                while(!feof($file)) {$contents = fgets($file);
+                    if(str_contains($contents, $line)) {
+                        $result = "Access granted.";
+                        break;}
+                    else {
+                        $result = "Access denied."; }}
+                    echo $result;
+                    fclose($file);
+                $redirect = match ($result) {
+                    "Access granted." => "gui.php",
+                    "Access denied." => "../lockout.html", };
+                header("Location: $redirect");
+
+                exit(); ?>
 	</body>
 </html>
