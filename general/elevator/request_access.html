@@ -6,16 +6,16 @@
 	</head>
 	
 	<body>
-		<a href="../index.html">Home</a><br/>
+		<a href="../../index.html">Home</a><br/>
 		<h1>Request Access</h1>
 		
-		<form action="php/request_access.php" method="post" id="access">
+		<form action="../php/request_access.php" method="post" id="access">
 			<fieldset>
 				<legend>Contact</legend>
-				First Name: <input type="text" name="firstname" required /><br/><br/>
-				Last Name: <input type="text" name="lastname" required /><br/><br/>
-				Email: <input type="text" name="email" required /><br/><br/>
-				Website: <input type="text" name="url" /><br/><br/>
+				First Name: <label><input type="text" name="firstname" required /></label><br/><br/>
+				Last Name: <label><input type="text" name="lastname" required /></label><br/><br/>
+				Email: <label><input type="text" name="email" required /></label><br/><br/>
+				Website: <label><input type="text" name="url" /></label><br/><br/>
 				
 				<label><input type="radio" name="person" value="faculty" /> Faculty</label>
 				<label><input type="radio" name="person" value="student" /> Student</label>
@@ -37,26 +37,25 @@
 			<fieldset>
 				<legend>Details</legend>
 				<p>Reason for request: 
-				<select name="reason">
+				<label><select name="reason">
 					<option value="none" selected></option>
 					<option value="new_user">Credential Initialisation</option>
 					<option value="forgot_username">Forgot Username</option>
 					<option value="forgot_password">Forgot Password</option>
 					<option value="feedback">Leaving Feedback</option>
-				</select>
+				</select></label>
 				</p>
-				<p>Give us some details:</p>
-				<textarea name="details" id="details" required ></textarea><br/><br/>
+				<label><textarea name="details" id="details" placeholder="Give us some details..." ></textarea></label><br/><br/>
 				<label>Response preferred by: <input type="date" name="deadline" /></label><br/>
 				
 				<p>How did we do?
-				<select name="good_job">
+				<label><select name="good_job">
 					<option value="ignored" selected></option>
 					<option value="good">Good</option>
 					<option value="really_good">Really Good</option>
 					<option value="super_duper">Super Duper</option>
 					<option value="excellent">Excellent</option>
-				</select>
+				</select></label>
 				</p>
 				
 				<input type="submit" value="Submit Request"/>

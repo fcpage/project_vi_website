@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/stylesR.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/images/ryan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/gui_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/php/gui.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/php/request_access.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/request_access.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/request_access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="PHP File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -106,14 +112,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.links.html.executor": "Debug",
+    "JavaScript Debug.request_access.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "gui",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Project_6/project_vi_website/general/images",
     "list.type.of.created.stylesheet": "CSS",
@@ -128,6 +136,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Project_6\project_vi_website\general\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\general\php" />
+      <recent name="C:\xampp\htdocs\project_vi_website\general\elevator" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -150,6 +162,7 @@
       <workItem from="1779745585543" duration="687000" />
       <workItem from="1780060744076" duration="780000" />
       <workItem from="1780194432370" duration="1792000" />
+      <workItem from="1780255777068" duration="21945000" />
     </task>
     <servers />
   </component>

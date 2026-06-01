@@ -3,7 +3,7 @@ $submitted = !empty($_POST);
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Login Form Handler Page</title>
 	</head>
