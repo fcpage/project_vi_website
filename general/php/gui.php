@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Elevator GUI</title>
-        <link rel="stylesheet" href="../../css/gui_style.css">
+        <link rel="stylesheet" href="../css/gui_style.css">
     </head>
     <body>
         <?php $last=$_POST["called_from"]; ?>

@@ -6,7 +6,7 @@
 	<head>
 		<title>Login Form Handler Page</title>
 	</head>
-	<?php   $dir = "../resources/logins.txt";
+	<?php   $dir = "../documents/logins.txt";
             $file = fopen($dir, "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
             $username = $_POST["username"];
             $password = $_POST["password"]; ?>
@@ -29,8 +29,8 @@
                     echo $result;
                     fclose($file);
                 $redirect = match ($result) {
-                    "Access granted." => "../elevator/gui.html",
-                    "Access denied." => "../lockout.html", };
+                    "Access granted." => "../html/gui.html",
+                    "Access denied." => "../html/lockout.html", };
                 header("Location: $redirect");
 
                 exit(); ?>

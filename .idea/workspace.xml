@@ -5,30 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/fergus_styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/general_styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/index_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/project_details_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/proj_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/resources/images/fig1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/resources/images/fig2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesF.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesR.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/Ryan_stiles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/elevator/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/gui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/elevator/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/elevator/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/request_access.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/lockout.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/lockout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/project_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/project_plan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/resources/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/documents/logins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Ryan_stiles.css" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/ryan/css/Ryan_stiles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/fergus_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/fergus/css/fergus_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/general_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/general_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/gui_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/gui_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/nigels_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/nigel/css/nigels_styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/project_details_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/project_details_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/gui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/request_access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/lockout.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/lockout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/logbooks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/fergus/html/fergus_page_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/nigel/html/nigel_sinclair_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/nigel/week2.md" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/nigel/md/week2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/ryan/html/ryan_pratt_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/php/gui.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/gui.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/proj_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/proj_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/project_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/project_plan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/documents/Project_Charter.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/general/documents/Project_Charter.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/documents/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/documents/logins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/CAUTION_ALIVE.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/images/CAUTION_ALIVE.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/Diddy_Kong_SSBB.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/images/Diddy_Kong_SSBB.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/fergus.png" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/fergus/images/fergus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/fig1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/images/fig1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/fig2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/general/images/fig2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/nigel.png" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/nigel/images/nigel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/ryan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/ryan/images/ryan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/images/stooges.png" beforeDir="false" afterPath="$PROJECT_DIR$/general/images/stooges.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,9 +147,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "gui",
+    "git-widget-placeholder": "fergus",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/project_vi_website/general/resources/images",
+    "last_opened_file_path": "C:/xampp/htdocs/project_vi_website/logbooks/ryan",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -153,15 +162,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan" />
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\nigel" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\resources\images" />
       <recent name="C:\xampp\htdocs\project_vi_website\general" />
       <recent name="C:\Project_6\project_vi_website\general\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\project_vi_website\general\resources\documents" />
-      <recent name="C:\xampp\htdocs\project_vi_website\general\resources" />
-      <recent name="C:\xampp\htdocs\project_vi_website\general\php" />
-      <recent name="C:\xampp\htdocs\project_vi_website\general\elevator" />
+      <recent name="C:\xampp\htdocs\project_vi_website\general" />
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan\css" />
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\nigel\css" />
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\fergus\css" />
+      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan\images" />
     </key>
   </component>
   <component name="SharedIndexes">
