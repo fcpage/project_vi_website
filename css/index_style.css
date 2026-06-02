@@ -1,0 +1,47 @@
+body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        padding: 20px;
+        text-align: center;
+        background-color: aliceblue;
+}
+
+h1 {
+        font-family: Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 160%;
+        text-align: center;
+        color: #DE443F;
+}
+
+h2 {
+        font-size: 125%;
+        font-family: Helvetica, sans-serif;
+        color: forestgreen;
+}
+
+h3 {
+        color: forestgreen;
+        text-align: center;
+        font-size: 26px;
+}
+
+image {
+        height: 200px;
+}
+
+figcaption {
+        text-align: center;
+        color: #DE443F;
+        font-style: italic;
+        font-size: 90%;
+}
+
+.directory {
+        display: inline-block;
+        font-size: 18px;
+        text-align: center;
+}
+a:link, a:visited, a:hover, a:active {
+        font-family: Arial, sans-serif;
+}

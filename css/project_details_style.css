@@ -1,0 +1,54 @@
+body {
+    font-family: Georgia, serif;
+}
+
+p, li {
+    font-size: 100%;
+    line-height: 20px;
+    text-align: justify;
+}
+
+p {
+    text-indent: 15px;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 125%;
+    font-family: Helvetica, sans-serif;
+}
+
+image {
+    height: 300px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 90%;
+}
+
+.mkbold {
+    font-weight: bold;
+}
+
+.mkunderlined {
+    text-decoration: underline
+}
+
+#hcs12 {
+    font-weight: bold;
+}
+
+#can {
+    font-weight: bold;
+}
+
+a:link, a:visited, a:hover, a:active {
+    font-family: Arial, sans-serif;
+}

@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="" />
+    <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/css/fergus_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/general_styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/index_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/project_details_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/proj_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/resources/images/fig1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/resources/images/fig2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylesF.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylesR.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/Ryan_stiles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/gui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/elevator/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/elevator/request_access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/lockout.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/lockout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/fergus/fergus_page_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/nigel/nigel_sinclair_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/logbooks/ryan/ryan_pratt_logbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/project_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/project_plan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/resources/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/resources/documents/logins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="PHP File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -114,7 +140,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "fergus",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Project_6/project_vi_website/general/images",
+    "last_opened_file_path": "C:/xampp/htdocs/project_vi_website/general/resources/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -127,9 +153,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\general\resources\images" />
+      <recent name="C:\xampp\htdocs\project_vi_website\general" />
       <recent name="C:\Project_6\project_vi_website\general\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\general\resources\documents" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\resources" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\php" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\elevator" />
@@ -157,6 +186,9 @@
       <workItem from="1780194432370" duration="1792000" />
       <workItem from="1780255777068" duration="24990000" />
       <workItem from="1780292795485" duration="670000" />
+      <workItem from="1780341187342" duration="181000" />
+      <workItem from="1780341400239" duration="2153000" />
+      <workItem from="1780411031417" duration="7096000" />
     </task>
     <servers />
   </component>
