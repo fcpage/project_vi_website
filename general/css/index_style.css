@@ -23,7 +23,7 @@ h2 {
 h3 {
         color: forestgreen;
         text-align: center;
-        font-size: 26px;
+        font-size: 120%;
 }
 
 image {
@@ -32,14 +32,13 @@ image {
 
 figcaption {
         text-align: center;
-        color: #DE443F;
         font-style: italic;
         font-size: 90%;
 }
 
 .directory {
         display: inline-block;
-        font-size: 18px;
+        font-size: 80%;
         text-align: center;
 }
 a:link, a:visited, a:hover, a:active {

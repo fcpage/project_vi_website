@@ -17,6 +17,7 @@
 			<li><b>Username:</b> <?php echo $username; ?></li>
 			<li><b>Password:</b> <?php echo $password; ?></li>
 		</ul>
+
         <?php   $result = "Access denied.";
                 $contents = ".";
                 $line = "username:$username-password:$password";
@@ -27,12 +28,14 @@
                     else {
                         $result = "Access denied."; }}
                     echo $result;
-                    fclose($file);
-                $redirect = match ($result) {
-                    "Access granted." => "../html/gui.html",
+                    fclose($file);?>
+        <?php   $redirect = match ($result) {
+                    "Access granted." => "../html/.gui.html",
                     "Access denied." => "../html/lockout.html", };
                 header("Location: $redirect");
 
                 exit(); ?>
 	</body>
+    <form action="../php/gui.php" method="get" name="init_gui" id="init_gui" onclose="init_gui.submit()">
+        <input type="hidden" name="init_gui" value=<?php $val?> required /></form>
 </html>

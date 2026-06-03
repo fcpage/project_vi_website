@@ -20,11 +20,10 @@ h2 {
 
 h3 {
     color: forestgreen;
-    font-size: 26px;
+    font-size: 100%;
 }
 
 figcaption {
-    color: #DE443F;
     font-style: italic;
     font-size: 90%;
 }

@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 160%;
+    color: #DE443F;
+}
+
+h2 {
+    font-size: 125%;
+    font-family: Helvetica, sans-serif;
+    color: forestgreen;
+}
+
+h3 {
+    color: forestgreen;
+    font-size: 100%;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 90%;
+}
+
+a:link, a:visited, a:hover, a:active {
+    font-family: Arial, sans-serif;
+}
+
+.car_buttons[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
