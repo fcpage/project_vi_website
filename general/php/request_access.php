@@ -1,14 +1,17 @@
-<?php
-$submitted = !empty($_POST);
-?>
+<?php (!empty($_POST)) ? $submitted = "YES" : $submitted = "NO"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Access Form Handler Page</title>
+        <meta name="description" content="This is the access request handler page for our project" />
+        <meta http-equiv="author" content="Fergus Page" />
+        <meta name="robots" content="noindex nofollow" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <link rel="stylesheet" href="../css/general_style.css" type="text/css">
 	</head>
-	
 	<body>
+        <h1>Access Form Handler Page</h1>
 		<p>Form Submitted? <?php echo (int) $submitted; ?> </p>
 		<p>Access Request:</p>
 		<ul>
