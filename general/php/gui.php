@@ -6,9 +6,8 @@
         <link rel="stylesheet" href="../css/gui_style.css">
     </head>
     <body>
-        <?php $call = $_POST["gui_init"];
-        $call = $_POST["called_to"];
-        $last = $_POST["called_from"];
+        <?php
+        $call = $_POST["called_to"] ?? 00; $last = $_POST["called_from"] ?? 00;
         if($call  > $last) {$dir = "UP";}
         else if ($call < $last ) {$dir = "DOWN";}
         else {$dir = "HOLD";}?>
