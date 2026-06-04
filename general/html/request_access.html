@@ -39,7 +39,7 @@
 			<fieldset>
 				<legend>Details</legend>
 				<p>Reason for request: 
-				<label><select name="reason">
+				<label><select name="reason" required>
 					<option value="none" selected></option>
 					<option value="new_user">Credential Initialisation</option>
 					<option value="forgot_username">Forgot Username</option>
@@ -47,10 +47,10 @@
 					<option value="feedback">Leaving Feedback</option>
 				</select></label>
 				</p>
-				<label><textarea name="details" id="details" placeholder="Give us some details..." ></textarea></label><br/><br/>
+				<label><textarea name="details" id="details" placeholder="Give us some details..." required></textarea></label><br/><br/>
 				<label>Response preferred by: <input type="date" name="deadline" /></label><br/>
 				<p>How did we do?
-				<label><select name="good_job">
+				<label><select name="good_job"required>
 					<option value="ignored" selected></option>
 					<option value="good">Good</option>
 					<option value="really_good">Really Good</option>

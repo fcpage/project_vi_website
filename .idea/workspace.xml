@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/documents/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/documents/requests/login/logins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/html/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/request_access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/php/request_access.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/request_access.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,11 +140,11 @@
       <recent name="C:\Project_6\project_vi_website\general\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\general\documents\requests\access" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\documents\requests\login" />
       <recent name="C:\xampp\htdocs\project_vi_website\general\documents\requests" />
       <recent name="C:\xampp\htdocs\project_vi_website\general" />
       <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan\css" />
-      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\nigel\css" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -172,7 +173,7 @@
       <workItem from="1780341400239" duration="2153000" />
       <workItem from="1780411031417" duration="7096000" />
       <workItem from="1780544806560" duration="5279000" />
-      <workItem from="1780579173685" duration="4638000" />
+      <workItem from="1780579173685" duration="12158000" />
     </task>
     <servers />
   </component>
