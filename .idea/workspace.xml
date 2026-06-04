@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/css/gui_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/gui_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/.gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/.gui.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/php/gui.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/gui.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logbooks/fergus/html/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/fergus/html/fergus_page_logbook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
