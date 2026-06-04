@@ -12,7 +12,7 @@
 	</head>
 	<body>
         <h1>Access Form Handler Page</h1>
-		<p>Form Submitted? <?php echo (int) $submitted; ?> </p>
+		<p>Form Submitted? <?php echo (int) $submitted; $involve=array_filter($_POST['involvement']); ?> </p>
 		<p>Access Request:</p>
 		<ul>
 			<li><b>First Name</b> <?php echo $_POST['firstname']; ?></li>
@@ -20,7 +20,7 @@
 			<li><b>Email</b> <?php echo $_POST['email']; ?></li>
 			<li><b>Website</b> <?php echo $_POST['url']; ?></li>
 			<li><b>Persona</b> <?php echo $_POST['person']; ?></li>
-			<li><b>Involvement</b> <?php echo $_POST['involvement']; ?></li>
+			<li><b>Involvement</b> <?php foreach ($involve as $ment) {echo $ment;}?></li>
 			<li><b>Reason</b> <?php echo $_POST['reason']; ?></li>
 			<li><b>Details</b> <?php echo $_POST['details']; ?></li>
 			<li><b>Deadline</b> <?php echo $_POST['deadline']; ?></li>

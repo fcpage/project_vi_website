@@ -14,7 +14,6 @@
 	<body>
 		<a href="../../index.html">Home</a><br/>
 		<h1>Request Access</h1>
-		
 		<form action="../php/request_access.php" method="post" id="access">
 			<fieldset>
 				<legend>Contact</legend>
@@ -22,24 +21,21 @@
 				Last Name: <label><input type="text" name="lastname" required /></label><br/><br/>
 				Email: <label><input type="text" name="email" required /></label><br/><br/>
 				Website: <label><input type="text" name="url" /></label><br/><br/>
-				
 				<label><input type="radio" name="person" value="faculty" /> Faculty</label>
 				<label><input type="radio" name="person" value="student" /> Student</label>
 				<label><input type="radio" name="person" value="other" required /> Other</label>
 			</fieldset>
-				
 			<fieldset>
 				<legend>Involvement</legend>
 				<i><b>I...</b></i><br/>
-				<label><input type="checkbox" name="involvement" value="none" /> have no involvement in this project.</label><br/>
-				<label><input type="checkbox" name="involvement" value="instructor" /> am an instructor in this project.</label><br/>
-				<label><input type="checkbox" name="involvement" value="instructor_other" /> am another instructor.</label><br/>
-				<label><input type="checkbox" name="involvement" value="student" /> am a student in this project.</label><br/>
-				<label><input type="checkbox" name="involvement" value="student_other" /> am a student from another group.</label><br/>
-				<label><input type="checkbox" name="involvement" value="admin" /> am a College administrator.</label><br/>
-				<label><input type="checkbox" name="involvement" value="external" /> am an external reviewer.</label><br/>
+				<label><input type="checkbox" name="involvement[0]" value="none, " /> have no involvement in this project.</label><br/>
+				<label><input type="checkbox" name="involvement[1]" value="instructor, " /> am an instructor in this project.</label><br/>
+				<label><input type="checkbox" name="involvement[2]" value="instructor_other, " /> am another instructor.</label><br/>
+				<label><input type="checkbox" name="involvement[3]" value="student, " /> am a student in this project.</label><br/>
+				<label><input type="checkbox" name="involvement[4]" value="student_other, " /> am a student from another group.</label><br/>
+				<label><input type="checkbox" name="involvement[5]" value="admin, " /> am a College administrator.</label><br/>
+				<label><input type="checkbox" name="involvement[6]" value="external" /> am an external reviewer.</label><br/>
 			</fieldset>
-			
 			<fieldset>
 				<legend>Details</legend>
 				<p>Reason for request: 
@@ -53,7 +49,6 @@
 				</p>
 				<label><textarea name="details" id="details" placeholder="Give us some details..." ></textarea></label><br/><br/>
 				<label>Response preferred by: <input type="date" name="deadline" /></label><br/>
-				
 				<p>How did we do?
 				<label><select name="good_job">
 					<option value="ignored" selected></option>
@@ -63,12 +58,9 @@
 					<option value="excellent">Excellent</option>
 				</select></label>
 				</p>
-				
 				<input type="submit" value="Submit Request"/>
-			</fieldset>	
-			
+			</fieldset>
 		</form><br/>
-		
 		<a href="login.html">Back</a>
 	</body>
 </html>
