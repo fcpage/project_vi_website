@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/request_access.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/documents/logins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/general/documents/requests/login/logins.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/php/request_access.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/request_access.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,30 +105,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.links.html.executor": "Debug",
-    "JavaScript Debug.request_access.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "gui",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/htdocs/project_vi_website/logbooks/ryan",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.fergus_page_logbook.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.links.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.request_access.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fergus&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/project_vi_website/logbooks/ryan&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan" />
@@ -138,11 +139,11 @@
       <recent name="C:\Project_6\project_vi_website\general\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\project_vi_website\general\documents\requests\login" />
+      <recent name="C:\xampp\htdocs\project_vi_website\general\documents\requests" />
       <recent name="C:\xampp\htdocs\project_vi_website\general" />
       <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan\css" />
       <recent name="C:\xampp\htdocs\project_vi_website\logbooks\nigel\css" />
-      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\fergus\css" />
-      <recent name="C:\xampp\htdocs\project_vi_website\logbooks\ryan\images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -171,6 +172,7 @@
       <workItem from="1780341400239" duration="2153000" />
       <workItem from="1780411031417" duration="7096000" />
       <workItem from="1780544806560" duration="5279000" />
+      <workItem from="1780579173685" duration="4638000" />
     </task>
     <servers />
   </component>
