@@ -12,7 +12,7 @@ input#submit:hover {
 }
 
 input#text, textarea#details {
-    color: #08dc7f;
+    color: #000000;
     box-shadow: 10px 10px 5px #DE443F;
     border: 3px solid black;
     border-radius: 10px;
@@ -22,6 +22,7 @@ input#text, textarea#details {
 
 fieldset {
     color: black;
+    font-weight: bold;
     background-color: rgb(255 132 39 / 0.42);
     border: 1px solid black;
     border-radius: 5px;
@@ -91,10 +92,27 @@ input#da {
     border-radius: 5px;
 }
 
+input#da:hover {
+    background-color: rgb(255 0 0 / 0.71);
+}
+
+input#da:focus {
+    background-color: #08DC7F;
+}
+
+input#da:active {
+    background-color: #16bfbf;
+}
+
 input.text_input:focus, textarea.text_input:focus {
     outline: 2px solid #000000;
     background-color: #08DC7F;
     color: black;
+    font-weight: bold;
+}
+
+input.text_input:active, textarea.text_input:active {
+    background-color: #16bfbf;
 }
 
 textarea#details {
