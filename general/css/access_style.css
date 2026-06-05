@@ -1,0 +1,102 @@
+input#submit {
+    background-color: #FF8427;
+    color: white;
+    width: 310px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+input#submit:hover {
+    color: blue;
+    background-color: white;
+}
+
+input#text, textarea#details {
+    color: #08dc7f;
+    box-shadow: 10px 10px 5px #DE443F;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 75px;
+}
+
+fieldset {
+    color: black;
+    background-color: rgb(255 132 39 / 0.42);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    padding: 10px;
+    margin: 20px;
+}
+
+legend {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(0 255 190);
+}
+
+.text_label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+}
+
+.text_input {
+    width: 180px;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.text_input:hover {
+    background-color: rgb(255 0 0 / 0.71);
+}
+
+div#rad {
+    margin-left: 38px;
+}
+
+div#I {
+    margin-left: 5px;
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+select:focus {
+    background-color: #08DC7F;
+}
+
+select:hover {
+    background-color: rgb(255 0 0 / 0.71);
+}
+
+select:active {
+    background-color: white;
+}
+
+select#feed {
+    width: 190px;
+}
+
+input#da {
+    width: 132px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input.text_input:focus, textarea.text_input:focus {
+    outline: 2px solid #000000;
+    background-color: #08DC7F;
+    color: black;
+}
+
+textarea#details {
+    background-image: src("../images/details.png");
+}

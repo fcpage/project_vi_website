@@ -8,19 +8,19 @@
 		<meta http-equiv="author" content="Fergus Page" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
-		<link rel="stylesheet" href="../css/general_style.css" type="text/css"
+		<link rel="stylesheet" href="../css/general_style.css" type="text/css">
+		<link rel="stylesheet" href="../css/login_style.css" type="text/css">
 	</head>
 	<body>
 		<a href="../../index.html">Home</a><br/>
 		<h1>Login:</h1>
-		
 		<form action="../php/login.php" method="post" id="login">
-			<p>Username: <input type="text" name="username" required /></p>
-			<p>Password: <input type="password" name="password" required /></p>
-			<input type="submit" value="Log In"/>
-			<p><br/><a href="request_access.html">Request Access</a></p>
+			<div><label for="user" class="text_label">Username: </label><input class="text_input" id="user" type="text" name="username" required /></div>
+			<div><label for="pass" class="text_label" >Password: </label><input class="text_input" id="pass" type="password" name="password" required /></div>
+			<div><input id="li" type="submit" value="Log In"/></div>
+			<br/><div><a href="request_access.html">Request Access</a></div>
 		</form><br/>
 		<a href="../../index.html">Back</a>
-
+		<p>Copyright &copy 2026 Fergus Page</p>
 	</body>
 </html>

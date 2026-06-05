@@ -16,8 +16,8 @@ file_put_contents("../documents/requests/access/access_request_{$date}_{$time}.t
     <meta http-equiv="pragma" content="no-cache" />
     <link rel="stylesheet" href="../css/general_style.css" type="text/css">
 </head>
-
 <body>
+    <a href="../../index.html">Home</a><br/>
     <h1>Access Form Handler Page</h1>
     <p>Your request has been submitted for consideration.<br/>Please review the details of your request below.</p>
     <h3>Access Request:</h3>

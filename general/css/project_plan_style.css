@@ -1,0 +1,26 @@
+table {
+    border-spacing: 3px;
+    border-block: #222222;
+    outline-style: solid;
+}
+
+td {
+    outline-style: solid;
+}
+
+td:hover {
+    background-color: rgb(161 152 251 / 0.67);
+
+}
+
+.fp {
+    background-color: rgb(163 243 8 / 0.65);
+}
+
+.rp {
+    background-color: rgb(213 19 19 / 0.58);
+}
+
+.ns {
+    background-color: rgb(8 188 243 / 0.58);
+}

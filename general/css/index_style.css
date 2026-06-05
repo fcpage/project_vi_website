@@ -41,6 +41,21 @@ figcaption {
         font-size: 80%;
         text-align: center;
 }
-a:link, a:visited, a:hover, a:active {
+
+a:link, a:active {
         font-family: Arial, sans-serif;
+        color: #FF5F00;
+        text-shadow: #0055AA 1px 1px 1px;
+}
+
+a:visited {
+        font-family: Arial, sans-serif;
+        color: #486E17;
+        text-shadow: #0055AA 1px 1px 1px;
+}
+
+a:hover {
+        font-family: Arial, sans-serif;
+        color: #E9B308;
+        text-shadow: #0055AA 1px 1px 1px;
 }

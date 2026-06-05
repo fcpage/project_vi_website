@@ -8,7 +8,8 @@
 		<meta http-equiv="author" content="Fergus Page" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
-		<link rel="stylesheet" href="../css/general_style.css" type="text/css"
+		<link rel="stylesheet" href="../css/general_style.css? v=1.1" type="text/css">
+		<link rel="stylesheet" href="../css/access_style.css? v=1.1" type="text/css">
 	</head>
 	
 	<body>
@@ -17,17 +18,21 @@
 		<form action="../php/request_access.php" method="post" id="access">
 			<fieldset>
 				<legend>Contact</legend>
-				First Name: <label><input type="text" name="firstname" required /></label><br/><br/>
-				Last Name: <label><input type="text" name="lastname" required /></label><br/><br/>
-				Email: <label><input type="text" name="email" required /></label><br/><br/>
-				Website: <label><input type="text" name="url" /></label><br/><br/>
-				<label><input type="radio" name="person" value="faculty" /> Faculty</label>
-				<label><input type="radio" name="person" value="student" /> Student</label>
-				<label><input type="radio" name="person" value="other" required /> Other</label>
+				<div>
+					<label for="fn" class="text_label">First Name: </label><input id="fn" class="text_input" type="text" name="firstname" required /><br/><br/>
+					<label for="ln" class="text_label">Last Name: </label><input id="ln" class="text_input" type="text" name="lastname" required /><br/><br/>
+					<label for="em" class="text_label">Email: </label><input id="em" class="text_input" type="text" name="email" required /><br/><br/>
+					<label for="ws" class="text_label">Website: </label><input id="ws" class="text_input" type="text" name="url" /><br/><br/>
+				</div>
+				<div id="rad">
+					<label><input type="radio" name="person" value="faculty" /> Faculty</label>
+					<label><input type="radio" name="person" value="student" /> Student</label>
+					<label><input type="radio" name="person" value="other" required /> Other</label>
+				</div>
 			</fieldset>
 			<fieldset>
 				<legend>Involvement</legend>
-				<i><b>I...</b></i><br/>
+				<div id="I"><i><b>I...</b></i><br/></div>
 				<label><input type="checkbox" name="involvement[0]" value="none, " /> have no involvement in this project.</label><br/>
 				<label><input type="checkbox" name="involvement[1]" value="instructor, " /> am an instructor in this project.</label><br/>
 				<label><input type="checkbox" name="involvement[2]" value="instructor_other, " /> am another instructor.</label><br/>
@@ -47,10 +52,10 @@
 					<option value="feedback">Leaving Feedback</option>
 				</select></label>
 				</p>
-				<label><textarea name="details" id="details" placeholder="Give us some details..." required></textarea></label><br/><br/>
-				<label>Response preferred by: <input type="date" name="deadline" /></label><br/>
+				<label class="text"><textarea class="text_input" name="details" id="details" placeholder="Give us some details..." required></textarea></label><br/><br/>
+				<label for="da">Response preferred by: </label><input id="da" type="date" name="deadline" /><br/>
 				<p>How did we do?
-				<label><select name="good_job"required>
+				<label for="feed"><select id="feed" name="good_job"required>
 					<option value="ignored" selected></option>
 					<option value="good">Good</option>
 					<option value="really_good">Really Good</option>
@@ -58,7 +63,7 @@
 					<option value="excellent">Excellent</option>
 				</select></label>
 				</p>
-				<input type="submit" value="Submit Request"/>
+				<input id="submit" type="submit" value="Submit Request"/>
 			</fieldset>
 		</form><br/>
 		<a href="login.html">Back</a>

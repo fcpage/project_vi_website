@@ -18,9 +18,24 @@ p {
     font-size: 100%;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:active {
     font-family: Arial, sans-serif;
+    color: #FF5F00;
+    text-shadow: #0055AA 1px 1px 1px;
 }
+
+a:visited {
+    font-family: Arial, sans-serif;
+    color: #486E17;
+    text-shadow: #0055AA 1px 1px 1px;
+}
+
+a:hover {
+    font-family: Arial, sans-serif;
+    color: #E9B308;
+    text-shadow: #0055AA 1px 1px 1px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: auto auto;

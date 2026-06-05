@@ -7,7 +7,7 @@
 		<meta name="robots" content="noindex nofollow" />  <!-- do not want page or any of its links to be indexed -->
 		<meta http-equiv="author" content="Michael Galle" />
 		<meta http-equiv="pragma" content="no-cache" /> <!-- want browser to reload this page every time -->
-		<link href="../css/project_details_style.css" type="text/css" rel="stylesheet" />
+		<link href="../css/project_details_style.css? v=1.1" type="text/css" rel="stylesheet">
 	</head>
 	<body>
 		<a href="../../index.html">Home</a><br/>
@@ -34,9 +34,8 @@
 		<p>The distance sensor will be interfaced directly to the controller to provide a distance estimate, which can be displayed on an LCD or 7-segment LED display and ultimately used for positional feedback. 
 		The elevator <span class=mkbold>motor</span> will interface with the controller via servo electronics.</p>
 	
-		<figure>
-			<img alt="Elevator System Diagram" title="Elevator System Diagram" src="../images/fig1.jpg" />   <!--   -->
-			<figcaption>Figure-1 <br />(Note: Above figure depicts an approximate schematic of the system. Actual implementation may be different from this.)</figcaption>
+		<figure><br/><img id="i1" alt="Elevator System Diagram" title="Elevator System Diagram" src="../images/fig1.jpg"/>
+			<br/><figcaption>Figure-1 <br />(Note: Above figure depicts an approximate schematic of the system. Actual implementation may be different from this.)</figcaption><br/>
 		</figure><br/>
 		
 		<p>An additional requirement is that student groups will create a <span class=mkunderlined>common</span> CAN message specification to which all groups will adhere.  The intent is to ensure that any embedded system from one group can be removed and added to another group, with no required changes in embedded software.
@@ -57,9 +56,8 @@
 			</li>
 		</ol>
 		
-		<figure>
-			<img alt="Elevator Network Diagram" title="Elevator Network Diagram" src="../images/fig2.jpg" />   <!--   -->
-			<figcaption>Figure-2 <br />(Note: Above figure depicts an approximate schematic of the system. Actual implementation may be different from this.)</figcaption>
+		<figure><br/><img id="i2" alt="Elevator Network Diagram" title="Elevator Network Diagram" src="../images/fig2.jpg" />   <!--   -->
+			<br/><figcaption>Figure-2 <br />(Note: Above figure depicts an approximate schematic of the system. Actual implementation may be different from this.)</figcaption><br/>
 		</figure><br/>
 		
 		<p>In <span class=mkbold>Phase 3</span> the two modules (developed in phases 1 and 2) will be integrated to complete the system. This phase also encourages each student group to incorporate features that are not specifically stated in this charter document. This phase includes a final demonstration, oral presentation and report.
