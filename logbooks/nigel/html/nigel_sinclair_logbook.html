@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Project VI - Nigel Sinclair</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="This is Nigel's engineering logbook for Project 6" />
+		<meta http-equiv="author" content="Nigel Sinclair" />
+		<meta name="robots" content="noindex nofollow" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="stylesheet" href="../css/nigels_styles.css" type="text/css">
+	</head>
+	
+	<body>
+		<a href="../../../index.html">Home</a><br/>
+		<h1>Weekly Logbook - Nigel Sinclair</h1>
+		
+		<figure>
+            <img src="../images/nigel.png" alt="Nigel Sinclair" title="Nigel Sinclair" width="">
+            <figcaption><b>Nigel Sinclair:</b><br/>
+                "There are two kinds of programming languages; the ones we like, and the ones we use"</br>
+                -- plagiarized (i don't remember)
+            </figcaption>
+		</figure>
+		
+		<h2>Logbook Index</h2>
+		
+		<ul>
+			<li><a href="#week1">Week 1</a></li>
+			<li><a href="#week2">Week 2</a></li>
+			<li><a href="#week3">Week 3</a></li>			
+		</ul>
+		
+		<h3 id="week1">Week 1</h3>
+
+        <b>Main task:</b> setup CAN communication with STM32.
+
+		<ul>
+			<li>Setup STM32CubeMX</li>
+			<li>Generate code for HAL using STM32CubeMX</li>
+			<li>Configure build system (CMake)</li>
+            <ul>
+                <li>Generate build system files using STM32CubeMX</li>
+                <li>Setup different builds for CMake</li>
+            </ul>
+            <li>Setup UART serial monitor via stdio functions</li>
+		</ul>
+
+        <b>Documentation:</b>
+
+		<ul>
+			<li>Updated project repo README with relavent instructions</li>
+			<li></li>
+		</ul>
+
+		<h3 id="week2">Week 2</h3>
+
+        <div id="week2content"></div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script> -->
+        <!-- <script type="module"> -->
+        <!--     import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js"; -->
+        <!--     const res = await fetch("week2.md"); -->
+        <!--     if(!res.ok) throw new Error('failed to load markdown'); -->
+        <!--     const md = await res.text(); -->
+        <!--     document.getElementById("week2content").innerHTML = marked.parse(md); -->
+        <!-- </script> -->
+		<ul>
+            <li>Implement Car/Floor Controller message handler</li>
+            <li>CAN filtering</li>
+            <li>Test CAN comms between two nucleos</li>
+            <li>Test CAN comms between elevator nodes</li>
+            <li>Test CAN comms with supervisory controller using CAN</li>
+            <li>Implement Elevator controller (Arduino)</li>
+		</ul>
+        <p>
+            CAN comms are kept consistent between modules by using a common
+            header file  (CAN_protocol.h). When included in a C file, all
+            symbols within it will be prefixed with "CAN_". When included in
+            a C++ file all symbols are placed in a CAN namespace.
+        </p>
+
+        <p>
+            This header file gives the definitions of two enums which
+            provide the necessary values for each node ID number and the
+            valid messages that can be sent over CAN.
+        </p>
+
+        <p>
+            The STM CAN code uses a lookup table for mapping button presses
+            to the correct LED indicator pin and the message that should be
+            sent.
+        </p>
+
+        <p>
+            The same firmware is used for both the Car Controller, and the
+            Floor controller. In order to set which floor number and whether
+            or not it is the car controller, you simply define a macro at
+            the command line when building.
+        </p>
+
+		<h3 id="week3">Week 3</h3>
+		
+		<h2>Questions?</h2>
+		<p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
+		
+		<a href="../../../general/html/logbooks.html">Back</a>
+	</body>
+</html>
+	
