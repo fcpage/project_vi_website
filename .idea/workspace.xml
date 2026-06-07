@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7c1ecf97-852b-41c1-a032-9fd7a0a2cdb2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/documents/Project_Charter.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/general/documents/organizational/Project_Charter.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/css/gui_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/general/css/gui_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/html/.gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/.gui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/lockout.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/lockout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/logbooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/logbooks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/project_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/project_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/project_plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/project_plan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/html/request_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/general/html/request_access.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/php/gui.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/gui.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/php/request_access.php" beforeDir="false" afterPath="$PROJECT_DIR$/general/php/request_access.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logbooks/fergus/html/fergus_page_logbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/logbooks/fergus/html/fergus_page_logbook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +97,10 @@
       <entry key="W1" value="139.94710314632158" />
     </decayedShown>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -188,6 +181,7 @@
       <workItem from="1780579173685" duration="12158000" />
       <workItem from="1780628154225" duration="10134000" />
       <workItem from="1780709532198" duration="4109000" />
+      <workItem from="1780717288512" duration="12001000" />
     </task>
     <servers />
   </component>
