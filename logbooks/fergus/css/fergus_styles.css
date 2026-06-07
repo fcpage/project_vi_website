@@ -1,0 +1,13 @@
+body {
+    background-color: aliceblue;
+}
+h1 {color: forestgreen;
+        font-family: Georgia, Times, "Times New Roman", serif;}
+    ul {color: black;
+        background-color: aliceblue;
+        font-family:  serif, Arial, helvetica;, "Times New Roman";}
+    a {color: black;}
+
+    .week {color: dodgerblue;}
+
+    #Fergus {color: orangered;}

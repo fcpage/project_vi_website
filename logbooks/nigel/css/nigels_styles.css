@@ -1,0 +1,9 @@
+:root {
+    --colors-grey: #1E212B; 
+    --colors-green: #4D8B31; 
+    --colors-yellow: #FF8427; 
+    --colors-white: #FFFFFF; 
+    background: var(--colors-grey);
+    color: var(--colors-white);
+}
+
