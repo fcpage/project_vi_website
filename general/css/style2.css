@@ -6,10 +6,9 @@
 
 body{
     background-image: url("../images/general/conestoga.png");
-    background-repeat: no-repeat;
     height: 150px;
     background-attachment: fixed;
-    background-position: right top;
+    background-position: top center;
 }
 
 #nav, #feature, .article, #footer {
