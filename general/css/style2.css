@@ -1,0 +1,37 @@
+*   {
+    font-family: Arial, Verdana, sans-serif;
+    color: #665544;
+    text-align: center;
+}
+
+body{
+    background-image: url("../images/general/conestoga.png");
+    background-repeat: no-repeat;
+    height: 150px;
+    background-attachment: fixed;
+    background-position: right top;
+}
+
+#nav, #feature, .article, #footer {
+    background-color: #EFEFEF;
+    margin-top: 20px;
+    padding: 10px 0px 5px 0px;
+    border: solid 1px black;
+}
+
+#feature, .article {
+    height: 100px;
+}
+
+#footer {
+    padding-top: 20px;
+}
+
+li  {
+    display: inline;
+    padding: 5px;
+}
+
+p#copy {
+    font-size: 60%;
+}

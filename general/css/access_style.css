@@ -11,6 +11,11 @@ input#submit:hover {
     background-color: white;
 }
 
+input#submit:active {
+    color: black;
+    background-color: lawngreen;
+}
+
 input#text, textarea#details {
     color: #000000;
     box-shadow: 10px 10px 5px #DE443F;
@@ -26,7 +31,7 @@ fieldset {
     background-color: rgb(255 132 39 / 0.42);
     border: 1px solid black;
     border-radius: 5px;
-    width: 40%;
+    width: 320px;
     padding: 10px;
     margin: 20px;
 }
@@ -42,7 +47,6 @@ legend {
     float: left;
     width: 100px;
     text-align: right;
-    padding: 0px 10px 0px 0px;
 }
 
 .text_input {
@@ -116,5 +120,45 @@ input.text_input:active, textarea.text_input:active {
 }
 
 textarea#details {
-    background-image: src("../images/details.png");
+    background-image: url("../images/access/details.png");
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 5px;
+    text-indent: 10px;
+}
+
+#ws {
+    background-image: url("../images/access/globe.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+#em {
+    background-image: url("../images/access/mail.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+#fn, #ln {
+    background-image: url("../images/access/id.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+#question, #feed {
+    background-image: url("../images/access/question.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+p#copy {
+    font-size: 60%;
 }

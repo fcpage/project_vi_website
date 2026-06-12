@@ -46,3 +46,7 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
+
+p#copy {
+    font-size: 60%;
+}

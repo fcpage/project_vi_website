@@ -1,13 +1,74 @@
 body {
     background-color: aliceblue;
 }
-h1 {color: forestgreen;
-        font-family: Georgia, Times, "Times New Roman", serif;}
-    ul {color: black;
-        background-color: aliceblue;
-        font-family:  serif, Arial, helvetica;, "Times New Roman";}
-    a {color: black;}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: forestgreen;
+    font-family: Georgia, Times, "Times New Roman", serif;
 
-    .week {color: dodgerblue;}
+}
 
-    #Fergus {color: orangered;}
+ul {
+    color: black;
+    background-color: aliceblue;
+    font-family:  serif, Arial, helvetica;, "Times New Roman";
+}
+a {
+    color: black;
+}
+
+.index  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    text-indent: -30px;
+}
+
+.index_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.week {
+    color: dodgerblue;
+}
+
+#Fergus {
+    color: orangered;
+}
+
+#fergus_img {
+    clip-path: circle(49% at 50% 50%);
+    border: 5px solid dodgerblue;
+    border-shape: circle(49% at 50% 50%);
+}
+
+#frame  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figcaption {
+    text-align: center;
+}
+
+#questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+p#copy {
+    font-size: 60%;
+}

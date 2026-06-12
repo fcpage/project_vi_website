@@ -87,3 +87,7 @@ table {
 tr:hover {
    background-color: darksalmon;
 }
+
+p#copy {
+    font-size: 60%;
+}

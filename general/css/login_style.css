@@ -19,3 +19,23 @@ div {
 #li {
     margin-left: 45px;
 }
+
+#user {
+    background-image: url("../images/login/user.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+#pass {
+    background-image: url("../images/login/password.png");
+    background-repeat: no-repeat;
+    background-position: 3px;
+    background-position-y: center;
+    text-indent: 5px;
+}
+
+p#copy {
+    font-size: 60%;
+}

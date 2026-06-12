@@ -45,3 +45,7 @@ a:hover {
     color: #E9B308;
     text-shadow: #0055AA 1px 1px 1px;
 }
+
+p#copy {
+    font-size: 60%;
+}

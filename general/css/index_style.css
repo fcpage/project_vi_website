@@ -26,8 +26,9 @@ h3 {
         font-size: 120%;
 }
 
-image {
+#caution {
         height: 200px;
+        clip-path: circle(49.9% at 50% 50%);
 }
 
 figcaption {
@@ -58,4 +59,8 @@ a:hover {
         font-family: Arial, sans-serif;
         color: #E9B308;
         text-shadow: #0055AA 1px 1px 1px;
+}
+
+p#copy {
+        font-size: 60%;
 }
