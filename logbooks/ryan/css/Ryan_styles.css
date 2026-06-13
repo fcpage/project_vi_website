@@ -1,0 +1,49 @@
+/* Ryan's style sheet */
+
+body
+{
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    padding: 20px;
+    color: #FFFFFF;
+    background-image: linear-gradient(to bottom right, #04131c, #012c45);
+    margin: auto;
+}
+
+main
+{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 15px auto;
+}
+
+li {
+    text-align: left;
+}
+
+h1
+{
+    color: #98c8ed;
+}
+
+h2
+{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+}
+
+h3
+{
+    color: #98c8ed;
+}
+
+a:link {
+    color: #2ba2fc;
+    text-decoration: none;
+}
