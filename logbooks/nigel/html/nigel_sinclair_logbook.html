@@ -99,7 +99,21 @@
         </p>
 
 		<h3 id="week3">Week 3</h3>
-		
+        <ul>		
+            <li>
+                Fixed supervisory controller version issue (downgraded to Cpp20).
+                <ul>
+                    <li> R-Pi3 does not support version of g++ which supports Cpp23. </li>
+                    <li> Required minor changes to build system </li>
+                    <ul>
+                        <li> cmake minimum version 3.14 </li>
+                        <li> cmake cxx version 20 </li>
+                        <li> link with pthreads </li>
+                        <li> link with libatomic </li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>		
 		<h2>Questions?</h2>
 		<p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
 		
