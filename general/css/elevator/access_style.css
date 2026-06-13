@@ -120,7 +120,7 @@ input.text_input:active, textarea.text_input:active {
 }
 
 textarea#details {
-    background-image: url("../images/access/details.png");
+    background-image: url("../../resources/references/imgs/access/details.png");
     background-repeat: no-repeat;
     background-position-x: 5px;
     background-position-y: 5px;
@@ -128,7 +128,7 @@ textarea#details {
 }
 
 #ws {
-    background-image: url("../images/access/globe.png");
+    background-image: url("../../resources/references/imgs/access/globe.png");
     background-repeat: no-repeat;
     background-position: 3px;
     background-position-y: center;
@@ -136,7 +136,7 @@ textarea#details {
 }
 
 #em {
-    background-image: url("../images/access/mail.png");
+    background-image: url("../../resources/references/imgs/access/mail.png");
     background-repeat: no-repeat;
     background-position: 3px;
     background-position-y: center;
@@ -144,7 +144,7 @@ textarea#details {
 }
 
 #fn, #ln {
-    background-image: url("../images/access/id.png");
+    background-image: url("../../resources/references/imgs/access/id.png");
     background-repeat: no-repeat;
     background-position: 3px;
     background-position-y: center;
@@ -152,7 +152,7 @@ textarea#details {
 }
 
 #question, #feed {
-    background-image: url("../images/access/question.png");
+    background-image: url("../../resources/references/imgs/access/question.png");
     background-repeat: no-repeat;
     background-position: 3px;
     background-position-y: center;

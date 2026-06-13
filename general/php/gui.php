@@ -7,7 +7,7 @@
         <meta http-equiv="author" content="Fergus Page" />
         <meta name="robots" content="noindex nofollow" />
         <meta http-equiv="pragma" content="no-cache" />
-        <link rel="stylesheet" href="../css/gui_style.css">
+        <link rel="stylesheet" href="../css/elevator/gui_style.css">
     </head>
     <body>
 

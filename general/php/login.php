@@ -2,7 +2,7 @@
 $username = $_POST["username"]; //get supposed "username"
 $password = $_POST["password"]; //what is the password?
 $result = 0; //default to lockout
-$file = fopen("../documents/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
+$file = fopen("../resources/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
 
 while(!feof($file) && !$result) {   //while not at the end of the login credential register and no match has been found
     $contents = fgets($file); //check each line until the file is through or the login is verified

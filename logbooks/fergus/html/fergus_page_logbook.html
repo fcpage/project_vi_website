@@ -2,200 +2,243 @@
 <html lang="en">
 
 	<head>
-
 		<title>Project VI - Fergus Page</title>
+
 		<meta charset="UTF-8">
 		<meta name="description" content="This is Fergus' engineering logbook for Project 6" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="author" content="Fergus Page" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		      crossorigin="anonymous" rel="stylesheet">
+		<link href="general/css/project/general_style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="../css/fergus_styles.css" type="text/css">
 	</head>
 
-	<!--[if lt IE 9]>
-	<script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
-	<![endif]-->
+	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 
 	<body>
-		<a href="../../../index.html">Home</a><br/>
-		<h1>Weekly Logbook - Fergus Page</h1>
-		<div id="frame">
+	<div id="page" class="container">
+		<header>
+			<nav id="bar">
+				<div class="index_block">
+					<h4>Warp</h4><br/>
+					<p id="sidebar">
+						<b><a class="index top_bread" href="#">Top</a></b><br/>
+						<a class="index" href="#week1">Week 1</a><br/>
+						<a class="index" href="#week2">Week 2</a><br/>
+						<a class="index" href="#week3">Week 3</a><br/>
+						<a class="index" href="#week4">Week 4</a><br/>
+						<a class="index" href="#week5">Week 5</a><br/>
+						<b><a class="index bottom_bread" href="../../../index.html">Home</a></b>
+					</p>
+				</div>
+			</nav>
+
+			<h1>Weekly Logbook</h1>
+			<h2>Fergus Page</h2>
 			<figure><img id="fergus_img" src="../images/fergus.png" alt="Fergus Page" title="Fergus Page" width="150">
-				<figcaption><b>Fergus Page</b><br/> sudo apt-get install help</figcaption></figure>
-		</div>
+				<figcaption><b>Fergus Page</b><br/>*Old man noises*</figcaption></figure>
+		</header><br/>
 
-
-		<h2 class="index_title">Logbook Index</h2>
-		<ul class="index">
-			<li><a href="#week1">Week 1</a></li>
-			<li><a href="#week2">Week 2</a></li>
-			<li><a href="#week3">Week 3</a></li>
-			<li><a href="#week4">Week 4</a></li>
-			<li><a href="#week5">Week 5</a></li>
-		</ul>
-
-		<h3 class=week id="week1">Week 1</h3>
-		<ul>
-			<li>Startup activities.</li>
+		<div id="content">
+		<article id="week1">
+			<h3 class="week">Week 1</h3>
+			<h6>Startup Activities</h6>
 			<ul>
 				<li>Beginning Software Engineering and Data Communications and Networking courses.</li>
 				<li>Started learning about LAN and HTML programming.</li>
 				<li>Formed Project VI group with Nigel Sinclair and Ryan Pratt.</li>
+				<li>Added Ubuntu x86_64 partition to my school laptop.</li>
+				<li>Installed current Ubuntu ARM64 on my RPi.</li>
 			</ul>
-			<li>Added Ubuntu x86_64 partition to my school laptop.</li>
-			<li>Installed current Ubuntu ARM64 on my RPi.</li>
-		</ul>
+		</article><br/>
 
-		<h3 class=week id="week2">Week 2</h3>
-		<ul>
-			<li>Started building framework for project website.</li>
-			<li>Set up RPi server at home and established SSH connection to the Ubuntu partition on my laptop through the home wireless network.</li>
-		</ul>
-
-		<h3 class=week id="week3">Week 3</h3>
-		<ul>
-			<li>Wrote RPi setup script informed by Michael Galle's instructions in the Software Engineering course shell.</li>
-			<li>Wrote RPi server setup script informed by Michael Galle's instructions in the Software Engineering course shell and personal research.</li>
-			<ul><li>To be completed on Sunday, May 31st, 2026.</li></ul>
-			<li>Transferred file from RPi server to Linux partition on laptop to confirm server function and communication with other entities.</li>
-			<li>Updated logbook and submitted documents for Debrief 1.</li>
-		</ul>
-
-		<h3 class=week id="week4">Week 4</h3>
-		<ul>
-			<li>Monday, June 1st, 2026</li>
+		<article id="week2">
+			<h3 class="week">Week 2</h3>
+			<h6>Preemptive Work</h6>
 			<ul>
-				<li>Finished coding server_setup.sh and fixed bugs in rpi_setup.sh.</li>
-				<li>Added output-logging scripts for RPi and Server setup scripts.</li>
-				<li>Coded preliminary GUI program in HTML and PHP.</li>
-				<li>Sorted out login credentials and redirects.</li>
+				<li>Started building framework for project website.</li>
+				<li>Set up RPi server at home and established SSH connection to the Ubuntu partition on my laptop through the home wireless network.</li>
 			</ul>
+		</article><br/>
 
-			<li>Tuesday, June 2nd, 2026</li>
+		<article id="week3">
+			<h3 class="week">Week 3</h3>
+			<h6>Received Guidance</h6>
 			<ul>
-				<li>Examined code for Arduino Elevator Controller and compiled to check integrity.</li>
-				<li>Created elevator button and indicator icons for GUI.</li>
-			</ul>
-
-			<li>Wednesday, June 3rd, 2026</li>
-			<ul>
-				<li>Edited login.php, gui.php, and gui.html to clean up and comment code.</li>
-				<li>Fixed array initialization issues for GUI buttons.</li>
-				<li>Got the radio buttons to go away and got the direction indicator working. Basic formatting with CSS.</li>
-				<li>Got the access request page to print out the full involvement, allowing multiple.</li>
-			</ul>
-
-			<li>Thursday, June 4th, 2026</li>
-			<ul>
-				<li>Set up access request page to write requests into text files.</li>
-				<li>Discussed RPi-web communications with Ryan and defined database structure and mechanic.</li>
-				<li>Did CSS formatting for website to make it look prettier.</li>
-			</ul>
-
-			<li>Friday, June 5th, 2026</li>
-			<ul>
-				<li>Commented all website HTML and PHP code. Commented all Bash code.</li>
-				<li>Added Project Plan (Gantt chart) to the Project Plan page to transfer into HTML.</li>
-			</ul>
-
-			<li>Saturday, June 6th, 2026</li>
-			<ul>
-				<li>Updated Gantt Chart and did Weekly Report</li>
-				<li>Compiled Brief2.</li>
-				<li>Wrote test plans and documentation for front end development, RPi environment setup, and server setup.</li>
-				<li>Updated logbook.</li>
-			</ul>
-
-			<li>Sunday, June 7th, 2026</li>
-			<ul>
-				<li>Transferred Gantt chart to the website and formatted it.</li>
-				<li>Updated logbook.</li>
-				<li>To finish on Monday:</li>
+				<li>Wrote RPi setup script informed by Michael Galle's instructions in the Software Engineering course shell.</li>
+				<li>Wrote RPi server setup script informed by Michael Galle's instructions in the Software Engineering course shell and personal research.</li>
 				<ul>
-					<li>Finish setup_database.sh</li>
-					<li>Hardware testing.</li>
+					<li>To be completed on Sunday, May 31st, 2026.</li>
 				</ul>
+				<li>Transferred file from RPi server to Linux partition on laptop to confirm server function and communication with other entities.</li>
+				<li>Updated logbook and submitted documents for Debrief 1.</li>
 			</ul>
+		</article><br/>
 
-			<h3 class=week id="week5">Week 5</h3>
-			<ul>
-				<li>Monday, June 8th, 2026</li>
+		<article id="week4">
+			<h3 class="week">Week 4</h3>
+			<section>
+				<h6>Monday, June 1st, 2026</h6>
 				<ul>
-					<li>Tested hardware and software on elevator platform</li>
-					<ul>
-						<li>STM floor controllers</li>
-						<li>RPi initialization and configuration</li>
-						<li>Supervisory program</li>
-					</ul>
-					<li>Achieved functioning elevator system</li>
-					<ul>
-						<li>CAN buss operational with communication between all nodes</li>
-						<li>Car controller and floor controllers working</li>
-						<li>Supervisory program works great</li>
-					</ul>
-					<li>Points of improvement and next steps</li>
-					<ul>
-						<li>Wire outboard buttons</li>
-						<li>RPi 3b does not fully support C++ 23 standard - reconfigure compiler settings or supervisory code to
-							allow compilation and operation on RPi 3b. Tested today on RPi 5</li>
-						<li>Get database up and running so GUI can link in</li>
-						<li>Cannot use pcan-usb driver - will not work with Linux system calls. Must blacklist the proprietary driver and use the native CAN driver</li>
-					</ul>
-
+					<li>Finished coding server_setup.sh and fixed bugs in rpi_setup.sh.</li>
+					<li>Added output-logging scripts for RPi and Server setup scripts.</li>
+					<li>Coded preliminary GUI program in HTML and PHP.</li>
+					<li>Sorted out login credentials and redirects.</li>
 				</ul>
+			</section>
 
-				<li>Wednesday, June 10th, 2026</li>
+			<section>
+				<h6>Tuesday, June 2nd, 2026</h6>
+				<ul>
+					<li>Examined code for Arduino Elevator Controller and compiled to check integrity.</li>
+					<li>Created elevator button and indicator icons for GUI.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Wednesday, June 3rd, 2026</h6>
+				<ul>
+					<li>Edited login.php, gui.php, and gui.html to clean up and comment code.</li>
+					<li>Fixed array initialization issues for GUI buttons.</li>
+					<li>Got the radio buttons to go away and got the direction indicator working. Basic formatting with CSS.</li>
+					<li>Got the access request page to print out the full involvement, allowing multiple.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Thursday, June 4th, 2026</h6>
+				<ul>
+					<li>Set up access request page to write requests into text files.</li>
+					<li>Discussed RPi-web communications with Ryan and defined database structure and mechanic.</li>
+					<li>Did CSS formatting for website to make it look prettier.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Friday, June 5th, 2026</h6>
+				<ul>
+					<li>Commented all website HTML and PHP code. Commented all Bash code.</li>
+					<li>Added Project Plan (Gantt chart) to the Project Plan page to transfer into HTML.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Saturday, June 6th, 2026</h6>
+				<ul>
+					<li>Updated Gantt Chart and did Weekly Report</li>
+					<li>Compiled Brief2.</li>
+					<li>Wrote test plans and documentation for front end development, RPi environment setup, and server setup.</li>
+					<li>Updated logbook.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Sunday, June 7th, 2026</h6>
+				<ul>
+					<li>Transferred Gantt chart to the website and formatted it.</li>
+					<li>Updated logbook.</li>
+				</ul>
+			</section>
+		</article><br/>
+
+		<article id="week5">
+			<h3 class="week">Week 5</h3>
+			<section>
+				<h6>Monday, June 8th, 2026</h6>
+				<ul>
+					<li>Tested hardware and software on elevator platform:</li>
+						<ul>
+							<li>STM floor controllers.</li>
+							<li>RPi initialization and configuration.</li>
+							<li>Supervisory program.</li>
+						</ul>
+					<li>Achieved functioning elevator system:</li>
+						<ul>
+							<li>CAN buss operational with communication between all nodes.</li>
+							<li>Car controller and floor controllers working.</li>
+							<li>Supervisory program works great.</li>
+						</ul>
+					<li>Points of improvement and next steps:</li>
+						<ul>
+							<li>Wire outboard buttons.</li>
+							<li>RPi 3b does not fully support C++ 23 standard - reconfigure compiler settings or supervisory code to
+								allow compilation and operation on RPi 3b. Tested today on RPi 5.</li>
+							<li>Get database up and running so GUI can link in.</li>
+							<li>Cannot use pcan-usb driver - will not work with Linux system calls.
+								Must blacklist the proprietary driver and use the native CAN driver.</li>
+						</ul>
+				</ul>
+			</section>
+
+			<section>
+				<h6>Wednesday, June 10th, 2026</h6>
 				<ul>
 					<li>Moved database-related parts of rpi_setup.sh into database_setup.sh</li>
 				</ul>
+			</section>
 
-				<li>Thursday, June 11th, 2026</li>
+			<section>
+				<h6>Thursday, June 11th, 2026</h6>
 				<ul>
-					<li>Reconfigured supervisory controller CMakeLists.txt to specify g++ 10, which allows C++ 20. This allows for our code to compile on the RPi 3b
-						without sacrificing functionality</li>
-					<ul>
-						<li>Must expressly flag -pthread and -atomics to g++ compiler, and manually link atomics library to allow code to compile for a 32bit system.
-							C++ 23 assumes a 64bit system</li>
-					</ul>
-					<li>Worked on project website formatting and added pages</li>
+					<li>Worked on project website formatting and added pages.</li>
+					<li>Reconfigured supervisory controller CMakeLists.txt with Nigel to specify g++ 10, which allows C++ 20.
+						This allows for our code to compile on the RPi 3b without sacrificing functionality.</li>
+						<ul>
+							<li>Must expressly flag -pthread and -atomics to g++ compiler, and manually link atomics library
+								to allow code to compile for a 32bit system. C++ 23 assumes a 64bit system.</li>
+						</ul>
 				</ul>
+			</section>
 
-				<li>Friday, June 12th, 2026</li>
+			<section>
+				<h6>Friday, June 12th, 2026</h6>
 				<ul>
-					<li>Wired outboard switches</li>
-					<li>Confirmed functionality of supervisory program compiled on and for RPi 3b on the elevator system</li>
-					<li>Finished database setup</li>
-					<li>Future feature: in-website terminal application to interact with supervisory controller</li>
+					<li>Fixed broken electrical connection on elevator controller CAN buss landing board (with LCD screen).
+						A mechanically unsupported,	straight connector was used when the milled PCB was fabricated, and
+						the electrical contact pins were bearing the full weight of the DB9 connector and cable. The connector
+						got bumped last week and most all the pins on the board-edge-side snapped off. I moved the last good pin
+						on that side to the in-use CAN line that became disconnected and recovered elevator motor function. Poor design.
+						A right-angle female DB9 connector with mechanical support is recommended (bolt it to the board).</li>
+					<li>Confirmed functionality of supervisory program compiled on and for RPi 3b on the elevator system with Ryan
+						(32bit not 64bit, as initially compiled).</li>
+					<li>Added media and documentation page to the website. Linked from the index page and the project plan page</li>
+					<li>Formatted website with HTML5 and Bootstrap CSS.</li>
+					<li>Future feature: in-website terminal application to interact with supervisory controller.</li>
 				</ul>
+			</section>
 
-				<li>Saturday, June 13th, 2026</li>
+			<section>
+				<h6>Saturday, June 13th, 2026</h6>
 				<ul>
-					<li>Use CSS to refine GUI button interactions and simplify php logic</li>
+					<li>Use CSS to refine GUI button interactions and simplify php logic.</li>
 				</ul>
+			</section>
 
-				<li>Sunday, June 14th, 2026</li>
+			<section>
+				<h6>Sunday, June 14th, 2026</h6>
 				<ul>
 					<li></li>
 				</ul>
+			</section>
+		</article><br/>
 
-		</ul>
+		<footer>
+			<div id="questions">
+				<h2>Questions?</h2>
+				<p>Click <a href="mailto:fpage4808@conestogac.on.ca">here</a> to email me directly.</p>
+			</div>
 
-		<h2 class="index_title">Logbook Index</h2>
-		<ul class="index">
-			<li><a href="#week1">Week 1</a></li>
-			<li><a href="#week2">Week 2</a></li>
-			<li><a href="#week3">Week 3</a></li>
-			<li><a href="#week4">Week 4</a></li>
-			<li><a href="#week5">Week 5</a></li>
-		</ul></br></br>
+			<p id="copy">Copyright &copy 2026 Fergus Page</p>
+		</footer>
 
-		<div id="questions">
-			<h2>Questions?</h2>
-			<p>Click <a href="mailto:fpage4808@conestogac.on.ca">here</a> to email me directly.</p>
-		</div>
-
-		<a href="../../../general/html/logbooks.html">Back</a>
-		<p>Copyright &copy 2026 Fergus Page</p>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+				crossorigin="anonymous"></script>
 	</body>
 </html>
 	

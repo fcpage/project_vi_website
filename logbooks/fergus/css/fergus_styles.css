@@ -1,15 +1,17 @@
 body {
-    background-color: aliceblue;
+    background: aliceblue;
 }
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: forestgreen;
-    font-family: Georgia, Times, "Times New Roman", serif;
 
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h6 {
+    color: #1ad671;
 }
 
 ul {
@@ -17,46 +19,69 @@ ul {
     background-color: aliceblue;
     font-family:  serif, Arial, helvetica;, "Times New Roman";
 }
-a {
-    color: black;
+
+.index_block h4{
+    float: left;
+    display: flex;
+    width: 65px;
+    position: fixed;
+    border: 2px solid black;
+    padding-left: 2px;
 }
 
-.index  {
+.index_block a{
+    margin-top: 3px;
+    margin-left: 3px;
+    float: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style-type: none;
-    text-indent: -30px;
+    width: 60px;
+    position: fixed;
 }
 
-.index_title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+p#sidebar {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    float: left;
+    display: block;
+    position: fixed;
+    border: 1px solid black;
+    width: 65px;
+    height: 180px;
+}
+
+nav#bar {
+    margin-top: 50px;
+}
+
+.index {
+    display: block;
+    text-align: left;
+    background-color: aliceblue;
+    text-decoration: none;
+    text-indent: 2px;
+}
+
+.top_bread{
+    text-indent: 12px;
+}
+
+.bottom_bread {
+    text-indent: 5px;
 }
 
 .week {
     color: dodgerblue;
 }
 
-#Fergus {
-    color: orangered;
-}
-
 #fergus_img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     clip-path: circle(49% at 50% 50%);
     border: 5px solid dodgerblue;
     border-shape: circle(49% at 50% 50%);
 }
 
-#frame  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 figcaption {
     text-align: center;
 }
@@ -70,5 +95,11 @@ figcaption {
 }
 
 p#copy {
+    display: block;
+    text-align: center;
     font-size: 60%;
+}
+
+#content {
+    margin-left: 80px;
 }

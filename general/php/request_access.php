@@ -18,7 +18,7 @@ for($i=1; $i < 10; $i++) {  //for every key
     $contents = $contents .= $desc[$i] .= $_POST[$key[$i]] .= "\n"; //append the descriptions and values
 }
 
-file_put_contents("../documents/requests/access/access_request_{$date}_{$time}.txt", $contents);    //write the log file and give it a unique file name
+file_put_contents("../resources/requests/access/access_request_{$date}_{$time}.txt", $contents);    //write the log file and give it a unique file name
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ file_put_contents("../documents/requests/access/access_request_{$date}_{$time}.t
     <meta http-equiv="author" content="Fergus Page" />
     <meta name="robots" content="noindex nofollow" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" href="../css/general_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/project/general_style.css" type="text/css">
 </head>
 
 <body>
