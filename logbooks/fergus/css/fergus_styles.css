@@ -24,18 +24,25 @@ ul {
     float: left;
     display: flex;
     width: 65px;
+    height:35px;
     position: fixed;
     border: 2px solid black;
     padding-left: 2px;
+    padding-bottom: 2px;
+    border-spacing: inherit;
+    background-color: aliceblue;
+    z-index: 100;
 }
 
 .index_block a{
-    margin-top: 3px;
+    margin-top: 5px;
     margin-left: 3px;
     float: left;
     display: flex;
     width: 60px;
     position: fixed;
+    border-spacing: inherit;
+    border-boundary: inherit;
 }
 
 p#sidebar {
