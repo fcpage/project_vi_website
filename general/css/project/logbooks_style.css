@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+
+#content {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

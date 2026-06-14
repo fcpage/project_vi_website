@@ -3,767 +3,837 @@
 
 	<head>
 		<title>Project VI - Project Plan</title>
+
 		<meta charset="UTF-8">
 		<meta name="description" content="This is the project plan page for our project" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="author" content="Fergus Page" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
-		<link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		      crossorigin="anonymous" rel="stylesheet">
+		<link href="../../../general/css/project/general_style.css" rel="stylesheet" type="text/css">
+		<link href="../../css/project/sidebar_style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="../../css/project/project_plan_style.css" type="text/css">
 	</head>
 
-	<!--[if lt IE 9]>
-	<script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
-	<![endif]-->
+	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 	
 	<body>
-		<a href="../../../index.html">Home</a><br/>
-		<h1>Project Plan</h1>
+		<div id="page" class="container">
+			<header>
+				<h1>Project Plan</h1>
+			</header>
 
-		<p>Discover the project requirements, our expected schedule, and our progress.</p>	<!-- general information about this page -->
-		<br/><hr/><br/>
+			<nav>
+				<div class="index_block">
+					<h4>Index</h4><br/>
+					<p id="sidebar">
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+						<b><a class="index top_up" href="#">Top</a></b><br/>
+						<a class="index" href="./about.html">About</a><br/>
+						<a class="index" href="./project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
+						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
+						<a class="index" href="../project/links.html">External Links</a><br/>
+						<a class="index" href="../demos/demos.html">Demos</a><br/>
+						<a class="index" href="../elevator/login.html">Login</a>
+					</p>
+				</div>
+			</nav>
 
-		<a href="documentation.html">Media and Documentation</a>
-		
-		<h2>Delivery Tracking</h2>	<!-- this is more or less how it happened -->
-		<ol>
-			<li>Week 1</li>
-			<ul>
-				<li>No class - just waiting for things </li>
-			</ul><br/>
+			<div id="content">
+				<article>
+					<section>
+						<p>Discover the project requirements, our expected schedule, and our progress.</p>	<!-- general information about this page -->
+					</section>
+					<br/><hr/><br/>
+				</article>
 
-			<li>Week 2</li>
-			<ul>
-				<li>Enjoy the long weekend</li>
-				<li>Get prepared in Software Engineering and Data Communications and Networking classes</li>
-			</ul><br/>
+				<article>
+					<h2>Delivery Tracking</h2>	<!-- this is more or less how it happened -->
+					<section>
+						<h6>Week 1</h6>
+							<ul>
+								<li>No class - just waiting for things </li>
+							</ul><br/>
+					</section>
 
-			<li>Week 3</li>
-			<ul>
-				<li>Receive instructions</li>
-			</ul><br/>
+					<section>
+						<h6>Week 2</h6>
+						<ul>
+							<li>Enjoy the long weekend</li>
+							<li>Get prepared in Software Engineering and Data Communications and Networking classes</li>
+						</ul><br/>
+					</section>
 
-			<li>Week 4</li>
-			<ul>
-				<li>Preparing node communications for CAN network</li>
-				<ul><li>Supervisory controller and Elevator motor controller</li></ul>
-			</ul><br/>
-		</ol>
-		
-		<br/><hr/><br/>
-		
-		<h2>Breakdown by Week</h2> <!-- this is our expected progress -->
-		<ol>
-			<li>Design CAN messaging protocol</li>
-			<li>Plan CAN node configuration</li>
-			<li>Develop fully-functioning CAN network</li>
-			<li>Complete test plan and compile results</li>
-			<li>Develop user interface (website) for remote control</li>
-			<li>Refine user interface (website) for remote control</li>
-			<li>Complete user interface (website) for remote control</li>
-			<li>Develop internet-based remote access system</li>
-			<li>Complete internet-based remote access system</li>
-			<li>Develop accessible (read / write) data repository</li>
-			<li>Complete accessible (read / write) data repository</li>
-			<li>Investigate and develop connectivity between IDN and internet</li>
-			<li>Complete fully-functioning CAN system</li>
-			<li>Oral presentation, final report, and video documentation</li>
-		</ol>
-		
-		<br/><hr/><br/>
-		
-		<h2>Gantt Chart</h2> <!-- not filled in yet but will be in week 5, as per project plan -->
-		<p>This is where we will be tracking our progress in achieving the requirements for this project.<br/></p>
-		
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th>Week 1</th>
-					<th>Week 2</th>
-					<th>Week 3</th>
-					<th>Week 4</th>
-					<th>Week 5</th>
-					<th>Week 6</th>
-					<th>Week 7</th>
-					<th>Week 8</th>
-					<th>Week 9</th>
-					<th>Week 10</th>
-					<th>Week 11</th>
-					<th>Week 12</th>
-					<th>Week 13</th>
-				</tr>
-			</thead>
+					<section>
+						<h6>Week 3</h6>
+						<ul>
+							<li>Receive instructions</li>
+						</ul><br/>
+					</section>
 
-			<tbody>
-			<tr>
-				<th class="phase">PHASE 1</th>
-				<td colspan="13" class="phase"></td>
-			</tr>
-			</tbody>
+					<section>
+						<h6>Week 4</h6>
+						<ul>
+							<li>Preparing node communications for CAN network</li>
+							<ul><li>Supervisory controller and Elevator motor controller</li></ul>
+						</ul><br/>
+					</section>
 
-			<tbody>
-			<tr>
-				<th class="task">1. Project Plan</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
-			
-			<tbody>
-				<tr>
-					<th class="job">Complete and submit a Project Plan</th>
-					<td class="all">ALL</td>
-					<td class="fill">2</td>
-					<td class="fill">3</td>
-					<td class="fill">4</td>
-					<td class="fill">5</td>
-					<td class="fill">6</td>
-					<td class="fill">7</td>
-					<td class="fill">8</td>
-					<td class="fill">9</td>
-					<td class="fill">10</td>
-					<td class="fill">11</td>
-					<td class="fill">12</td>
-					<td class="fill">13</td>
-			</tbody>
+					<section>
+						<h6>Week 5</h6>
+						<ul>
+							<li>Testing, troubleshooting, and repairing elevator hardware</li>
+							<li>Confirming CAN communications and verifying contorller software</li>
+						</ul><br/>
+					</section>
 
-			<tbody>
-			<tr>
-				<th class="task">2. Set up Raspberry Pi as Server and confirmed communication</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
-			
-			<tbody>
-				<tr>
-					<th class="job">Set up Raspberry Pi as a server</th>
-					<td class="fp">FP</td>
-					<td class="fill">2</td>
-					<td class="fill">3</td>
-					<td class="fill">4</td>
-					<td class="fill">5</td>
-					<td class="fill">6</td>
-					<td class="fill">7</td>
-					<td class="fill">8</td>
-					<td class="fill">9</td>
-					<td class="fill">10</td>
-					<td class="fill">11</td>
-					<td class="fill">12</td>
-					<td class="fill">13</td>
-				</tr>
-			</tbody>
-			
-			<tbody>
-				<tr>
-					<th class="job">Confirm communication between client computer and server (HTTP/SSH)</th>
-					<td class="fp">FP</td>
-					<td class="fill">2</td>
-					<td class="fill">3</td>
-					<td class="fill">4</td>
-					<td class="fill">5</td>
-					<td class="fill">6</td>
-					<td class="fill">7</td>
-					<td class="fill">8</td>
-					<td class="fill">9</td>
-					<td class="fill">10</td>
-					<td class="fill">11</td>
-					<td class="fill">12</td>
-					<td class="fill">13</td>
-				</tr>
-			</tbody>
+					<hr/><br/>
+				</article>
 
-			<tbody>
-			<tr>
-				<th class="task">3. STM32 Programming via HAL </th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
-			
-			<tbody>
-				<tr>
-					<th class="job">Explain common CAN messaging protocol  (see document)</th>
-					<td class="ns" colspan="2">NS</td>
-					<td class="fill">3</td>
-					<td class="fill">4</td>
-					<td class="fill">5</td>
-					<td class="fill">6</td>
-					<td class="fill">7</td>
-					<td class="fill">8</td>
-					<td class="fill">9</td>
-					<td class="fill">10</td>
-					<td class="fill">11</td>
-					<td class="fill">12</td>
-					<td class="fill">13</td>
-				</tr>
-			</tbody>
-			
-			<tbody>
-				<tr>
-					<th class="job">Implement the CAN messaging protocol by properly setting the filters (code demo) on STM32</th>
-					<td class="fill">1</td>
-					<td class="ns">NS</td>
-					<td class="fill">3</td>
-					<td class="fill">4</td>
-					<td class="fill">5</td>
-					<td class="fill">6</td>
-					<td class="fill">7</td>
-					<td class="fill">8</td>
-					<td class="fill">9</td>
-					<td class="fill">10</td>
-					<td class="fill">11</td>
-					<td class="fill">12</td>
-					<td class="fill">13</td>
-				</tr>
-			</tbody>
+				<article>
+					<section>
+						<h2>Breakdown by Week</h2> <!-- this is our expected progress -->
+						<ol>
+							<li>Design CAN messaging protocol</li>
+							<li>Plan CAN node configuration</li>
+							<li>Develop fully-functioning CAN network</li>
+							<li>Complete test plan and compile results</li>
+							<li>Develop user interface (website) for remote control</li>
+							<li>Refine user interface (website) for remote control</li>
+							<li>Complete user interface (website) for remote control</li>
+							<li>Develop internet-based remote access system</li>
+							<li>Complete internet-based remote access system</li>
+							<li>Develop accessible (read / write) data repository</li>
+							<li>Complete accessible (read / write) data repository</li>
+							<li>Investigate and develop connectivity between IDN and internet</li>
+							<li>Complete fully-functioning CAN system</li>
+							<li>Oral presentation, final report, and video documentation</li>
+						</ol><br/>
+					</section>
+					<hr/><br/>
+				</article>
 
-			<tbody>
-			<tr>
-				<th class="job">Able to read CAN messages placed on the CAN bus (Raspberry Pi) and detect up/down request, floor
-					request, door open/close, location of elevator car</th>
-				<td class="fill">1</td>
-				<td class="rp">RP</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+				<article>
+					<section>
+						<h2>Gantt Chart</h2> <!-- not filled in yet but will be in week 5, as per project plan -->
+						<p>This is where we will be tracking our progress in achieving the requirements for this project.<br/></p>
+					</section>
 
-			<tbody>
-			<tr>
-				<th class="job">Develop and implement a test plan to confirm functionality of software/hardware</th>
-				<td colspan="3" class="all">ALL</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+					<section>
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th>Week 1</th>
+									<th>Week 2</th>
+									<th>Week 3</th>
+									<th>Week 4</th>
+									<th>Week 5</th>
+									<th>Week 6</th>
+									<th>Week 7</th>
+									<th>Week 8</th>
+									<th>Week 9</th>
+									<th>Week 10</th>
+									<th>Week 11</th>
+									<th>Week 12</th>
+									<th>Week 13</th>
+								</tr>
+							</thead>
 
-			<tbody>
-			<tr>
-				<th class="task">3. Controls / indicators (virtual and buttons)</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="phase">PHASE 1</th>
+								<td colspan="13" class="phase"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Develop and implement a test plan to confirm functionality of software/hardware</th>
-				<td colspan="3" class="rp">RP</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">1. Project Plan</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Elevator Car Controls (up/down/floor number) built in HTML (possibly CSS if students work ahead)</th>
-				<td class="fprp" colspan="3">FP/RP</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+								<tr>
+									<th class="job">Complete and submit a Project Plan</th>
+									<td class="all">ALL</td>
+									<td class="fill">2</td>
+									<td class="fill">3</td>
+									<td class="fill">4</td>
+									<td class="fill">5</td>
+									<td class="fill">6</td>
+									<td class="fill">7</td>
+									<td class="fill">8</td>
+									<td class="fill">9</td>
+									<td class="fill">10</td>
+									<td class="fill">11</td>
+									<td class="fill">12</td>
+									<td class="fill">13</td>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">4. Finite State Machine (recommended)</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">2. Set up Raspberry Pi as Server and confirmed communication</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Develop Finite State Machine Logic for Elevator Operation</th>
-				<td colspan="3" class="rp">RP</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+								<tr>
+									<th class="job">Set up Raspberry Pi as a server</th>
+									<td class="fp">FP</td>
+									<td class="fill">2</td>
+									<td class="fill">3</td>
+									<td class="fill">4</td>
+									<td class="fill">5</td>
+									<td class="fill">6</td>
+									<td class="fill">7</td>
+									<td class="fill">8</td>
+									<td class="fill">9</td>
+									<td class="fill">10</td>
+									<td class="fill">11</td>
+									<td class="fill">12</td>
+									<td class="fill">13</td>
+								</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="phase">PHASE 2</th>
-				<td colspan="13" class="phase"></td>
-			</tr>
-			</tbody>
+							<tbody>
+								<tr>
+									<th class="job">Confirm communication between client computer and server (HTTP/SSH)</th>
+									<td class="fp">FP</td>
+									<td class="fill">2</td>
+									<td class="fill">3</td>
+									<td class="fill">4</td>
+									<td class="fill">5</td>
+									<td class="fill">6</td>
+									<td class="fill">7</td>
+									<td class="fill">8</td>
+									<td class="fill">9</td>
+									<td class="fill">10</td>
+									<td class="fill">11</td>
+									<td class="fill">12</td>
+									<td class="fill">13</td>
+								</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">1. User Interface / Client Program</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">3. STM32 Programming via HAL </th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Fully working and completed front end Graphical User Interface /Webpage to control elevator</th>
-				<td class="fill">1</td>
-				<td colspan="10" class="fp">FP</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+								<tr>
+									<th class="job">Explain common CAN messaging protocol  (see document)</th>
+									<td class="ns" colspan="2">NS</td>
+									<td class="fill">3</td>
+									<td class="fill">4</td>
+									<td class="fill">5</td>
+									<td class="fill">6</td>
+									<td class="fill">7</td>
+									<td class="fill">8</td>
+									<td class="fill">9</td>
+									<td class="fill">10</td>
+									<td class="fill">11</td>
+									<td class="fill">12</td>
+									<td class="fill">13</td>
+								</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">User action buttons/icons implemented</th>
-				<td class="fill">1</td>
-				<td class="fp">FP</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+								<tr>
+									<th class="job">Implement the CAN messaging protocol by properly setting the filters (code demo) on STM32</th>
+									<td class="fill">1</td>
+									<td class="ns">NS</td>
+									<td class="fill">3</td>
+									<td class="fill">4</td>
+									<td class="fill">5</td>
+									<td class="fill">6</td>
+									<td class="fill">7</td>
+									<td class="fill">8</td>
+									<td class="fill">9</td>
+									<td class="fill">10</td>
+									<td class="fill">11</td>
+									<td class="fill">12</td>
+									<td class="fill">13</td>
+								</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Indicators/lights etc. implemented</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td colspan="4" class="fprp">FP/RP</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Able to read CAN messages placed on the CAN bus (Raspberry Pi) and detect up/down request, floor
+									request, door open/close, location of elevator car</th>
+								<td class="fill">1</td>
+								<td class="rp">RP</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">User action buttons developed to make changes to UI that are reflected in the database</th>
-				<td class="fill">1</td>
-				<td colspan="4" class="fprp">FP/RP</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Develop and implement a test plan to confirm functionality of software/hardware</th>
+								<td colspan="3" class="all">ALL</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">User indicator buttons change - changes in database are reflected in UI</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td colspan="3" class="fprp">FP/RP</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">3. Controls / indicators (virtual and buttons)</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">2. Database Repository </th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Develop and implement a test plan to confirm functionality of software/hardware</th>
+								<td colspan="3" class="rp">RP</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Database set up and accepting values/commands from website</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td colspan="3" class="rp">RP</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Elevator Car Controls (up/down/floor number) built in HTML (possibly CSS if students work ahead)</th>
+								<td class="fprp" colspan="3">FP/RP</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Database has fields for logging information placed on the CAN bus</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td colspan="3" class="rp">RP</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">4. Finite State Machine (recommended)</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">3. Diagnostic Reports </th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Develop Finite State Machine Logic for Elevator Operation</th>
+								<td colspan="3" class="rp">RP</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Produced based on content in database </th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td colspan="7" class="rpns">RP/NS</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="phase">PHASE 2</th>
+								<td colspan="13" class="phase"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Displayed on webpage</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td colspan="8" class="ns">NS</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">1. User Interface / Client Program</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">4. Server Program</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Fully working and completed front end Graphical User Interface /Webpage to control elevator</th>
+								<td class="fill">1</td>
+								<td colspan="10" class="fp">FP</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Users are authorized/authenticated based on username/password  </th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td colspan="6" class="fp">FP</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">User action buttons/icons implemented</th>
+								<td class="fill">1</td>
+								<td class="fp">FP</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Server program provides logging data/accepts commands only from authorized users</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td colspan="5" class="fp">FP</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Indicators/lights etc. implemented</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td colspan="4" class="fprp">FP/RP</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">5. Announce floor numbers (Function of the Client or Server Program) for users with Visual Impairments</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">User action buttons developed to make changes to UI that are reflected in the database</th>
+								<td class="fill">1</td>
+								<td colspan="4" class="fprp">FP/RP</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Implement a Server Program for announcing the floor numbers</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td colspan="4" class="ns">NS</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">User indicator buttons change - changes in database are reflected in UI</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td colspan="3" class="fprp">FP/RP</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Speaker on elevator used to announce the current/next floor (speaker already connected to system)</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td colspan="4" class="ns">NS</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">2. Database Repository </th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">6. Sabbath mode (Function of the Client Program)</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Database set up and accepting values/commands from website</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td colspan="3" class="rp">RP</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Users may operate the elevator without having to push buttons (e.g. verbally, based on schedule/time) </th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td colspan="4" class="rp">RP</td>
-				<td class="fill">11</td>
-				<td class="fill">12</td>
-				<td class="fill">13</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Database has fields for logging information placed on the CAN bus</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td colspan="3" class="rp">RP</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="phase">PHASE 3</th>
-				<td colspan="13" class="phase"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">3. Diagnostic Reports </th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">1. CAN/LAN network communication</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Produced based on content in database </th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td colspan="7" class="rpns">RP/NS</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Research and Implement a CAN/LAN communication bridge</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="rpns">RP/NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Displayed on webpage</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td colspan="8" class="ns">NS</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Ensure activity in CAN network changes values in database</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="rpns">RP/NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">4. Server Program</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Changes in User Interface/Website changes value in database and generate CAN messages</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="fprp">FP/RP</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Users are authorized/authenticated based on username/password  </th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td colspan="6" class="fp">FP</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">CAN Messages result in changes to database and GUI/Indicators</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="all">ALL</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Server program provides logging data/accepts commands only from authorized users</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td colspan="5" class="fp">FP</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Commands from CAN/LAN networks are sent to the controller and move the elevator / indicate floor number</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="all">ALL</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">5. Announce floor numbers (Function of the Client or Server Program) for users with Visual Impairments</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">2. Controller Software Written</th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Implement a Server Program for announcing the floor numbers</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td colspan="4" class="ns">NS</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">CAN Supervisor (Raspberry Pi) relays messages between CAN/LAN Network (see sample program on Rpi)</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td class="fill">3</td>
-				<td class="fill">4</td>
-				<td class="fill">5</td>
-				<td class="fill">6</td>
-				<td class="fill">7</td>
-				<td class="fill">8</td>
-				<td class="fill">9</td>
-				<td class="fill">10</td>
-				<td class="fill">11</td>
-				<td colspan="2" class="rpns">RP/NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Speaker on elevator used to announce the current/next floor (speaker already connected to system)</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td colspan="4" class="ns">NS</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">3. Finite State Machine logic written </th>
-				<td colspan="13" class="task"></td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">6. Sabbath mode (Function of the Client Program)</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="job">Develop and Implement a finite state machine (using C/C+, PHP, Python to implement logic)</th>
-				<td class="fill">1</td>
-				<td class="fill">2</td>
-				<td colspan="11" class="ns">NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Users may operate the elevator without having to push buttons (e.g. verbally, based on schedule/time) </th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td colspan="4" class="rp">RP</td>
+								<td class="fill">11</td>
+								<td class="fill">12</td>
+								<td class="fill">13</td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">4. Additional capability that shows ingenuity</th>
-				<td colspan="8" class="task"></td>
-				<td colspan="5" class="ns">NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="phase">PHASE 3</th>
+								<td colspan="13" class="phase"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">5. Ideas for Capstone (at least 3 per student)</th>
-				<td colspan="2" class="task"></td>
-				<td colspan="11" class="all">ALL</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="task">1. CAN/LAN network communication</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
 
-			<tbody>
-			<tr>
-				<th class="task">6. Final Presentation & Demonstration</th>
-				<td colspan="9" class="task"></td>
-				<td colspan="4" class="ns">NS</td>
-			</tr>
-			</tbody>
+							<tbody>
+							<tr>
+								<th class="job">Research and Implement a CAN/LAN communication bridge</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="rpns">RP/NS</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">Ensure activity in CAN network changes values in database</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="rpns">RP/NS</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">Changes in User Interface/Website changes value in database and generate CAN messages</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="fprp">FP/RP</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">CAN Messages result in changes to database and GUI/Indicators</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="all">ALL</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">Commands from CAN/LAN networks are sent to the controller and move the elevator / indicate floor number</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="all">ALL</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="task">2. Controller Software Written</th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">CAN Supervisor (Raspberry Pi) relays messages between CAN/LAN Network (see sample program on Rpi)</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td class="fill">3</td>
+								<td class="fill">4</td>
+								<td class="fill">5</td>
+								<td class="fill">6</td>
+								<td class="fill">7</td>
+								<td class="fill">8</td>
+								<td class="fill">9</td>
+								<td class="fill">10</td>
+								<td class="fill">11</td>
+								<td colspan="2" class="rpns">RP/NS</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="task">3. Finite State Machine logic written </th>
+								<td colspan="13" class="task"></td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="job">Develop and Implement a finite state machine (using C/C+, PHP, Python to implement logic)</th>
+								<td class="fill">1</td>
+								<td class="fill">2</td>
+								<td colspan="11" class="ns">NS</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="task">4. Additional capability that shows ingenuity</th>
+								<td colspan="8" class="task"></td>
+								<td colspan="5" class="ns">NS</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="task">5. Ideas for Capstone (at least 3 per student)</th>
+								<td colspan="2" class="task"></td>
+								<td colspan="11" class="all">ALL</td>
+							</tr>
+							</tbody>
+
+							<tbody>
+							<tr>
+								<th class="task">6. Final Presentation & Demonstration</th>
+								<td colspan="9" class="task"></td>
+								<td colspan="4" class="ns">NS</td>
+							</tr>
+							</tbody>
 
 
-			<tfoot>
-				<th>Legend:</th>
-				<th class="fp" colspan="3">FP = Fergus Page</th>
-				<th class="rp" colspan="3">RP = Ryan Pratt</th>
-				<th class="ns" colspan="3">NS = Nigel Sinclair</th>
-				<th class="fprp">FP/RP</th>
-				<th class="rpns">RP/NS</th>
-				<th class="nsfp">NS/FP</th>
-				<th class="all" colspan="1">ALL</th>
-			</tfoot>
-		</table><br/>
-		<p>Downloadable version: <a href="../../resources/references/docs/Project_Plan.pdf">Project Plan (Gantt Chart)</a></p></br> <!-- link to the completed project plan/gantt chart -->
-		<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+							<tfoot>
+								<th>Legend:</th>
+								<th class="fp" colspan="3">FP = Fergus Page</th>
+								<th class="rp" colspan="3">RP = Ryan Pratt</th>
+								<th class="ns" colspan="3">NS = Nigel Sinclair</th>
+								<th class="fprp">FP/RP</th>
+								<th class="rpns">RP/NS</th>
+								<th class="nsfp">NS/FP</th>
+								<th class="all" colspan="1">ALL</th>
+							</tfoot>
+						</table><br/>
+					</section>
+					<section>
+						<p>Downloadable version: <a href="../../resources/references/docs/Project_Plan.pdf">Project Plan (Gantt Chart)</a></p> <!-- link to the completed project plan/gantt chart -->
+					</section>
+				</article>
+
+				<article>
+					<section>
+						<p>Check out our project's <a href="documentation.html">Media and Documentation</a> page to learn more.</p>
+					</section>
+				</article>
+			</div>
+
+			<footer>
+				<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+			</footer>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		        crossorigin="anonymous"></script>
 	</body>
 </html>
 	

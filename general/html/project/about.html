@@ -2,39 +2,111 @@
 <html lang="en">
 	<head>
 		<title>Project VI - About</title>
+
 		<meta charset="UTF-8">
 		<meta name="description" content="This is the about page for our project" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="author" content="Fergus Page" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
-		<link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
+
+		<link rel="stylesheet" href="../../resources/map/leaflet.css"/>
+		<script src="../../resources/map/leaflet.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		      crossorigin="anonymous" rel="stylesheet">
+		<link href="../../../general/css/project/general_style.css" rel="stylesheet" type="text/css">
+		<link href="../../css/project/sidebar_style.css" rel="stylesheet" type="text/css">
+		<link href="../../css/project/about_style.css" rel="stylesheet" type="text/css">
 	</head>
 
-	<!--[if lt IE 9]>
-	<script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script>
-	<![endif]-->
+	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 
 	<body>
-		<a href="../../../index.html">Home</a><br/>
-		<h1>Project VI - About</h1>
+		<div id="page" class="container">
+			<header>
+				<h1>Project VI - About</h1>
+			</header>
 
-		<p>Welcome to the <i>about</i> page for <b>Project VI</b>.<br/>	<!-- some chit-chat -->
-		This is where we will provide an overview of our project.
-		In this project, we will design an elevator... <br/> We are
-		<em>really</em> excited that you are here to witness <strong>history
-		in the making</strong>! <br/> This will be the greatest undertaking since Einstein discovering that E=mc<sup>2</sup>.</p><hr/>
+			<nav>
+				<div class="index_block">
+					<h4>Index</h4><br/>
+					<p id="sidebar">
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+						<b><a class="index top_up" href="#">Top</a></b><br/>
+						<a class="index" href="./about.html">About</a><br/>
+						<a class="index" href="./project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
+						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
+						<a class="index" href="../project/links.html">External Links</a><br/>
+						<a class="index" href="../demos/demos.html">Demos</a><br/>
+						<a class="index" href="../elevator/login.html">Login</a>
+					</p>
+				</div>
+			</nav>
 
-		<h2>Our Team</h2>
+			<div id="content">
+				<article>
+					<section>
+						<p>Welcome to the <i>about</i> page for <b>Project VI</b>.<br/>	<!-- some chit-chat -->
+						This is where we will provide an overview of our project.
+						In this project, we will design an elevator...<br/>
+						We are <em>really</em> excited that you are here to witness <strong>history in the making</strong>!<br/>
+						This will be the greatest undertaking since Einstein discovering that E=mc<sup>2</sup>.</p><hr/>
+					</section>
 
-		<figure><!-- group photo -->
-			<img src="../../resources/references/imgs/general/stooges.png" alt="The Team" title="The Team" width="400">
-			<figcaption><b>The Dream Team: </b>Team work makes the dream work.</figcaption>
-		</figure>
+					<section>
+						<h2>Our Team</h2>
+					</section>
 
-		<p><b>Fergus Page</b><br/>An awesome web developer who will build the front-end interface.</p>	<!-- this is who we are and our general roles -->
-		<p><b>Nigel Sinclair</b><br/>An awesome embedded developer who will build the controller network program.</p>
-		<p><b>Ryan Pratt</b><br/>Awesome at protocol development for CAN networks, who will build the supervisory control system.</p>
-		<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+					<figure><!-- group photo -->
+						<img id="team" src="../../resources/references/imgs/general/stooges.png" alt="The Team" title="The Team" width="400">
+						<figcaption><b>The Dream Team: </b>Team work makes the dream work.</figcaption>
+					</figure><br/>
+
+					<section>
+						<p><b>Fergus Page</b><br/>An awesome web developer who will build the front-end interface.</p>	<!-- this is who we are and our general roles -->
+						<p><b>Nigel Sinclair</b><br/>An awesome embedded developer who will build the controller network program.</p>
+						<p><b>Ryan Pratt</b><br/>An awesome systems developer who will build the supervisory control system.</p>
+					</section>
+				</article><br/>
+
+				<article>
+					<section>
+						<h2>Elevator Location:</h2>
+					</section>
+
+				<div id="map">
+					<script >
+						var map = L.map('map').setView([43.3871, -80.3968], 15);
+
+						L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+							maxZoom: 19,
+							attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+						}).addTo(map);
+
+						var marker = L.marker([43.387122243769944, -80.39682084792196]).addTo(map);
+						
+						marker.bindPopup("<b>Conestoga College</b><br>850 Fountain St S<br/>Cambridge, ON").openPopup();
+					</script>
+				</div><br/>
+
+				</article>
+
+				<aside>
+					<p>Map display copyright &copy 2010-2026 Volodymyr Agafonkin at <a href="https://leafletjs.com/">leafletjs.com</a></br>
+						Maps copyright &copy OpenStreetMap contributors at <a href="https://www.openstreetmap.org/">openstreetmap.org</a></p>
+				</aside>
+
+				<footer>
+					<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+				</footer>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		        crossorigin="anonymous"></script>
 	</body>
 </html>
 	

@@ -1,79 +1,38 @@
-body {
-    background: aliceblue;
-}
-
 h1 {
-    text-align: center;
+    font-size: 30px;
+    color: black;
 }
 
 h2 {
-    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
+h3 {
+    font-size: 25px;
 }
 
 h6 {
-    color: #1ad671;
+    color: forestgreen;
 }
 
-ul {
-    color: black;
-    background-color: aliceblue;
-    font-family:  serif, Arial, helvetica;, "Times New Roman";
+a {
+    color: dodgerblue;
 }
 
-.index_block h4{
-    float: left;
-    display: flex;
-    width: 65px;
-    height:35px;
-    position: fixed;
-    border: 2px solid black;
-    padding-left: 2px;
-    padding-bottom: 2px;
-    border-spacing: inherit;
-    background-color: aliceblue;
-    z-index: 100;
-}
-
-.index_block a{
-    margin-top: 5px;
-    margin-left: 3px;
-    float: left;
-    display: flex;
-    width: 60px;
-    position: fixed;
-    border-spacing: inherit;
-    border-boundary: inherit;
-}
-
-p#sidebar {
-    margin-top: 5px;
-    margin-bottom: 30px;
-    float: left;
+article {
     display: block;
-    position: fixed;
-    border: 1px solid black;
-    width: 65px;
-    height: 180px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-nav#bar {
-    margin-top: 50px;
-}
-
-.index {
+section {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     text-align: left;
-    background-color: aliceblue;
-    text-decoration: none;
-    text-indent: 2px;
-}
-
-.top_bread{
-    text-indent: 12px;
-}
-
-.bottom_bread {
-    text-indent: 5px;
 }
 
 .week {
@@ -89,22 +48,32 @@ nav#bar {
     border-shape: circle(49% at 50% 50%);
 }
 
-figcaption {
-    text-align: center;
-}
-
 #questions{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-direction: column;
     text-align: center;
 }
 
-p#copy {
-    display: block;
-    text-align: center;
-    font-size: 60%;
+.index_block h4{
+    color: black;
+    width: 67px;
+    height:35px;
+}
+
+.index_block a{
+    color: dodgerblue;
+    width: 60px;
+}
+
+nav#bar {
+    margin-top: 125px;
+}
+
+p#sidebar {
+    width: 67px;
+    height: 180px;
 }
 
 #content {

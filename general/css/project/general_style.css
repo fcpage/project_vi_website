@@ -6,7 +6,9 @@ body {
 }
 
 header {
-
+    display: block;
+    justify-self: center;
+    align-self: center;
 }
 
 nav {
@@ -14,11 +16,26 @@ nav {
 }
 
 article {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: left;
 }
 
 aside {
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 70%;
 }
 
 footer {
@@ -44,6 +61,10 @@ h3 {
     color: forestgreen;
 }
 
+ul {
+    color: black;
+}
+
 figure {
     display: block;
 }
@@ -63,15 +84,15 @@ a:link {
 }
 
 a:visited {
-    color: #FF5F00;
+    color: #DE443F;
 }
 
 a:hover {
     color: #E9B308;
 }
 
-p#copy, a#top {
+p#copy{
     display: block;
     text-align: center;
-    font-size: 60%;
+    font-size: 10px;
 }

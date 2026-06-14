@@ -1,0 +1,19 @@
+img#team {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+div#map {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: 400px;
+    width: 80%;
+}
+
+h2{
+    color: black;
+    text-align: left;
+
+}
