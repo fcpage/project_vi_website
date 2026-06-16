@@ -2,6 +2,7 @@ img#team {
     display: flex;
     align-self: center;
     justify-self: center;
+    border-radius: 10px;
 }
 
 div#map {
@@ -10,10 +11,10 @@ div#map {
     justify-self: center;
     height: 400px;
     width: 80%;
+    border-radius: 10px;
 }
 
 h2{
     color: black;
     text-align: left;
-
 }
