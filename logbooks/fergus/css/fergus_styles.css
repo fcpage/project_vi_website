@@ -1,4 +1,5 @@
 h1 {
+    margin-left: 0;
     font-size: 30px;
     color: black;
 }
@@ -48,34 +49,6 @@ section {
     border-shape: circle(49% at 50% 50%);
 }
 
-#questions{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+footer {
     text-align: center;
-}
-
-.index_block h4{
-    color: black;
-    width: 67px;
-    height:35px;
-}
-
-.index_block a{
-    color: dodgerblue;
-    width: 60px;
-}
-
-nav#bar {
-    margin-top: 125px;
-}
-
-p#sidebar {
-    width: 67px;
-    height: 180px;
-}
-
-#content {
-    margin-left: 80px;
 }

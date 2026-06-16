@@ -1,0 +1,3 @@
+This file was transferred from the RPi server over SSH to another Ubuntu terminal on the same home network.
+
+This proves that there is communication between the server and another terminal.
