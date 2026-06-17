@@ -18,3 +18,13 @@ h2{
     color: black;
     text-align: left;
 }
+
+
+
+#content {
+    margin-left: 133px;
+}
+
+p#sidebar {
+    height: 255px;
+}

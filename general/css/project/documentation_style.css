@@ -54,3 +54,7 @@ legend.inner {
     width: 100%;
     text-align: center;
 }
+
+p#sidebar {
+    height: 215px;
+}

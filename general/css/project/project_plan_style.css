@@ -81,3 +81,7 @@ td:hover {
 .fill {
     text-align: center;
 }
+
+p#sidebar {
+    height: 255px;
+}

@@ -55,7 +55,7 @@
 			</div>
 
 			<aside>
-				<p>Site loaded on <?php echo date("l, F d, Y "); ?> at <?php echo date("G:i:s A - T"); ?></p>
+				<p>Site loaded on <?php echo date("l, F d, Y "); ?> at <?php echo date("g:i:s A - T"); ?></p>
 			</aside>
 
 			<footer>

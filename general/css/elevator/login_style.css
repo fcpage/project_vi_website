@@ -16,8 +16,12 @@ div {
     width: 274px;
 }
 
-#li {
-    margin-left: 45px;
+div#log {
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #user {
@@ -36,6 +40,33 @@ div {
     text-indent: 5px;
 }
 
-p#copy {
-    font-size: 60%;
+.ra {
+    display: inline-block;
+    text-decoration: none;
+    width: 300px;
+    height: 75px;
+    background-image: url("../../resources/references/imgs/access/AccessButtonY.png");
+    background-size: cover;
+    border-radius: 37px;
+    clip-path: border-box;
+}
+
+.ra:hover {
+    background-image: url("../../resources/references/imgs/access/AccessButtonB.png");
+    width: 300px;
+
+}
+
+.ra:active {
+    transition-delay: 2s;
+    background-image: url("../../resources/references/imgs/access/AccessButtonG.png");
+    width: 300px;
+}
+
+#content {
+    margin-left: 150px;
+}
+
+fieldset {
+    width: 320px;
 }
