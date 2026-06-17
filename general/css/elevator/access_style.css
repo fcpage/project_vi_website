@@ -162,6 +162,6 @@ textarea#details {
     text-indent: 5px;
 }
 
-p#copy {
-    font-size: 60%;
+p#sidebar {
+    height: 275px;
 }

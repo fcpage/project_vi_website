@@ -52,3 +52,34 @@ section {
 footer {
     text-align: center;
 }
+
+div#bar1 {
+    display: block;
+    border: 2px solid black;
+    width: 133px;
+    height: 310px;
+    margin-bottom: 0;
+}
+
+div#bar2 {
+    display: block;
+    border: 2px solid black;
+    width: 133px;
+    height: 200px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+div#sidebars {
+    float: left;
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 120px;
+    height: 275px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    background-color: aliceblue;
+    z-index: 70;
+}
+

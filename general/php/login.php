@@ -10,5 +10,5 @@ while(!feof($file) && !$result) {   //while not at the end of the login credenti
 }
 
 fclose($file);
-$result ? header("Location: ../html/.gui.html") : header("Location: ../html/lockout.html"); //close the login list and redirect to end page
+$result ? header("Location: ../html/elevator/.gui.html") : header("Location: ../html/elevator/lockout.html"); //close the login list and redirect to end page
 //closing php tag is redundant apparently?

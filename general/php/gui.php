@@ -23,6 +23,10 @@
         $dir_button = ($_POST["dir_button"] ?? 0); //get input from floor buttons or default to car operation
         ($call  > $last) ? ($dir = "UP") : (($call < $last ) ? ($dir = "DOWN") : ($dir = "HOLD")); //figure out the car's direction of travel
 
+        ($call == 3) ? ($floor3 = "../resources/references/imgs/gui/3lit.png") : ($floor3 = "../resources/references/imgs/3unlit.png"); //show call to 3rd? - car control
+        ($call == 2) ? ($floor2 = "../resources/references/imgs/gui/2lit.png") : ($floor2 = "../resources/references/imgs/2unlit.png"); //show call to 2nd? - car control
+        ($call == 1) ? ($floor1 = "../resources/references/imgs/gui/1lit.png") : ($floor1 = "../resources/references/imgs/gui/1unlit.png"); //show call to 1st? - car control
+        
         (($dir_button == 1) && ($last == 3)) ?? (($call = 3) && ($dir = "HOLD"));   //going up from third goes nowhere, hold
         (($dir_button == 1) && ($last == 2)) ?? (($call = 3) && ($dir = "UP"));     //going up from second goes to third
         (($dir_button == 1) && ($last == 1)) ?? (($call = 2) && ($dir = "UP"));     //going up from first goes to second
@@ -30,11 +34,9 @@
         (($dir_button == 2) && ($last == 2)) ?? (($call = 1) && ($dir = "DOWN"));   //going down from second goes to first
         (($dir_button == 2) && ($last == 1)) ?? (($call = 1) && ($dir = "HOLD"));   //going down from first goes nowhere, hold
 
-        ($call == 3) ? ($floor3 = "../images/gui/3lit.png") : ($floor3 = "../images/gui/3unlit.png"); //show call to 3rd? - car control
-        ($call == 2) ? ($floor2 = "../images/gui/2lit.png") : ($floor2 = "../images/gui/2unlit.png"); //show call to 2nd? - car control
-        ($call == 1) ? ($floor1 = "../images/gui/1lit.png") : ($floor1 = "../images/gui/1unlit.png"); //show call to 1st? - car control
-        ($dir === "UP") ? ($up_ind = "../images/gui/uplit.png") : ($up_ind = "../images/gui/upunlit.png"); //show upward-going call - floor control
-        ($dir === "DOWN") ? ($down_ind = "../images/gui/downlit.png") : ($down_ind = "../images/gui/downunlit.png"); //show downward-going call - floor control($dir === "HOLD") ?? (($up_ind = "../images/gui/upunlit.png") && ($down_ind = "../images/gui/downunlit.png")); //stop the car at the floor it was called up to
+
+        ($dir === "UP") ? ($up_ind = "../resources/references/imgs/gui/uplit.png") : ($up_ind = "../resources/references/imgs/gui/upunlit.png"); //show upward-going call - floor control
+        ($dir === "DOWN") ? ($down_ind = "../resources/references/imgs/gui/downlit.png") : ($down_ind = "../resources/references/imgs/gui/downunlit.png"); //show downward-going call - floor control($dir === "HOLD") ?? (($up_ind = "../images/gui/upunlit.png") && ($down_ind = "../images/gui/downunlit.png")); //stop the car at the floor it was called up to
         ?>
 
         <form method="post" id="buttons" target="_self" onclick="buttons.submit()" onsubmit="button.submit()">  <!-- Post a self-targeting form to take new input and generate last call -->
