@@ -83,3 +83,6 @@ div#sidebars {
     z-index: 70;
 }
 
+#content {
+    margin-left: 133px;
+}

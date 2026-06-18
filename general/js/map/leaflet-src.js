@@ -206,7 +206,7 @@
 
   // @property emptyImageUrl: String
   // Data URI string containing a base64-encoded empty GIF image.
-  // Used as a hack to free memory from unused images on WebKit-powered
+  // Used as a hack to free memory from unused map on WebKit-powered
   // mobile devices (by setting image `src` to this string).
   var emptyImageUrl = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
@@ -7372,7 +7372,7 @@
   	 * as iconAnchor if not specified).
   	 *
   	 * @option className: String = ''
-  	 * A custom class name to assign to both icon and shadow images. Empty by default.
+  	 * A custom class name to assign to both icon and shadow map. Empty by default.
   	 */
 
   	options: {
@@ -7502,7 +7502,7 @@
 
   		// @option imagePath: String
   		// `Icon.Default` will try to auto-detect the location of the
-  		// blue icon images. If you are placing these images in a non-standard
+  		// blue icon map. If you are placing these map in a non-standard
   		// way, set this option to point to the right path.
   		return (this.options.imagePath || IconDefault.imagePath) + Icon.prototype._getIconUrl.call(this, name);
   	},
@@ -7727,7 +7727,7 @@
   		alt: 'Marker',
 
   		// @option zIndexOffset: Number = 0
-  		// By default, marker images zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like `1000` (or high negative value, respectively).
+  		// By default, marker map zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like `1000` (or high negative value, respectively).
   		zIndexOffset: 0,
 
   		// @option opacity: Number = 1.0
@@ -10062,7 +10062,7 @@
   		var bottom = this._containerBottom = -offset.y,
   		    left = this._containerLeft = -Math.round(this._containerWidth / 2) + offset.x;
 
-  		// bottom position the overlay in case the height of the overlay changes (images loading etc)
+  		// bottom position the overlay in case the height of the overlay changes (map loading etc)
   		this._container.style.bottom = bottom + 'px';
   		this._container.style.left = left + 'px';
   	},
@@ -12349,7 +12349,7 @@
   		format: 'image/jpeg',
 
   		// @option transparent: Boolean = false
-  		// If `true`, the WMS service will return images with transparency.
+  		// If `true`, the WMS service will return map with transparency.
   		transparent: false,
 
   		// @option version: String = '1.1.1'
