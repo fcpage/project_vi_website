@@ -4,7 +4,7 @@
 <html lang="en">
 
 	<head>
-        <title>Project VI - Directory</title>
+        <title>Extra Safe Elevator</title>
 
 		<meta charset="UTF-8">
 		<meta name="description" content="This is the index, directory, and landing page for our project" />
@@ -26,10 +26,10 @@
 		<div id="page" class="container">
 
 			<header class="clearfix">
-				<h1>Project VI - Elevator</h1>
+				<h1>Extra Safe Elevator</h1>
 				<h2 id="subtitle"><em>Website Under Construction</em></h2>
-				<figure><img id="caution" src="general/resources/references/imgs/general/CAUTION_ALIVE.jpg"
-							 alt="CAUTION ALIVE" title="CAUTION ALIVE" width="200"/><br/>
+				<figure><img id="logo" src="general/resources/references/imgs/general/ESE_Glow_Thumbnail_Square.png"
+							 alt="ESE Logo" title="ESE Logo" width="400"/><br/>
 					<figcaption><b>Live Website Development:</b><br/>We're working on it.</figcaption>
 				</figure>
 			</header>

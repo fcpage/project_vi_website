@@ -1,0 +1,19 @@
+img#lock {
+    display: block;
+    justify-self: center;
+    height: 400px;
+    width: 400px;
+    clip-path: circle(49.9% at 50% 50%);
+}
+
+#content {
+    width: 80%;
+    margin-left: 133px;
+    justify-content: center;
+    text-align: center;
+}
+
+footer, p {
+    text-align: center;
+    margin-left: 0;
+}

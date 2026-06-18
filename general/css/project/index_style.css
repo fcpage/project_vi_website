@@ -22,11 +22,12 @@ h3      {
         font-size: 80%;
 }
 
-img#caution {
+img#logo {
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        height: 200px;
+        height: 400px;
+        width: 400px;
         clip-path: circle(49.9% at 50% 50%);
 }
 
