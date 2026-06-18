@@ -24,7 +24,7 @@
 	<body>
 		<div id="page" class="container">
 			<header>
-				<h1 id="#">Project VI - About</h1>
+				<h1 id="#">About</h1>
 			</header>
 
 			<nav>
@@ -47,49 +47,54 @@
 			<div id="content">
 				<article>
 					<section>
-						<p>Welcome to the <i>about</i> page for <b>Project VI</b>.<br/>	<!-- some chit-chat -->
-						This is where we will provide an overview of our project.
-						In this project, we will design an elevator...<br/>
-						We are <em>really</em> excited that you are here to witness <strong>history in the making</strong>!<br/>
-						This will be the greatest undertaking since Einstein discovering that E=mc<sup>2</sup>.</p><hr/>
+						<fieldset>
+							<p>Welcome to the <i>about</i> page for <b>Project VI</b>.<br/>	<!-- some chit-chat -->
+							This is where we will provide an overview of our project.
+							In this project, we will design an elevator...<br/>
+							We are <em>really</em> excited that you are here to witness <strong>history in the making</strong>!<br/>
+							This will be the greatest undertaking since Einstein discovering that E=mc<sup>2</sup>.</p>
+						</fieldset>
+					</section><br/>
+
+					<section>
+						<fieldset>
+							<legend>Our Team</legend>
+
+							<figure><!-- group photo -->
+								<img id="team" src="../../resources/references/imgs/general/stooges.png" alt="The Team" title="The Team" width="400">
+								<figcaption><b>The Dream Team: <br/></b>Where there's smoke, there's fire... <br/>Is that MCU supposed to be smoking?</figcaption>
+							</figure>
+						</fieldset><br/>
 					</section>
 
 					<section>
-						<h2>Our Team</h2>
-					</section>
-
-					<figure><!-- group photo -->
-						<img id="team" src="../../resources/references/imgs/general/stooges.png" alt="The Team" title="The Team" width="400">
-						<figcaption><b>The Dream Team: </b>Team work makes the dream work.</figcaption>
-					</figure><br/>
-
-					<section>
-						<p><b>Fergus Page</b><br/>An awesome web developer who will build the front-end interface.</p>	<!-- this is who we are and our general roles -->
-						<p><b>Nigel Sinclair</b><br/>An awesome embedded developer who will build the controller network program.</p>
-						<p><b>Ryan Pratt</b><br/>An awesome systems developer who will build the supervisory control system.</p>
+						<fieldset>
+							<p><b>Fergus Page</b><br/>An awesome web developer who will build the front-end interface.</p>	<!-- this is who we are and our general roles -->
+							<p><b>Nigel Sinclair</b><br/>An awesome embedded developer who will build the controller network program.</p>
+							<p><b>Ryan Pratt</b><br/>An awesome systems developer who will build the supervisory control system.</p>
+						</fieldset>
 					</section>
 				</article><br/>
 
 				<article>
 					<section>
-						<h2>Elevator Location:</h2>
+						<fieldset>
+							<legend>Elevator Location</legend>
+
+							<div id="map"><script>
+							var map = L.map('map').setView([43.3871, -80.3968], 15);
+
+							L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+								maxZoom: 19,
+								attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+							}).addTo(map);
+
+							var marker = L.marker([43.387122243769944, -80.39682084792196]).addTo(map);
+
+							marker.bindPopup("<b>Conestoga College</b><br>850 Fountain St S<br/>Cambridge, ON").openPopup();
+							</script></div><br/>
+						</fieldset>
 					</section>
-
-				<div id="map">
-					<script >
-						var map = L.map('map').setView([43.3871, -80.3968], 15);
-
-						L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-							maxZoom: 19,
-							attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-						}).addTo(map);
-
-						var marker = L.marker([43.387122243769944, -80.39682084792196]).addTo(map);
-						
-						marker.bindPopup("<b>Conestoga College</b><br>850 Fountain St S<br/>Cambridge, ON").openPopup();
-					</script>
-				</div><br/>
-
 				</article>
 
 				<aside>
@@ -98,7 +103,7 @@
 				</aside>
 
 				<footer>
-					<p id="copy" >Copyright &copy 2026Fergus Page</p>
+					<p id="copy" >Copyright &copy 2026 Fergus Page</p>
 				</footer>
 			</div>
 		</div>

@@ -5,56 +5,6 @@ h2 {
     margin-left: 5%;
 }
 
-fieldset.outer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    font-weight: bold;
-    background-color: rgb(128 128 128 / 0.25);
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 80%;
-    padding: 10px;
-}
-
-fieldset.inner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    font-weight: bold;
-    background-color: rgb(233 179 8 / 0.68);
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 100%;
-    padding: 10px;
-}
-
-legend.outer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
-    border-radius: 5px;
-    color: black;
-    background-color: rgb(0 255 190);
-    width: 100%;
-    text-align: center;
-}
-
-legend.inner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
-    border-radius: 5px;
-    color: black;
-    background-color: rgb(255 0 0 / 0.71);
-    width: 100%;
-    text-align: center;
-}
-
 p#sidebar {
     height: 215px;
 }

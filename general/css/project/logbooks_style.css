@@ -9,3 +9,7 @@ ul {
 p#sidebar {
     height: 255px;
 }
+
+#content {
+    margin-left: 133px;
+}

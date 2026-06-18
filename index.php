@@ -29,25 +29,27 @@
 				<h1>Project VI - Elevator</h1>
 				<h2 id="subtitle"><em>Website Under Construction</em></h2>
 				<figure><img id="caution" src="general/resources/references/imgs/general/CAUTION_ALIVE.jpg"
-							 alt="CAUTION ALIVE" title="CAUTION ALIVE" width="200"/></br>
+							 alt="CAUTION ALIVE" title="CAUTION ALIVE" width="200"/><br/>
 					<figcaption><b>Live Website Development:</b><br/>We're working on it.</figcaption>
 				</figure>
 			</header>
 
 			<nav>
-				<h3><b>Directory</b></h3>
-				<ul>
-					<li class="directory"><a href="general/html/project/about.html">About</a></li> |
-					<li class="directory"><a href="general/html/project/project_plan.html">Project Plan</a></li> |
-					<li class="directory"><a href="general/html/demos/project_details.html">Project Details</a></li> |
-					<li class="directory"><a href="general/html/project/logbooks.html">Logbooks</a></li> |
-					<li class="directory"><a href="general/html/elevator/login.html">Login</a></li>
-				</ul>
-				<ul>
-					<li class="directory"><a href="general/html/project/links.html">External Links</a></li> |
-					<li class="directory"><a href="general/html/demos/demos.html">Demos</a></li> |
-					<li class="directory"><a href="general/html/project/documentation.html">Media and Documentation</a></li>
-				</ul>
+                <fieldset>
+                    <legend><b>Directory</b></legend>
+                    <ul>
+                        <li class="directory"><a href="general/html/project/about.html">About</a></li> |
+                        <li class="directory"><a href="general/html/project/project_plan.html">Project Plan</a></li> |
+                        <li class="directory"><a href="general/html/demos/project_details.html">Project Details</a></li> |
+                        <li class="directory"><a href="general/html/project/logbooks.html">Logbooks</a></li> |
+                        <li class="directory"><a href="general/html/elevator/login.html">Login</a></li>
+                    </ul>
+                    <ul>
+                        <li class="directory"><a href="general/html/project/links.html">External Links</a></li> |
+                        <li class="directory"><a href="general/html/demos/demos.html">Demos</a></li> |
+                        <li class="directory"><a href="general/html/project/documentation.html">Media and Documentation</a></li>
+                    </ul>
+                </fieldset>
 			</nav>
 
 			<div id="content">
@@ -55,7 +57,8 @@
 			</div>
 
 			<aside>
-				<p>Site loaded on <?php echo date("l, F d, Y "); ?> at <?php echo date("g:i:s A - T"); ?></p>
+                <br/><script src="./general/js/demos/ex1.js"></script>
+				<p>Site loaded on <?php echo date("l, F d, Y "); ?> at <?php echo date("g:i:s A - T"); ?></p><br/>
 			</aside>
 
 			<footer>

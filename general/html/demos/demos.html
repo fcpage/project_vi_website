@@ -45,16 +45,29 @@
         <div id="content">
             <article>
                 <section>
-                    <fieldset>
+                    <fieldset class="outer">
                         <legend>Demo Pieces from the Slides</legend>
-                    <a href="flex_test.html">Flex Formatting Test</a><br/>
-                    <a href="index2.html">Second Index Page using 960 CSS Grid</a><br/>
-                    <a href="media_queries_desktop_first.html">Desktop First Media Query</a><br/>
-                    <a href="media_query_mobile_first.html">Mobile First Media Query</a>
+                        <fieldset class="inner">
+                            <legend>CSS</legend>
+                            <a href="flex_test.html">Flex Formatting Test</a><br/>
+                            <a href="index2.html">Second Index Page using 960 CSS Grid</a><br/>
+                            <a href="media_queries_desktop_first.html">Desktop First Media Query</a><br/>
+                            <a href="media_query_mobile_first.html">Mobile First Media Query</a>
+                        </fieldset><br/>
+
+                        <fieldset class="inner">
+                            <legend>JavaScript</legend>
+                            <a href="../../js/demos/ex1.js">Time-Aware Greeting</a><br/>
+                        </fieldset>
                     </fieldset>
                 </section>
             </article>
         </div><br/>
+
+        <aside>
+            <p>Note: CSS demos render full pages. JavaScript demos display source code and are
+                implemented throughout the site.</p>
+        </aside>
 
         <footer>
             <p id="copy" >Copyright &copy 2026 Fergus Page</p>

@@ -29,3 +29,7 @@ img#caution {
         height: 200px;
         clip-path: circle(49.9% at 50% 50%);
 }
+
+aside, footer {
+        margin-left: 0;
+}

@@ -19,10 +19,8 @@ h2{
     text-align: left;
 }
 
-
-
-#content {
-    margin-left: 133px;
+fieldset {
+    width: 425px;
 }
 
 p#sidebar {
