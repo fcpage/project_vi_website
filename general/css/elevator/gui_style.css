@@ -11,8 +11,22 @@
 
 fieldset {
     width: max-content;
+    height: max-content;
 }
 
 fieldset p{
     text-align: center;
+}
+
+#content {
+    margin-left: 133px;
+}
+
+footer {
+    margin-left: 160px;
+    text-align: center;
+}
+
+header {
+    margin-left: 133px;
 }
