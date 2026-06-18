@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>Elevator GUI</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="This is the gui mechanism for our project" />
         <meta http-equiv="author" content="Fergus Page" />
         <meta name="robots" content="noindex nofollow" />
         <meta http-equiv="pragma" content="no-cache" />
+
         <link rel="stylesheet" href="../css/elevator/gui_style.css">
     </head>
     <body>

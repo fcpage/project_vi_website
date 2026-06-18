@@ -23,12 +23,17 @@ file_put_contents("../resources/requests/access/access_request_{$date}_{$time}.t
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Review Access Request</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="This is the access request handler page for our project" />
     <meta http-equiv="author" content="Fergus Page" />
     <meta name="robots" content="noindex nofollow" />
     <meta http-equiv="pragma" content="no-cache" />
+
     <link rel="stylesheet" href="../css/project/general_style.css" type="text/css">
 </head>
 
