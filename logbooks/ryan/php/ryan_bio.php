@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project VI - Ryan Pratt</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="This is Ryan's engineering logbook for Project 6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="author" content="Ryan Pratt" />
+    <meta name="robots" content="noindex nofollow" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous" rel="stylesheet">
+    <link href="../../../general/css/project/general_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/sidebar_style_log.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/Ryan_styles.css" type="text/css">
+</head>
+
+<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
+
+<body>
+
+
+<nav>
+    <div id="sidebars">
+        <div id="bar1" class="index_block">
+            <h4>Index</h4><br/>
+            <p class="sidebar">
+                <b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
+                <b><a class="index top_up" href="#">Top</a></b><br/>
+                <a class="index" href="../../../general/html/project/about.html">About</a><br/>
+                <a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+                <a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+                <a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+                <a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+                <a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+                <a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+                <a class="index" href="../../../general/html/elevator/login.html">Login</a>
+            </p>
+        </div><br/>
+
+        <div id="bar2" class="index_block">
+            <h4>Warp</h4><br/>
+            <p class="sidebar">
+                <a class="index" href="#week1">Week 1</a><br/>
+                <a class="index" href="#week2">Week 2</a><br/>
+                <a class="index" href="#week3">Week 3</a><br/>
+                <a class="index" href="#week4">Week 4</a><br/>
+                <a class="index" href="#week5">Week 5</a><br/>
+                <a class="index" href="#week6">Week 6</a>
+            </p>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <h1>Weekly Logbook - Ryan Pratt</h1>
+
+    <figure>
+        <img src="../images/ryan.jpg" alt="Ryan Pratt" title="Ryan Pratt" width="100px">
+        <figcaption><b>Ryan Pratt:</b><br/>"Success is not final, failure is not fatal: it is the courage to continue that counts." ~ Winston Churchill</figcaption>
+    </figure>
+
+    <h2>
+        Bio
+    </h2>
+
+    <p>
+        Hello! I'm Ryan, I'm from Stratford Ontario and attend Conestoga College's Electronic Systems Engineering
+        program. Outside of school I enjoy film-making, aviation, history, and model building. In engineering, I
+        i enjoy working with systems and tackling complex problems.
+    </p>
+
+    <h2>Logbook Index</h2>
+
+    <ul>
+        <li><a href="#week1">Week 1</a></li>
+        <li><a href="#week2">Week 2</a></li>
+        <li><a href="#week3">Week 3</a></li>
+    </ul>
+
+    <h3 id="week1">Week 1</h3>
+    <b>Main task:</b> Design the elevator finite state machine (FSM) architecture.
+    <ul>
+        <li>
+            Built and tested finite state machine logic
+        </li>
+        <li>
+            Created a custom preprocessor to generate finite state machines from more readable syntax
+        </li>
+        <li>
+            Began architecting supervisory CAN controller sensor handling
+        </li>
+    </ul>
+
+    <h3 id="week2">Week 2</h3>
+    <ul>
+        <li>
+            Implemented C++ side of CANBus protocol
+        </li>
+        <li>
+            Troubleshot broken elevator
+        </li>
+        <li>
+            Revise CAN logic controller to use a shared common header file
+        </li>
+    </ul>
+
+    <h3 id="week3">Week 3</h3>
+    <ul>
+        <li>Implemented safety features using multithreading to ensure comms is always available</li>
+        <li>Implemented single-producer single-consumer atomic ring buffers to avoid mutex overhead</li>
+        <li>Updated SC design document to reflect updated design criteria and new information</li>
+    </ul>
+
+    <h2>Questions?</h2>
+    <p>Click <a href="mailto:rpratt3415@conestogac.on.ca">here</a> to email me directly.</p>
+
+    <footer>
+        <p id="copy">Copyright &copy <?php echo date("Y") ?> Ryan Pratt (age <?php echo (date("Y")-2003); ?>)</p>
+    </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
