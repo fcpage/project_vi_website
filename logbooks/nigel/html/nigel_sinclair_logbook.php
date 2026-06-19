@@ -26,7 +26,7 @@
     <nav>
         <div id="sidebars">
             <div id="bar1" class="index_block">
-                <h4>Index</h4><br/>
+                <h4 class="index_title">Index</h4><br/>
                 <p class="sidebar">
                     <b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
                     <b><a class="index top_up" href="#">Top</a></b><br/>
@@ -42,7 +42,7 @@
             </div><br/>
 
             <div id="bar2" class="index_block">
-                <h4>Warp</h4><br/>
+                <h4 class="index_title">Warp</h4><br/>
                 <p class="sidebar">
                     <a class="index" href="#week1">Week 1</a><br/>
                     <a class="index" href="#week2">Week 2</a><br/>
@@ -56,17 +56,37 @@
     </nav>
 
     <div id="content">
-		<h1 id="#">Weekly Logbook - Nigel Sinclair</h1>
+        <div class="major-heading">
+            <h1 id="#">Weekly Logbook - Nigel Sinclair</h1>
+            <hr/>
+        </div>
 		
 		<figure>
-            <img src="../images/nigel.png" alt="Nigel Sinclair" title="Nigel Sinclair" width="">
+            <img id="nigel_profile" src="../images/nigel.png" alt="Nigel Sinclair" title="Nigel Sinclair">
             <figcaption><b>Nigel Sinclair:</b><br/>
-                "There are two kinds of programming languages; the ones we like, and the ones we use"</br>
-                -- plagiarized (i don't remember)
+                "May the git push --force be with you!"</br>
             </figcaption>
 		</figure>
+
+        <div class="minor-heading">
+            <h2>Bio</h2>
+            <hr/>
+        </div>
 		
-		<h2>Logbook Index</h2>
+        <p>
+            I am a student in Electronic Systems Engineering at Conestoga College. 
+            I am an avid linux user (you can tell because my photo is really bad) who is passionate about embedded systems and systems level software. 
+            I have had the fortune of amazing co-op experiences in the elevator industry 
+            (which means I am right at home in this project) doing a wide variety of things such as:
+            <ul>
+                <li>3D CAD</li>
+                <li>PCB design</li>
+                <li>Embedded systems software design</li>
+                <li>Parts research</li>
+                <li>Code compliance</li>
+            </ul>
+            I am enjoying broadening my horizons in frontend/backend software design with this project.
+        </p>
 		
 		<ul>
 			<li><a href="#week1">Week 1</a></li>
@@ -74,7 +94,10 @@
 			<li><a href="#week3">Week 3</a></li>			
 		</ul>
 		
-		<h3 id="week1">Week 1</h3>
+        <div class="minor-heading">
+            <h3 id="week1">Week 1</h3>
+            <hr/>
+        </div>
 
         <b>Main task:</b> setup CAN communication with STM32.
 
@@ -96,17 +119,12 @@
 			<li></li>
 		</ul>
 
-		<h3 id="week2">Week 2</h3>
+        <div class="minor-heading">
+            <h3 id="week2">Week 2</h3>
+            <hr/>
+        </div>
 
         <div id="week2content"></div>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script> -->
-        <!-- <script type="module"> -->
-        <!--     import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js"; -->
-        <!--     const res = await fetch("week2.md"); -->
-        <!--     if(!res.ok) throw new Error('failed to load markdown'); -->
-        <!--     const md = await res.text(); -->
-        <!--     document.getElementById("week2content").innerHTML = marked.parse(md); -->
-        <!-- </script> -->
 		<ul>
             <li>Implement Car/Floor Controller message handler</li>
             <li>CAN filtering</li>
@@ -141,7 +159,10 @@
             the command line when building.
         </p>
 
-		<h3 id="week3">Week 3</h3>
+        <div class="minor-heading">
+            <h3 id="week3">Week 3</h3>
+            <hr/>
+        </div>
         <ul>		
             <li>
                 Fixed supervisory controller version issue (downgraded to Cpp20).
@@ -157,13 +178,33 @@
                 </ul>
             </li>
         </ul>		
-		<h2>Questions?</h2>
-		<p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
+        <div class="minor-heading">
+            <h3 id="week4">Week 4</h3>
+            <hr/>
+        </div>
+        <ul>		
+            <li>Updated CAN protocol for compatibility between SC and FC/CC.
+                <ul>
+                    <li> Updated header
+                    <li> Updated SC CAN to use common protocol </li>
+                </ul>
+            </li>
+            <li>Implement CAN heartbeat messaging for floor/car controllers</li>
+            <li>Implement CAN heartbeat messaging for supervisory controller</li>
+            <li>Implement CAN floor notification messaging for supervisory controller</li>
+            <li>Set up external buttons</li>
+        </ul>		
+        <div class="questions">
+            <h2>Questions?</h2>
+            <p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
+        </div>
+        <hr/>
 
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+        <footer>Copyright &copy <?php echo date("Y")?> Nigel Sinclair</footer>
 	</body>
 </html>
 	
