@@ -56,7 +56,7 @@
 
 
         <footer>
-            <p id="copy">Copyright &copy 2026 Fergus Page (age <?php echo (date("Y")-1997); ?>)</p>
+            <p id="copy">Copyright &copy <?php echo date("Y") ?> Fergus Page (age <?php echo (date("Y")-1997); ?>)</p>
         </footer>
 
     </div>

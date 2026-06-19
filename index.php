@@ -57,7 +57,7 @@
 			</div>
 
 			<aside>
-                <br/><script src="./general/js/demos/ex1.js"></script>
+                <br/><script src="general/js/demos/greeting.js"></script>
 				<p>Site loaded on <?php echo date("l, F d, Y "); ?> at <?php echo date("g:i:s A - T"); ?></p><br/>
 			</aside>
 
