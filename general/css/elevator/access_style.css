@@ -27,6 +27,7 @@ input#text, textarea#details {
 
 fieldset {
     display: block;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     color: black;
@@ -34,7 +35,7 @@ fieldset {
     background-color: rgb(255 132 39 / 0.42);
     border: 1px solid black;
     border-radius: 5px;
-    width: 320px;
+
     padding: 10px;
     /*margin: 20px;*/
 }
