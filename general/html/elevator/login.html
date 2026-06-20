@@ -50,8 +50,8 @@
 						<fieldset>
 							<legend>Elevator Access</legend>
 							<form action="../../php/login.php" method="post" id="login"><br/>	<!-- the login fields -->
-								<div><label for="user" class="text_label">Username: </label><input class="text_input" id="user" type="text" name="username" required /></div>
-								<div><label for="pass" class="text_label" >Password: </label><input class="text_input" id="pass" type="password" name="password" required /></div><br/>
+								<div><label for="user" class="text_label">Username: </label><input class="text_input" id="user" type="text" minlength="7" name="username" required /></div>
+								<div><label for="pass" class="text_label" >Password: </label><input class="text_input" id="pass" type="password" minlength="7" name="password" required /></div><br/>
 								<div id="log"><input id="li" type="submit" value="Log In"/></div>	<!-- click now or pay late fees -->
 								<div><br/><a class="ra" href="request_access.html"></a></div>
 							</form><br/>
@@ -68,5 +68,34 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 	        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 	        crossorigin="anonymous"></script>
+
+        <script>
+            // JS Begin
+            // Event listener script for the login form checking length of username and password
+
+            const loginForm = document.getElementById('login');
+            const user = document.getElementById('user');
+            const pass = document.getElementById('pass');
+
+            function checkLength(field, label){
+                field.setCustomValidity(
+                    field.value.length >= 7 ? '' : label + 'Must be at least 7 characters long'
+                );
+            }
+
+            user.addEventListener('input', function(){
+                checkLength(user, 'Username');
+            });
+
+            pass.addEventListener('input', function(){
+                checkLength(pass, 'Password');
+            });
+
+            loginForm.addEventListener('submit', function(){
+                checkLength(user, 'Username');
+                checkLength(pass, 'Password');
+            });
+            // JS Ends
+        </script>
 	</body>
 </html>
