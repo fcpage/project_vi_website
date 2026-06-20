@@ -44,8 +44,6 @@
 				</div>
 			</nav>
 
-
-
 			<div id="content">
 				<article>
 					<section>
@@ -53,9 +51,27 @@
 							<fieldset>
 								<legend>Contact</legend>	<!-- let's get some contact information -->
 								<div>
-									<label for="fn" class="text_label">First Name: </label><input id="fn" class="text_input" type="text" name="firstname" required /><br/><br/>	<!-- what is your name -->
-									<label for="ln" class="text_label">Last Name: </label><input id="ln" class="text_input" type="text" name="lastname" required /><br/><br/>	<!-- what is your quest -->
-									<label for="em" class="text_label">Email: </label><input id="em" class="text_input" type="text" name="email" required /><br/><br/>	<!-- what is the airspeed of an unladen swallow -->
+									<div>
+										<label for="fn" class="text_label">First Name: </label>
+										<input id="fn" class="text_input" type="text" name="firstname"/><br/>
+										<a id="fnFb"></a>
+										<br/><br/>	<!-- what is your name -->
+									</div>
+
+									<div>
+										<label for="ln" class="text_label">Last Name: </label>
+										<input id="ln" class="text_input" type="text" name="lastname"/><br/>
+										<a id="lnFb"></a>
+										<br/><br/>	<!-- what is your quest -->
+									</div>
+
+									<div>
+										<label for="em" class="text_label">Email: </label>
+										<input id="em" class="text_input" type="text" name="email"/><br/>
+										<a id="emFb"></a>
+										<br/><br/>	<!-- what is the airspeed of an unladen swallow -->
+									</div>
+
 									<label for="ws" class="text_label">Website: </label><input id="ws" class="text_input" type="text" name="url" /><br/><br/>	<!-- what is your favourite colour -->
 								</div>
 								<div id="rad">	<!-- what is your relation to the college -->
@@ -103,6 +119,7 @@
 								<input id="submit" type="submit" value="Submit Request"/>	<!-- send it! -->
 							</fieldset>
 						</form><br/>
+						<script src="../../js/demos/validate.js"></script>
 					</section>
 
 			</article>

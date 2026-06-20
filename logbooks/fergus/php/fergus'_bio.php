@@ -43,23 +43,28 @@
     <header>
         <h1 id="#">Fergus' Bio</h1>
         <figure><img id="fergus_img" src="../images/fergus.png" alt="Fergus Page" title="Fergus Page" width="150">
-            <figcaption><br/><b>Fergus Page</b><br/>*Old man noises*<br/>
-                <p><a href="../php/fergus'_bio.php">Bio</a></p><br/></figcaption></figure>
+            <figcaption><br/><b>Fergus Page</b><br/>*Old man noises*<br/><br/>
     </header>
 
     <div id="content">
         <article>
             <section>
+                <p class="bio">Fergus is a 3rd year student in the Electronic Systems Engineering program at Conestoga College. He enjoys working with
+                    hardware, software, and their interface. In this project, he has done the wiring of the elevator floor and car nodes'
+                    outboard buttons and indicators, developed the project front-end including the elevator's graphical user interface,
+                    and some of the containing website. He has also written scripts to set up the Raspberry Pi with the required
+                    dependencies for the server, database, and CAN system. These contributions support the supervisory program
+                    written by Ryan Pratt and the CAN communication with the microcontroller program written by Nigel Sinclair.<br/></p>
 
+                <p class="bio">You will not find Fergus relaxing on a beach, for he never sleeps (at least not anymore).</p>
             </section>
         </article><br/>
-
-
-        <footer>
-            <p id="copy">Copyright &copy <?php echo date("Y") ?> Fergus Page (age <?php echo (date("Y")-1997); ?>)</p>
-        </footer>
-
     </div>
+    <footer>
+        <p id="copy">Copyright &copy <?php echo date("Y") ?> Fergus Page (age <?php echo (date("Y")-1997) ?>)</p>
+    </footer>
+
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

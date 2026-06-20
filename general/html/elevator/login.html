@@ -77,9 +77,13 @@
             const user = document.getElementById('user');
             const pass = document.getElementById('pass');
 
+            window.addEventListener('load', function(){
+                user.focus();
+            });
+
             function checkLength(field, label){
                 field.setCustomValidity(
-                    field.value.length >= 7 ? '' : label + 'Must be at least 7 characters long'
+                    field.value.length >= 7 ? '' : label + ' must be at least 7 characters long'
                 );
             }
 
