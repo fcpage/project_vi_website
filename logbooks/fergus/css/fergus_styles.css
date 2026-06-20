@@ -49,10 +49,6 @@ section {
     border-shape: circle(49% at 50% 50%);
 }
 
-footer {
-    text-align: center;
-}
-
 div#bar1 {
     display: block;
     border: 2px solid black;
@@ -83,6 +79,20 @@ div#sidebars {
     z-index: 70;
 }
 
+p.bio {
+    text-indent: 40px;
+}
+
 #content {
+    display: block;
     margin-left: 133px;
+}
+
+footer, header{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
 }

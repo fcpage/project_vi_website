@@ -26,3 +26,38 @@ fieldset {
 p#sidebar {
     height: 255px;
 }
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    0%, 100%    { opacity: 0;}
+    50%         { opacity: 1;}
+}
+
+.slide {
+    display: none;
+    width: 400px;
+    height: 225px;
+    border-radius: 10px;
+}
+
+#slideshow_container {
+    display: block;
+    width: 400px;
+    height: 225px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden; !important;
+}
+
+#video_container {
+    display: block;
+    width: 400px;
+    height: 225px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden; !important;
+}
