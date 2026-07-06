@@ -80,6 +80,8 @@
         <li><a href="#week1">Week 1</a></li>
         <li><a href="#week2">Week 2</a></li>
         <li><a href="#week3">Week 3</a></li>
+        <li><a href="#week4">Week 4</a></li>
+        <li><a href="#week5">Week 5</a></li>
     </ul>
 
     <h3 id="week1">Week 1</h3>
@@ -114,6 +116,18 @@
         <li>Implemented safety features using multithreading to ensure comms is always available</li>
         <li>Implemented single-producer single-consumer atomic ring buffers to avoid mutex overhead</li>
         <li>Updated SC design document to reflect updated design criteria and new information</li>
+    </ul>
+
+    <h3 id="week4">Week 4</h3>
+    <ul>
+        <li>Implemented node to node heartbeat protocol</li>
+        <li>Uses a custom CAN protocol extension to verify liveliness of all nodes on network</li>
+        <li>Added additional in-code comments to assist future users familiarizing themselves with the codebase</li>
+    </ul>
+
+    <h3 id="week5">Week 5</h3>
+    <ul>
+        <li>Student Success Week</li>
     </ul>
 
     <h2>Questions?</h2>
