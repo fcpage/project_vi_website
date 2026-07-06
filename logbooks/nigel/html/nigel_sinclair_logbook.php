@@ -194,6 +194,15 @@
             <li>Implement CAN floor notification messaging for supervisory controller</li>
             <li>Set up external buttons</li>
         </ul>		
+        <div class="minor-heading">
+            <h3 id="week5">Week 5</h3>
+            <hr/>
+        </div>
+        <p>Student success week</p>
+        <div class="minor-heading">
+            <h3 id="week6">Week 6</h3>
+            <hr/>
+        </div>
         <div class="questions">
             <h2>Questions?</h2>
             <p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
