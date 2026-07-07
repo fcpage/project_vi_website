@@ -1,35 +1,46 @@
 <?php
-ob_start();
+$date = date("Y-m-d");  //what day is it??? It's summertime!
+$time = date("H:i:s");  //do you have the time, to listen to me whine?
+$contents = null; //declare empty file contents variable (global)
+$authentication = null; //declare authentication variable, default to lockout (global)
+$authorization = null; //declare authorization variable, default to lockout (global)
+
 $username = $_POST["username"]; //get supposed "username"
 $password = $_POST["password"]; //what is the password?
-$contents = null; //declare empty file contents variable (global)
-$auth = null; //declare authorization variable, default to lockout (global)
-$result = 0; //declare authentication variable, default to lockout (global)
+
 $file = fopen("../resources/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
 
-while(!feof($file) && !$result) {   //while not at the end of the login credential register and no match has been found
+while(!feof($file) && !$authentication) {   //while not at the end of the login credential register and no match has been found
     $contents = fgets($file); //check each line until the file is through or the login is verified
-    str_contains($contents, "username:$username-password:$password") ? ($result = 1) : ($result = 0);//if the login key is found, make $result true, if not, make $result false
+    str_contains($contents, "username:$username-password:$password") ? ($authentication = "valid") : ($result = null);//if the login key is found, make $result true, if not, make $result false
 }
 
 fclose($file); //close the file
 
 if (str_contains($contents, "dev")){ //if auth key is dev
-    $auth = "dev";  //assign authorization key if found
+    $authorization = "dev";  //assign authorization key if found
 } elseif (str_contains($contents, "prof")){ //else if auth key is prof
-    $auth = "prof"; //assign authorization key if found
+    $authorization = "prof"; //assign authorization key if found
 } elseif (str_contains($contents, "run")){ //else if auth key is run
-    $auth = "run"; //assign authorization key if found
+    $authorization = "run"; //assign authorization key if found
 } else { //else
-    $auth = null; //invalid auth key
+    $authorization = null; //invalid auth key
 }
 
-if ($result && $auth) {    //if authentication is valid and there is a valid authorization key
-    if ($auth == "dev") { //if authorization is "dev",
+$log = "Date: $date, Time: $time\n\n";  //log the login attempt date and time
+$log .= "Username: " . $username . "\n" ; //log the entered username
+($authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
+($authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $authorization . "\n\n"); //log authorization credentials
+$file = fopen("../resources/requests/login/login_attempts.txt", "a"); //open login attempt log file in append mode
+file_put_contents("../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
+fclose($file); //close the file
+
+if ($authentication && $authorization) {    //if authentication is valid and there is a valid authorization key
+    if ($authorization == "dev") { //if authorization is "dev",
         header("Location: ../html/elevator/gui.html"); //redirect to gui
-    } elseif ($auth == "prof") { //if authorization is "prof",
+    } elseif ($authorization == "prof") { //if authorization is "prof",
         header("Location: ../html/elevator/elevator_menu.html"); //redirect to elevator menu
-    } elseif ($auth == "run") { //if authorization is "run",
+    } elseif ($authorization == "run") { //if authorization is "run",
         header("Location: ../html/elevator/elevator_doors.html"); //redirect to doors display
     } else {
         header("Location: ../html/elevator/lockout.html");} //if authorization is invalid, redirect to lockout page
