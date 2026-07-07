@@ -1,6 +1,7 @@
-username:ryan-password:1234
-username:nigel-password:1234
-username:fergus-password:1234
-username:hassan-password:1234
-username:safat-password:1234
+username:ryan_pratt-password:12345678-auth:dev
+username:nigel_sinclair-password:12345678-auth:dev
+username:fergus_page-password:12345678-auth:dev
+username:hassan_zaytoon-password:12345678-auth:prof
+username:safat_khan-password:12345678-auth:prof
+username:elevator-password:12345678-auth:run
 EOF
