@@ -17,11 +17,11 @@ while(!feof($file) && !$authentication) {   //while not at the end of the login 
 fclose($file); //close the file
 
 //Authorization
-if (str_contains($contents, "dev")){ //if auth key is dev
+if (str_contains($contents, "-auth:dev")){ //if auth key is dev
     $authorization = "dev";  //assign authorization key if found
-} elseif (str_contains($contents, "prof")){ //else if auth key is prof
+} elseif (str_contains($contents, "-auth:prof")){ //else if auth key is prof
     $authorization = "prof"; //assign authorization key if found
-} elseif (str_contains($contents, "run")){ //else if auth key is run
+} elseif (str_contains($contents, "-auth:run")){ //else if auth key is run
     $authorization = "run"; //assign authorization key if found
 } else { //else if no authorization,
     $authorization = null; //invalid authorization key
