@@ -32,9 +32,7 @@ $log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s") . "\n";  //log the logi
 $log .= "Username: " . $username . "\n" ; //log the entered username
 ($authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
 ($authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $authorization . "\n\n"); //log authorization credentials
-$file = fopen("../resources/requests/login/login_attempts.txt", "a"); //open login attempt log file in append mode
 file_put_contents("../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
-fclose($file); //close the file
 
 //Redirection
 if ($authentication && $authorization) {    //if authentication is valid and there is a valid authorization key

@@ -1,11 +1,11 @@
 <?php
-$date = date("Y-m-d");  //what day is it???
-$time = date("H-i-s");  //do you have the time, to listen to me whine?
+$date = date("Y-m-d"); //What day is it???
+$time = date("H:i:s"); //Do you have the time, to listen to me whine?
 $key = [0=>"."];    //initialize the key array, non-null
 $desc = [0=>"."];   //initialize the description array, non-null
 array_push($key,'firstname', 'lastname', 'email', 'url', 'person', 'reason', 'details', 'deadline', 'good_job');    //load the keys
 array_push($desc, "First Name: ", "Last Name: ", "Email: ", "Website: ", "Person: ", "Reason: ", "Details: ", "Deadline: ", "Feedback: ", "Involvement: "); //load the descriptions
-$contents = "Date: $date\nTime: $time\n\nAccess Request:\n\n";  //build the array header
+$contents = "Access Request:\nDate: " . $date . "\nTime: " . $time . "\n\n";  //build the request header
 $contents .= $desc[8];  //involvement description
 
 foreach (array_filter($_POST['involvement']) as $i) { //for every checked element
