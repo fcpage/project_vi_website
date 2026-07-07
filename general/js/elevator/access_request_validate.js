@@ -41,5 +41,7 @@ function checkEmail(event)
 }
 
 raForm.addEventListener('submit', function(event) {
-    checkFirstName(event); checkLastName(event); checkEmail(event);
+    checkFirstName(event);
+    checkLastName(event);
+    checkEmail(event);
     }, false);
