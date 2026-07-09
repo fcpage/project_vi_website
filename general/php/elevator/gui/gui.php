@@ -10,7 +10,7 @@
         <meta name="robots" content="noindex nofollow" />
         <meta http-equiv="pragma" content="no-cache" />
 
-        <link rel="stylesheet" href="../../css/elevator/gui_style.css">
+        <link rel="stylesheet" href="../../../css/elevator/gui_style.css">
     </head>
     <body>
 
@@ -20,7 +20,7 @@
         //same gui handles both floor controller calls and car controller calls - when using the floor buttons the car buttons are indicators, and when using the car buttons, the floor buttons are indicators
         //form submits on click, so only one selection is possible per iteration, which excludes conflict cases between the car and floor control sets
         //floor call buttons only handle adjacent-floor calls
-
+        session_start();
         $call = ($_POST["called_to"] ?? 1); //get input from form post, or default to first floor
         $last = ($_POST["called_from"] ?? 1); //get last floor from post or initialize to first floor
         $dir_button = ($_POST["dir_button"] ?? 0); //get input from floor buttons or default to car operation
@@ -37,8 +37,6 @@
         (($dir_button == 2) && ($last == 3)) ?? (($call = 2) && ($dir = "DOWN"));   //going down from third goes to second
         (($dir_button == 2) && ($last == 2)) ?? (($call = 1) && ($dir = "DOWN"));   //going down from second goes to first
         (($dir_button == 2) && ($last == 1)) ?? (($call = 1) && ($dir = "HOLD"));   //going down from first goes nowhere, hold
-
-
 
         ($dir === "UP") ? ($up_ind = "./uplit.png") : ($up_ind = "./upunlit.png"); //show upward-going call - floor control
         ($dir === "DOWN") ? ($down_ind = "./downlit.png") : ($down_ind = "./downunlit.png"); //show downward-going call - floor control($dir === "HOLD") ?? (($up_ind = "../map/gui/upunlit.png") && ($down_ind = "../map/gui/downunlit.png")); //stop the car at the floor it was called up to

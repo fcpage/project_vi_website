@@ -15,7 +15,6 @@
 		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 		      crossorigin="anonymous" rel="stylesheet">
 		<link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
-		<link href="../../css/project/sidebar_style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="../../css/elevator/login_style.css" type="text/css">
 	</head>
 
@@ -31,11 +30,11 @@
 				<div class="index_block">
 					<h4>Index</h4><br/>
 					<p id="sidebar">
-						<b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
 						<b><a class="index top_up" href="#">Top</a></b><br/>
 						<a class="index" href="../project/about.html">About</a><br/>
-						<a class="index" href="../../html/project/project_plan.html">Project Plan</a><br/>
-						<a class="index" href="../../html/demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../project/project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
 						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
 						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
 						<a class="index" href="../project/links.html">External Links</a><br/>
@@ -49,11 +48,11 @@
 					<section>
 						<fieldset>
 							<legend>Elevator Access</legend>
-							<form action="../../php/login.php" method="post" id="login"><br/>	<!-- the login fields -->
+							<form action="../../php/requests/login.php" method="post" id="login"><br/>	<!-- the login fields -->
 								<div><label for="user" class="text_label">Username: </label><input class="text_input" id="user" type="text" minlength="7" name="username" required/></div>
 								<div><label for="pass" class="text_label" >Password: </label><input class="text_input" id="pass" type="password" minlength="7" name="password" required/></div><br/>
 								<div id="log"><input id="li" type="submit" value="Log In"/></div>	<!-- click now or pay late fees -->
-								<div><br/><a class="ra" href="request_access.html"></a></div>
+								<div><br/><a class="ra" href="./request_access.html"></a></div>
 							</form><br/>
 						</fieldset>
 					</section>
