@@ -28,7 +28,7 @@
             <div class="index_block">
                 <h4>Index</h4><br/>
                 <p id="sidebar">
-                    <b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
+                    <b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
                     <b><a class="index top_up" href="#">Top</a></b><br/>
                     <a class="index" href="../../../general/html/project/about.html">About</a><br/>
                     <a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
