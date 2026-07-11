@@ -23,8 +23,8 @@ if (str_contains($contents, "-auth:dev")){ //if auth key is dev
 } else {$authorization = null;} //else if no authorization, invalid authorization key
 
 //Logging
-$log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s") . "\n";  //log the login attempt date and time
-$log .= "Username: " . $username . "\n" ; //log the entered username
+$log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s");  //log the login attempt date and time
+$log .= "\nUsername: " . $username . "\n" ; //log the entered username
 ($authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
 ($authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $authorization . "\n\n"); //log authorization credentials
 file_put_contents("../../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
