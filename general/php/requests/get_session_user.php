@@ -2,5 +2,6 @@
 if(isset($_SESSION["username"])) {
     $user = explode("_", $_SESSION["username"]);
     echo ucfirst($user[0]);
-} else {echo "No user found";
+} else {
+    echo "false";
 } exit;

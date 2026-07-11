@@ -27,13 +27,21 @@ $log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s") . "\n";  //log the logi
 $log .= "Username: " . $username . "\n" ; //log the entered username
 ($authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
 ($authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $authorization . "\n\n"); //log authorization credentials
-file_put_contents("../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
+file_put_contents("../../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
 
 //Redirection
 if ($authentication && $authorization) {    //if authentication is valid and there is a valid authorization key
     session_start();
+    $_SESSION["login"] = "true";
     $_SESSION["username"] = $username;
     $_SESSION["authorization"] = $authorization;
+    setcookie("login", "true", [
+        'expires' => "86400",
+        'path' => "/",
+        'secure' => true,
+        'httponly' => false,
+        'samesite' => 'Lax']);
+
     if ($authorization == "dev") { //if authorization is "dev",
         header("Location: ../../html/elevator/gui.html"); //redirect to gui
     } elseif ($authorization == "prof") { //if authorization is "prof",
