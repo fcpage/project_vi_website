@@ -1,22 +1,28 @@
-import {startSession, destroySession, getSessionUser} from "./sessionFunctions.js";
+import {startSession, destroySession, getSessionUser, getSessionAuth, getSessionLogin} from "./sessionFunctions.js";
+import {getCookie, setCookie} from "./cookieFunctions.js";
+
 startSession();
-let verify = document.getElementById("verify");
+getSessionUser();
+getSessionAuth();
+getSessionLogin();
+const user = getCookie("user");
+const auth = getCookie("auth");
+const login = setCookie(getCookie("login"), true);
+const verify = document.getElementById("verify");
 
-const username = getSessionUser();
-console.log(username);
-console.log("User: " + username);
-verify.innerHTML = `Welcome, ${username}!<br/>` +
-    'Please <a href="../../../general/php/requests/logout.php">' +
-    'LOG OUT</a> when you\'re finished.';
-
-/*if (typeof String(username) !== 'undefined') {
+if ((user !== String(false)) &&
+    (auth !== String(false))){
+    let login = setCookie("login", String(true));
     console.log("User: " + user);
-    verify.innerHTML = 'Welcome, ' + user + '!<br/>' +
-        'Please <a href="../../../general/php/requests/logout.php">' +
+    console.log("Auth: " + auth);
+    console.log('Login: '+ login);
+    verify.innerHTML = `Welcome, ${user}!<br/>` +
+        'Please <a href="../../../general/html/requests/logout.html">' +
         'LOG OUT</a> when you\'re finished.';
-} else {destroySession();
-    console.log('No user found.');
-    verify.innerHTML = 'Failed to verify session.<br/> Please log in first.';
-    //window.location.replace("../../html/requests/login.html");*/
-
-//}
+} else if (login === String(false)) {
+    destroySession();
+    setCookie("login", String(false));
+    console.log("User: " + getCookie("user"));
+    console.log('Login: '+ getCookie("login"));
+    window.location.replace("../../html/requests/login.html");
+}
