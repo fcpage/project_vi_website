@@ -10,20 +10,17 @@
 }
 
 fieldset {
-    width: max-content;
-    height: max-content;
+    width: 450px;
+    height: 445px;
 }
 
 fieldset p{
     text-align: center;
 }
 
-#content {
-    margin-left: 133px;
-}
-
-footer {
-    margin-left: 160px;
+div.UI{
+    display: block;
+    align-content: center;
     text-align: center;
 }
 

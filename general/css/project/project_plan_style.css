@@ -1,91 +1,63 @@
 table {
-    border-style: solid;
     border-spacing: 1px;
     outline-style: solid;
-    border-collapse: collapse;
-    border-block: 1px solid black;
+    margin-right: min(63px);
 }
 
-th{
-    border-style: solid;
-    border-block: 1px solid black;
-    border-collapse: collapse;
-}
-
-th:hover{
-    background-color: rgb(161 152 251 / 0.67);
-}
-
-td {
+table, td, th {
     border-style: solid;
     border-collapse: collapse;
     border-block: 1px solid black;
-    width: 100%;
 }
 
-td:hover {
+td:hover, th:hover{
     background-color: rgb(161 152 251 / 0.67);
+}
+
+.fp, .rp, .ns, .all, .fprp, .rpns, .nsfp, .phase, .fill {
+    text-align: center;
+}
+
+.task, .job {
+    text-align: left;
 }
 
 .fp {
-    text-align: center;
     background-color: rgb(0 255 157 / 0.71);
-
-
 }
 
 .rp {
-    text-align: center;
     background-color: rgb(213 19 19 / 0.58);
 }
 
 .ns {
-    text-align: center;
     background-color: rgb(8 188 243 / 0.58);
 }
 
 .all {
-    text-align: center;
     background-color: rgb(255 95 0 / 0.69);
 }
 
 .phase {
-    text-align: center;
     background-color: rgb(233 179 8);
 }
 
 .task {
-    text-align: left;
     background-color: rgb(204 204 204 / 0.58);
-}
-
-.job {
-    text-align: left;
 }
 
 .fprp {
     background-color: rgb(243 239 8 / 0.8);
-    text-align: center;
 }
 
 .rpns {
     background-color: rgb(163 243 8 / 0.65);
-    text-align: center;
 }
 
 .nsfp {
     background-color: rgb(85 0 255 / 0.58);
-    text-align: center;
 }
 
-.fill {
-    text-align: center;
-}
-
-p#sidebar {
-    height: 255px;
-}
-
-#content {
-    margin-left: 133px;
+#gantt {
+    width: fit-content;
 }
