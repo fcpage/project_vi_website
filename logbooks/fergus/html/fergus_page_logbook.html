@@ -15,7 +15,6 @@
 		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 		      crossorigin="anonymous" rel="stylesheet">
 		<link href="../../../general/css/project/general_style.css" rel="stylesheet" type="text/css">
-		<link href="../css/sidebar_style_log.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="../css/fergus_styles.css" type="text/css">
 	</head>
 
@@ -24,48 +23,42 @@
 	<body>
 		<div id="page" class="container">
 			<nav>
-				<div id="sidebars">
-					<div id="bar1" class="index_block">
-						<h4>Index</h4><br/>
-						<p class="sidebar">
-							<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
-							<b><a class="index top_up" href="#">Top</a></b><br/>
-							<a class="index" href="../../../general/html/project/about.html">About</a><br/>
-							<a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
-							<a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
-							<a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
-							<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
-							<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
-							<a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
-							<a class="index" href="../../../general/html/requests/login.html">Login</a>
-						</p>
-					</div><br/>
+					<fieldset id="bar1" class="sidebar">
+						<legend>Index</legend>
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+						<b><a class="index top_up" href="#">Top</a></b><br/>
+						<a class="index" href="../../../general/html/project/about.html">About</a><br/>
+						<a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+						<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+						<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+						<a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+						<a class="index" href="../../../general/html/requests/login.html">Login</a>
+					</fieldset><br/>
 
-					<div id="bar2" class="index_block">
-						<h4>Warp</h4><br/>
-						<p class="sidebar">
-							<a class="index" href="#week1">Week 1</a><br/>
-							<a class="index" href="#week2">Week 2</a><br/>
-							<a class="index" href="#week3">Week 3</a><br/>
-							<a class="index" href="#week4">Week 4</a><br/>
-							<a class="index" href="#week5">Week 5</a><br/>
-							<a class="index" href="#week6">Week 6</a><br/>
-							<a class="index" href="#week7">Week 7</a><br/>
-							<a class="index" href="#week8">Week 8</a><br/>
-						</p>
-					</div>
-				</div>
+					<fieldset id="bar2" class="sidebar">
+						<legend>Logbook</legend>
+						<a class="index" href="#week1">Week 1</a><br/>
+						<a class="index" href="#week2">Week 2</a><br/>
+						<a class="index" href="#week3">Week 3</a><br/>
+						<a class="index" href="#week4">Week 4</a><br/>
+						<a class="index" href="#week5">Week 5</a><br/>
+						<a class="index" href="#week6">Week 6</a><br/>
+						<a class="index" href="#week7">Week 7</a><br/>
+						<a class="index" href="#week8">Week 8</a><br/>
+					</fieldset>
 			</nav>
 
-			<div id="content">
-				<header>
-					<h1 id="#">Weekly Logbook</h1>
-					<h2>Fergus Page</h2><br/>
-					<figure><img id="fergus_img" src="../images/fergus.png" alt="Fergus Page" title="Fergus Page" width="150">
-						<figcaption><br/><b>Fergus Page</b><br/>*Old man noises*<br/>
-							<p><a href="../php/fergus'_bio.php">Bio</a></p><br/></figcaption></figure>
-				</header>
+			<header>
+				<h1 id="#">Weekly Logbook</h1>
+				<h3 id="name" >Fergus Page</h3><br/>
+				<figure><img id="fergus_img" src="../images/fergus.png" alt="Fergus Page" title="Fergus Page" width="150">
+					<figcaption><br/><b>Fergus Page</b><br/>*Old man noises*<br/>
+						<p><a href="fergus'_bio.html">Bio</a></p><br/></figcaption></figure>
+			</header>
 
+			<div id="content">
 				<article id="week1">
 					<h3 class="week">Week 1</h3>
 					<section>
@@ -340,6 +333,19 @@
 				<article id="week8">
 					<h3 class="week">Week 8</h3>
 
+
+					<section>
+						<h6>Saturday, July 11th, 2026</h6>
+						<ul>
+							<li>Refactored and cleaned up all CSS on website.</li>
+							<li>Altered all pages on website except for demos so that
+								they have a consistent style and eliminated unnecessary CSS files.</li>
+							<li>Added age calculation JS script and reverted PHP files
+								calculating age to HTML.</li>
+							<li>Restyled menus using fieldset and anchors rather than div and ul and
+								anchors</li>
+						</ul>
+					</section>
 				</article><br/>
 			</div>
 				<footer>
@@ -348,9 +354,11 @@
 						<p>Click <a href="mailto:fpage4808@conestogac.on.ca">here</a> to email me directly.</p>
 					</div>
 
-					<p id="copy">Copyright &copy 2026 Fergus Page</p>
+					<p id="copy">Copyright &copy <span id="year"></span> Fergus Page</p>
 				</footer>
 		</div>
+
+		<script src="../../../general/js/demos/year.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		        crossorigin="anonymous"></script>

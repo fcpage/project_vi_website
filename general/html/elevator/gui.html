@@ -27,20 +27,19 @@
         </header>
 
         <nav>
-            <div class="index_block">
-                <h4>Index</h4><br/>
-                <p id="sidebar">
-                    <b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
-                    <b><a class="index top_up" href="#">Top</a></b><br/>
-                    <a class="index" href="../project/about.html">About</a><br/>
-                    <a class="index" href="../../html/project/project_plan.html">Project Plan</a><br/>
-                    <a class="index" href="../../html/demos/project_details.html">Project Details</a><br/>
-                    <a class="index" href="../project/logbooks.html">Logbooks</a><br/>
-                    <a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
-                    <a class="index" href="../project/links.html">External Links</a><br/>
-                    <a class="index" href="../demos/demos.html">Demos</a><br/>
-                </p>
-            </div>
+            <fieldset id="bar1" class="sidebar">
+                <legend>Index</legend>
+                <b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+                <b><a class="index top_up" href="#">Top</a></b><br/>
+                <a class="index" href="../../../general/html/project/about.html">About</a><br/>
+                <a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+                <a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+                <a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+                <a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+                <a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+                <a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+                <a class="index" href="../../../general/html/requests/login.html">Login</a>
+            </fieldset><br/>
         </nav>
 
         <div id="content">
@@ -48,21 +47,47 @@
                 <fieldset>
                     <legend>Elevator GUI</legend>
                     <section>
-                        <p>Please select a floor to actuate the elevator car:</p><br/>  <!-- some instructions -->
+                        <p>Please select a floor to actuate the elevator car:</p>  <!-- some instructions -->
+                        <iframe id="gui" src="../../php/elevator/gui/gui.php" title="Control Panel" width="400" height="425"></iframe>
                     </section>
+                </fieldset><br/>
 
+                <fieldset>
+                    <legend>Car</legend>
                     <section>
-                        <iframe id="panel" src="../../php/elevator/gui/gui.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                        <iframe id="car" src="../../php/elevator/gui/car.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
                     </section>
-                </fieldset>
+                </fieldset><br/>
+
+                <fieldset>
+                    <legend>Floor 3</legend>
+                    <section>
+                        <iframe id="floor3" src="../../php/elevator/gui/floor3.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                    </section>
+                </fieldset><br/>
+
+                <fieldset>
+                    <legend>Floor 2</legend>
+                    <section>
+                        <iframe id="floor2" src="../../php/elevator/gui/floor2.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                    </section>
+                </fieldset><br/>
+
+                <fieldset>
+                    <legend>Floor 1</legend>
+                    <section>
+                        <iframe id="floor1" src="../../php/elevator/gui/floor1.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                    </section>
+                </fieldset><br/>
             </article>
         </div>
 
         <footer>
-            <p id="copy" >Copyright &copy 2026 Fergus Page</p>
+            <p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
         </footer>
     </div>
 
+    <script src="../../js/demos/year.js"></script>
     <script type="module" src="../../js/project/verify.mjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

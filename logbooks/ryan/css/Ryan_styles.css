@@ -52,69 +52,32 @@ a:link {
     text-decoration: none;
 }
 
-div#bar1 {
+fieldset.sidebar#bar1 { /*index menu*/
+    background-image: linear-gradient(to bottom right, #04131c, #012c45);
+
+    legend {
+        background-color: #98c8ed;
+        color: #2ba2fc;;
+    }
+}
+
+fieldset.sidebar#bar2 { /*logbook menu*/
+    background-image: linear-gradient(to bottom right, #04131c, #012c45);
+
+    legend {
+        background-color: #98c8ed;
+        color: #2ba2fc;
+    }
+
+    height: fit-content(110%); !important; /*change background block height*/
+}
+
+.index { /*menu links*/
+    background-image: linear-gradient(to bottom right, #04131c, #012c45);
+}
+
+img {
     display: block;
-    border: 2px solid black;
-    width: 133px;
-    height: 310px;
-    margin-bottom: 0;
-}
-
-div#bar2 {
-    display: block;
-    border: 2px solid black;
-    width: 133px;
-    height: 200px;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-div#sidebars {
-    float: left;
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 120px;
-    height: 275px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-
-    z-index: 70;
-}
-
-#content {
-    margin-left: 133px;
-}
-
-div#bar1 {
-    display: block;
-    border: 2px solid aliceblue;
-    width: 133px;
-    height: 310px;
-    margin-bottom: 0;
-}
-
-div#bar2 {
-    display: block;
-    border: 2px solid aliceblue;
-    width: 133px;
-    height: 200px;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-div#sidebars {
-    float: left;
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 120px;
-    height: 275px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    z-index: 70;
-}
-
-main {
-    margin-left: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
