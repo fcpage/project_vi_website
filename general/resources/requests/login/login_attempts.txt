@@ -10,8 +10,6 @@ Date:2026-07-11Username: hassan_zaytoon
 Authentication: valid
 Authorization: prof
 
-<<<<<<< Updated upstream
-=======
 Date:2026-07-11Username: fergus_page
 Authentication: valid
 Authorization: dev
@@ -24,10 +22,3 @@ Date:2026-07-11
 Username: fergus_page
 Authentication: valid
 Authorization: dev
-
-Date:2026-07-12
-Username: hassan_zaytoon
-Authentication: valid
-Authorization: prof
-
->>>>>>> Stashed changes

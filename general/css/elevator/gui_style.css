@@ -23,3 +23,13 @@ div.UI{
     align-content: center;
     text-align: center;
 }
+
+header {
+    margin-left: 133px;
+}
+
+div.UI{
+    display: block;
+    align-content: center;
+    text-align: center;
+}
