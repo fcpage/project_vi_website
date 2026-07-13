@@ -14,7 +14,6 @@
 		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 		      crossorigin="anonymous" rel="stylesheet">
 		<link href="../../../general/css/project/general_style.css" rel="stylesheet" type="text/css">
-		<link href="../../../general/css/project/logbooks_style.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
@@ -22,41 +21,42 @@
 	<body>
 		<div id="page" class="container">
 			<header>
+				<div id="spacer"></div>
 				<h1 id="#">Logbooks</h1>	<!-- title -->
 			</header>
 
 			<nav>
-				<div class="index_block">
-					<h4>Index</h4><br/>
-					<p id="sidebar">
-						<b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
-						<b><a class="index top_up" href="#">Top</a></b><br/>
-						<a class="index" href="about.html">About</a><br/>
-						<a class="index" href="./project_plan.html">Project Plan</a><br/>
-						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
-						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
-						<a class="index" href="../project/links.html">External Links</a><br/>
-						<a class="index" href="../demos/demos.html">Demos</a><br/>
-						<a class="index" href="../elevator/login.html">Login</a>
-					</p>
-				</div>
+				<fieldset id="bar1" class="sidebar">
+					<legend>Index</legend>
+					<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+					<b><a class="index top_up" href="#">Top</a></b><br/>
+					<a class="index" href="../../../general/html/project/about.html">About</a><br/>
+					<a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+					<a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+					<a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+					<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+					<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+					<a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+					<a class="index" href="../../../general/html/requests/login.html">Login</a>
+				</fieldset><br/>
 			</nav>
 
 			<div id="content">
 				<fieldset>
 					<legend>Individual Logbooks</legend>
-					<ul>	<!-- links to our individual logbooks -->
-						<li><a href="../../../logbooks/fergus/html/fergus_page_logbook.html">Fergus Page</a></li>
-						<li><a href="../../../logbooks/ryan/html/ryan_pratt_logbook.html">Ryan Pratt</a></li>
-						<li><a href="../../../logbooks/nigel/html/nigel_sinclair_logbook.html">Nigel Sinclair</a></li>
-					</ul>
+						<!-- links to our individual logbooks -->
+						<a href="../../../logbooks/fergus/html/fergus_page_logbook.html">Fergus Page</a><br/>
+						<a href="../../../logbooks/ryan/html/ryan_pratt_logbook.html">Ryan Pratt</a><br/>
+						<a href="../../../logbooks/nigel/html/nigel_sinclair_logbook.html">Nigel Sinclair</a><br/>
 				</fieldset><br/>
 			</div>
 
 			<footer>
-				<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+				<p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
 			</footer>
 		</div>
+
+		<script src="../../js/demos/year.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		        crossorigin="anonymous"></script>

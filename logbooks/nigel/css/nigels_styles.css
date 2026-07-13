@@ -1,45 +1,124 @@
 :root {
-    --colors-grey: #1E212B; 
-    --colors-green: #4D8B31; 
-    --colors-yellow: #FF8427; 
-    --colors-white: #FFFFFF; 
-    background: var(--colors-grey);
-    color: var(--colors-white);
+    /* Color Pallette */
+    --color-black:          #343f44;
+    --color-bright-black:   #868d80;
+
+    --color-red:            #e67e80;
+    --color-bright-red:     #e67e80;
+
+    --color-green:          #a7c080;
+    --color-bright-green:   #a7c080;
+
+    --color-yellow:         #dbbc7f;
+    --color-bright-yellow:  #dbbc7f;
+
+    --color-blue:           #7fbbb3;
+    --color-bright-blue:    #7fbbb3;
+
+    --color-magenta:        #d699b6;
+    --color-bright-magenta: #d699b6;
+
+    --color-cyan:           #83c092;
+    --color-bright-cyan:    #83c092;
+
+    --color-white:          #859289;
+    --color-bright-white:   #9da9a0;
+
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+a {
+    color: var(--color-blue) !important;
+}
+
+a:hover {
+    color: var(--color-yellow) !important;
+}
+
+a:visited {
+    color: var(--color-magenta) !important;
+}
+
+a:active {
+    color: var(--color-bright-red) !important;
+}
+
+.index_block {
+    background: var(--color-bright-black);
+}
+
+.index {
+    background: var(--color-black) !important;
+}
+
+.index_title {
+    background: var(--color-bright-black) !important;
+    border: none !important;
+    color: var(--color-bright-cyan) !important;
+}
+
+h1, footer {
+    margin-left: 0;
+    text-align: center;
 }
 body, ul {
-    background-color: var(--colors-grey);
-    color: var(--colors-white);
+    background-color: var(--color-black);
+    color: var(--color-bright-white);
+    /* float: center; */
 }
 
-div#bar1 {
-    display: block;
-    border: 2px solid aliceblue;
-    width: 133px;
-    height: 310px;
-    margin-bottom: 0;
+h1, h2, h3 {
+    color: var(--color-cyan);
 }
 
-div#bar2 {
-    display: block;
-    border: 2px solid aliceblue;
-    width: 133px;
-    height: 200px;
-    margin-top: 0;
-    padding-top: 0;
+fieldset.sidebar#bar1 { /*index menu*/
+    background-color: var(--color-black);
+
+    legend {
+        background-color: var(--color-cyan);
+    }
 }
 
-div#sidebars {
-    float: left;
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 120px;
-    height: 275px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    z-index: 70;
+fieldset.sidebar#bar2 { /*logbook menu*/
+    background-color: var(--color-black);
+
+    legend {
+        background-color: var(--color-cyan);
+    }
+
+    height: fit-content(110%); !important; /*change background block height*/
 }
 
-#content {
-    margin-left: 150px;
+.index { /*menu links*/
+
+}
+
+#nigel_profile {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: circle(35% at 50% 50%);
+    border: 5px solid var(--color-cyan);
+    border-shape: circle(49% at 50% 50%);
+}
+
+.major-heading > hr {
+    width: 100%;
+    margin: auto;
+    padding: 0px 0px 10px 0px;
+}
+
+.minor-heading > h3 {
+    font-weight: bold;
+}
+
+.minor-heading > hr {
+    width: 70%;
+    margin: auto;
+    padding: 0px 0px 10px 0px;
+}
+
+.questions {
+    text-align: center; 
 }

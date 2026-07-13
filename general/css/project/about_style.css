@@ -20,9 +20,49 @@ h2{
 }
 
 fieldset {
-    width: 425px;
+    width: min(425px);
 }
 
-p#sidebar {
-    height: 255px;
+.fade {
+    animation: fade 5s ease-in-out 0s 1;
+}
+
+@keyframes fade {
+    0%, 100%    { opacity: 0;}
+    10%   { opacity: .5; }
+    20%   { opacity: .7; }
+    30%   { opacity: .8; }
+    40%   { opacity: .9; }
+    50%   { opacity: 1;}
+    60%   { opacity: .9; }
+    70%   { opacity: .8; }
+    80%   { opacity: .7; }
+    90%   { opacity: .5; }
+}
+
+.slide {
+    display: none;
+    width: 400px;
+    height: 225px;
+    border-radius: 10px;
+}
+
+#slideshow_container {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 225px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden; !important;
+}
+
+#video_container {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 225px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden; !important;
 }

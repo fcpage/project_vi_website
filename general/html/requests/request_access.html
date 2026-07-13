@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Access Request</title>
+
+		<meta charset="UTF-8">
+		<meta name="description" content="This is the request access page for our project" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="author" content="Fergus Page, Ryan Pratt" />
+		<meta name="robots" content="noindex nofollow" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		      crossorigin="anonymous" rel="stylesheet">
+		<link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
+		<link rel="stylesheet" href="../../css/elevator/access_style.css" type="text/css">
+	</head>
+
+	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
+	
+	<body>
+		<div id="page" class="container">
+
+			<header>
+				<h1 id="#">Request Access</h1>	<!-- the page you go tp to request login credentials -->
+			</header>
+
+			<nav>
+				<div class="index_block">
+					<h4>Index</h4><br/>
+					<p id="sidebar">
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+						<b><a class="index top_up" href="#">Top</a></b><br/>
+						<a class="index" href="../project/about.html">About</a><br/>
+						<a class="index" href="../project/project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
+						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
+						<a class="index" href="../project/links.html">External Links</a><br/>
+						<a class="index" href="../demos/demos.html">Demos</a>
+					</p>
+				</div>
+			</nav>
+
+			<div id="content">
+				<article>
+					<section>
+						<form action="../../php/requests/request_access.php" method="post" id="access">
+							<fieldset>
+								<legend>Contact</legend>	<!-- let's get some contact information -->
+								<div>
+									<div>
+										<label for="fn" class="text_label">First Name: </label>
+										<input id="fn" class="text_input" type="text" name="firstname"/><br/>
+										<a id="fnFb"></a>
+										<br/><br/>	<!-- what is your name -->
+									</div>
+
+									<div>
+										<label for="ln" class="text_label">Last Name: </label>
+										<input id="ln" class="text_input" type="text" name="lastname"/><br/>
+										<a id="lnFb"></a>
+										<br/><br/>	<!-- what is your quest -->
+									</div>
+
+									<div>
+										<label for="em" class="text_label">Email: </label>
+										<input id="em" class="text_input" type="text" name="email"/><br/>
+										<a id="emFb"></a>
+										<br/><br/>	<!-- what is the airspeed of an unladen swallow -->
+									</div>
+
+									<label for="ws" class="text_label">Website: </label><input id="ws" class="text_input" type="text" name="url" /><br/><br/>	<!-- what is your favourite colour -->
+								</div>
+								<div id="rad">	<!-- what is your relation to the college -->
+									<label><input type="radio" name="person" value="faculty" /> Faculty</label>
+									<label><input type="radio" name="person" value="student" /> Student</label>
+									<label><input type="radio" name="person" value="other" required /> Other</label>
+								</div>
+							</fieldset><br/>
+
+							<fieldset>
+								<legend>Involvement</legend>	<!-- what is your relation to the project -->
+								<div id="I"><i><b>I...</b></i><br/></div>	<!-- choose a bunch -->
+								<label><input type="checkbox" name="involvement[0]" value="none, " /> have no involvement in this project.</label><br/>
+								<label><input type="checkbox" name="involvement[1]" value="instructor, " /> am an instructor in this project.</label><br/>
+								<label><input type="checkbox" name="involvement[2]" value="instructor_other, " /> am another instructor.</label><br/>
+								<label><input type="checkbox" name="involvement[3]" value="student, " /> am a student in this project.</label><br/>
+								<label><input type="checkbox" name="involvement[4]" value="student_other, " /> am a student from another group.</label><br/>
+								<label><input type="checkbox" name="involvement[5]" value="admin, " /> am a College administrator.</label><br/>
+								<label><input type="checkbox" name="involvement[6]" value="external" /> am an external reviewer.</label><br/>
+							</fieldset><br/>
+
+							<fieldset>
+								<legend>Details</legend>	<!-- be specific -->
+								<p>Reason for request: 	<!-- what sort of action do we need to take -->
+								<label><select id="question" name="reason" required>
+									<option value="none" selected></option>
+									<option value="new_user">Credential Initialisation</option>
+									<option value="forgot_username">Forgot Username</option>
+									<option value="forgot_password">Forgot Password</option>
+									<option value="feedback">Leaving Feedback</option>
+								</select></label>
+								</p>
+								<label class="text"><textarea class="text_input" name="details" id="details" placeholder="Give us some details..."  maxlength="180" required></textarea></label><br/><br/>	<!-- make your mark -->
+								<p id="details_count">180 characters remaining</p>
+                                <p id="details_error"></p>
+                                <label for="da">Response preferred by: </label><input id="da" type="date" name="deadline" /><br/>	<!-- when do you need to hear back by -->
+								<p>How did we do?	<!-- please be kind -->
+								<label for="feed"><select id="feed" name="good_job" required>
+									<option value="ignored" selected></option>
+									<option value="good">Good</option>
+									<option value="really_good">Really Good</option>
+									<option value="super_duper">Super Duper</option>
+									<option value="excellent">Excellent</option>
+								</select></label></p>
+								<input id="submit" type="submit" value="Submit Request"/>	<!-- send it! -->
+							</fieldset>
+						</form><br/>
+					</section>
+			</article>
+
+				<footer>
+					<p id="copy" >Copyright &copy <span id="year"></span> Fergus Page, Ryan Pratt</p>
+				</footer>
+			</div>
+		</div>
+
+		<script src="../../js/demos/year.js"></script>
+		<script src="../../js/elevator/feedback_limit.js"></script>
+		<script src="../../js/elevator/access_request_validate.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		        crossorigin="anonymous"></script>
+	</body>
+</html>

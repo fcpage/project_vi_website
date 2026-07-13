@@ -1,72 +1,68 @@
-.text_label {
-    float: left;
-    width: 100px;
-    text-align: right;
-    padding: 0px 10px 0px 0px;
-}
-
-.text_input {
-    width: 150px;
-    text-align: left;
-    padding: 0px 0px 0px 10px;
-}
-
-div {
-    padding: 10px 0px 0px 0px;
-    width: 274px;
-}
-
-div#log {
-    width: fit-content;
-    display: block;
+fieldset#login_window {
+    width: 320px;
     margin-left: auto;
     margin-right: auto;
+    float: left;
 
-}
+    .text_label {
+        float: left;
+        width: 100px;
+        text-align: right;
+        padding-right: 10px;
+    }
 
-#user {
-    background-image: url("../../resources/references/imgs/login/user.png");
-    background-repeat: no-repeat;
-    background-position: 3px;
-    background-position-y: center;
-    text-indent: 5px;
-}
+    .text_input {
+        width: 190px;
+        text-align: left;
+    }
 
-#pass {
-    background-image: url("../../resources/references/imgs/login/password.png");
-    background-repeat: no-repeat;
-    background-position: 3px;
-    background-position-y: center;
-    text-indent: 5px;
-}
+    div.in {
+        padding-bottom: 10px;
+    }
 
-.ra {
-    display: inline-block;
-    text-decoration: none;
-    width: 300px;
-    height: 75px;
-    background-image: url("../../resources/references/imgs/access/AccessButtonY.png");
-    background-size: cover;
-    border-radius: 37px;
-    clip-path: border-box;
-}
+    div#log {
+        width: fit-content;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.ra:hover {
-    background-image: url("../../resources/references/imgs/access/AccessButtonB.png");
-    width: 300px;
+    #user {
+        background-image: url("../../resources/references/imgs/login/user.png");
+        background-repeat: no-repeat;
+        background-position: 3px;
+        background-position-y: center;
+        text-indent: 5px;
+    }
 
-}
+    #pass {
+        background-image: url("../../resources/references/imgs/login/password.png");
+        background-repeat: no-repeat;
+        background-position: 3px;
+        background-position-y: center;
+        text-indent: 5px;
+    }
 
-.ra:active {
-    transition-delay: 2s;
-    background-image: url("../../resources/references/imgs/access/AccessButtonG.png");
-    width: 300px;
-}
+    .ra {
+        display: inline-block;
+        text-decoration: none;
+        width: 300px;
+        height: 75px;
+        background-image: url("../../resources/references/imgs/access/AccessButtonY.png");
+        background-size: cover;
+        border-radius: 37px;
+        clip-path: border-box;
+    }
 
-#content {
-    margin-left: 150px;
-}
+    .ra:hover {
+        background-image: url("../../resources/references/imgs/access/AccessButtonB.png");
+        width: 300px;
 
-fieldset {
-    width: 320px;
+    }
+
+    .ra:active {
+        transition-delay: 2s;
+        background-image: url("../../resources/references/imgs/access/AccessButtonG.png");
+        width: 300px;
+    }
 }

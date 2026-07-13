@@ -28,20 +28,19 @@
 			</header>
 
 			<nav>
-				<div class="index_block">
-					<h4>Index</h4><br/>
-					<p id="sidebar">
-						<b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
-						<b><a class="index top_up" href="#">Top</a></b><br/>
-						<a class="index" href="./project_plan.html">Project Plan</a><br/>
-						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
-						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
-						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
-						<a class="index" href="../project/links.html">External Links</a><br/>
-						<a class="index" href="../demos/demos.html">Demos</a><br/>
-						<a class="index" href="../elevator/login.html">Login</a>
-					</p>
-				</div>
+				<fieldset id="bar1" class="sidebar">
+					<legend>Index</legend>
+					<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+					<b><a class="index top_up" href="#">Top</a></b><br/>
+					<a class="index" href="../../../general/html/project/about.html">About</a><br/>
+					<a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+					<a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+					<a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+					<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+					<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+					<a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+					<a class="index" href="../../../general/html/requests/login.html">Login</a>
+				</fieldset><br/>
 			</nav>
 
 			<div id="content">
@@ -52,7 +51,7 @@
 							This is where we will provide an overview of our project.
 							In this project, we will design an elevator...<br/>
 							We are <em>really</em> excited that you are here to witness <strong>history in the making</strong>!<br/>
-							This will be the greatest undertaking since Einstein discovering that E=mc<sup>2</sup>.</p>
+							This will be the greatest undertaking since Einstein discovering that sliced_bread=E=mc<sup>2</sup>.</p>
 						</fieldset>
 					</section><br/>
 
@@ -60,9 +59,29 @@
 						<fieldset>
 							<legend>Our Team</legend>
 
-							<figure><!-- group photo -->
-								<img id="team" src="../../resources/references/imgs/general/stooges.png" alt="The Team" title="The Team" width="400">
-								<figcaption><b>The Dream Team: <br/></b>Where there's smoke, there's fire... <br/>Is that MCU supposed to be smoking?</figcaption>
+							<figure><!-- group photos -->
+								<div id="slideshow_container">
+									<div class="slide fade">
+										<img alt="photo 1" width="400" src="../../resources/references/imgs/about/team_photos/team_photo%20(1).jpg"/>
+									</div>
+
+									<div class="slide fade">
+										<img alt="photo 2" width="400" src="../../resources/references/imgs/about/team_photos/team_photo%20(2).jpg"/>
+									</div>
+
+									<div class="slide fade">
+										<img alt="photo 3" width="400" src="../../resources/references/imgs/about/team_photos/team_photo%20(3).jpg"/>
+									</div>
+
+									<div class="slide fade">
+										<img alt="photo 4" width="400" src="../../resources/references/imgs/about/team_photos/team_photo%20(4).jpg"/>
+									</div>
+
+									<div class="slide fade">
+										<img alt="photo 5" width="400" src="../../resources/references/imgs/about/team_photos/team_photo%20(5).jpg"/>
+									</div>
+								</div>
+								<figcaption><b>The Dream Team: <br/></b>Where there's smoke, there's fire... <br/>What's that smell?</figcaption>
 							</figure>
 						</fieldset><br/>
 					</section>
@@ -75,6 +94,17 @@
 						</fieldset>
 					</section>
 				</article><br/>
+
+				<section>
+					<fieldset>
+						<legend>Introducing<br/>the Extra Safe Elevator:</legend>
+						<div id="video_container"><!-- group photos -->
+							<video width="400" height="224" controls>
+								<source src="../../resources/references/vids/about/desc.mp4" type="video/mp4">
+							</video>
+						</div><br/>
+					</fieldset><br/>
+				</section>
 
 				<article>
 					<section>
@@ -95,21 +125,48 @@
 							</script></div><br/>
 						</fieldset>
 					</section>
-				</article>
-
-				<aside>
-					<p>Map display copyright &copy 2010-2026 Volodymyr Agafonkin at <a href="https://leafletjs.com/">leafletjs.com</a></br>
-						Maps copyright &copy OpenStreetMap contributors at <a href="https://www.openstreetmap.org/">openstreetmap.org</a></p>
-				</aside>
-
-				<footer>
-					<p id="copy" >Copyright &copy 2026 Fergus Page</p>
-				</footer>
+				</article><br/>
 			</div>
+			<aside>
+				<p>Map display copyright &copy 2010-2026 Volodymyr Agafonkin at <a href="https://leafletjs.com/">leafletjs.com</a></br>
+					Maps copyright &copy OpenStreetMap contributors at <a href="https://www.openstreetmap.org/">openstreetmap.org</a></p>
+			</aside>
+
+			<footer>
+				<p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
+			</footer>
 		</div>
+
+		<script src="../../js/demos/year.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		        crossorigin="anonymous"></script>
+		<script>
+			let index = 0;
+			let slides = document.getElementsByClassName('slide');
+
+			while(1)
+			{
+				show();
+			}
+
+			function show() {
+				let i;
+
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				index++;
+
+				if (index > slides.length) {
+					index = 0;
+				}
+
+				slides[index - 1].style.display = "block";
+				setTimeout(show, 5000);
+			}
+		</script>
 	</body>
 </html>
 	
