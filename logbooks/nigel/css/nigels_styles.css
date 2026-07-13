@@ -122,3 +122,7 @@ fieldset.sidebar#bar2 { /*logbook menu*/
 .questions {
     text-align: center; 
 }
+
+ul {
+    text-align: left;
+}
