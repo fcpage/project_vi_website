@@ -203,6 +203,13 @@
             <h3 id="week6">Week 6</h3>
             <hr/>
         </div>
+        <ul>
+            <li>Perform database setup</li>
+            <li>Implement JDBC connector api wrapper</li>
+            <li>Implement database thread with SPSC queues for sending state to application thread</li>
+            <li>Implement C++ data structures to represent database snapshots</li>
+            <li>Updated heartbeat logic</li>
+        </ul>        
         <div class="questions">
             <h2>Questions?</h2>
             <p>Click <a href="mailto:nsinclair3726@conestogac.on.ca">here</a> to email me directly.</p>
