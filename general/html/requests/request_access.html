@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="This is the request access page for our project" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="author" content="Fergus Page" />
+		<meta http-equiv="author" content="Fergus Page, Ryan Pratt" />
 		<meta name="robots" content="noindex nofollow" />
 		<meta http-equiv="pragma" content="no-cache" />
 
@@ -31,15 +31,15 @@
 				<div class="index_block">
 					<h4>Index</h4><br/>
 					<p id="sidebar">
-						<b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
+						<b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
 						<b><a class="index top_up" href="#">Top</a></b><br/>
-						<a class="index" href="../../../general/html/project/about.html">About</a><br/>
-						<a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
-						<a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
-						<a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
-						<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
-						<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
-						<a class="index" href="../../../general/html/demos/demos.html">Demos</a>
+						<a class="index" href="../project/about.html">About</a><br/>
+						<a class="index" href="../project/project_plan.html">Project Plan</a><br/>
+						<a class="index" href="../demos/project_details.html">Project Details</a><br/>
+						<a class="index" href="../project/logbooks.html">Logbooks</a><br/>
+						<a class="index" href="../project/documentation.html">Media and Documentation</a><br/><br/>
+						<a class="index" href="../project/links.html">External Links</a><br/>
+						<a class="index" href="../demos/demos.html">Demos</a>
 					</p>
 				</div>
 			</nav>
@@ -47,7 +47,7 @@
 			<div id="content">
 				<article>
 					<section>
-						<form action="../../php/request_access.php" method="post" id="access">
+						<form action="../../php/requests/request_access.php" method="post" id="access">
 							<fieldset>
 								<legend>Contact</legend>	<!-- let's get some contact information -->
 								<div>
@@ -119,42 +119,20 @@
 								<input id="submit" type="submit" value="Submit Request"/>	<!-- send it! -->
 							</fieldset>
 						</form><br/>
-						<script src="../../js/demos/validate.js"></script>
 					</section>
-
 			</article>
 
 				<footer>
-					<p id="copy" >Copyright &copy 2026 Fergus Page</p>
+					<p id="copy" >Copyright &copy <span id="year"></span> Fergus Page, Ryan Pratt</p>
 				</footer>
 			</div>
 		</div>
 
+		<script src="../../js/demos/year.js"></script>
+		<script src="../../js/elevator/feedback_limit.js"></script>
+		<script src="../../js/elevator/access_request_validate.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		        crossorigin="anonymous"></script>
-
-        <script>
-            // JS Begin
-            // Event listener for the character limit on the details textarea
-
-            const details = document.getElementById("details");
-            const detailsCount = document.getElementById("details_count");
-            const detailsError = document.getElementById("details_error");
-            const maxChar = 180;
-
-            details.addEventListener("input", function() {
-                const remaining = maxChar - details.value.length;
-
-                detailsCount.textContent = remaining + ' characters remaining';
-                detailsError.textContent = remaining < 0 ? 'You have exceeded the maximum number of characters allowed.' : '';
-
-                details.setCustomValidity(
-                    remaining < 0 ? 'You have exceeded the maximum number of characters allowed.' : ''
-                );
-            });
-
-            // JS End
-        </script>
 	</body>
 </html>

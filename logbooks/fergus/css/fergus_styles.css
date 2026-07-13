@@ -1,11 +1,5 @@
 h1 {
-    margin-left: 0;
     font-size: 30px;
-    color: black;
-}
-
-h2 {
-    font-size: 25px;
     color: black;
 }
 
@@ -13,86 +7,27 @@ h3 {
     font-size: 25px;
 }
 
+h3#name {
+    color: black;
+}
+
 h6 {
     color: forestgreen;
-}
-
-a {
-    color: dodgerblue;
-}
-
-article {
-    display: block;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    text-align: left;
 }
 
 .week {
     color: dodgerblue;
 }
 
+a.index{
+    color: dodgerblue;
+}
+
 #fergus_img {
-    display: flex;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     clip-path: circle(49% at 50% 50%);
     border: 5px solid dodgerblue;
     border-shape: circle(49% at 50% 50%);
-}
-
-div#bar1 {
-    display: block;
-    border: 2px solid black;
-    width: 133px;
-    height: 310px;
-    margin-bottom: 0;
-}
-
-div#bar2 {
-    display: block;
-    border: 2px solid black;
-    width: 133px;
-    height: 200px;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-div#sidebars {
-    float: left;
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 120px;
-    height: 275px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    background-color: aliceblue;
-    z-index: 70;
-}
-
-p.bio {
-    text-indent: 40px;
-}
-
-#content {
-    display: block;
-    margin-left: 133px;
-}
-
-footer, header{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
 }

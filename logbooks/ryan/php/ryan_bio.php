@@ -29,7 +29,7 @@
         <div id="bar1" class="index_block">
             <h4>Index</h4><br/>
             <p class="sidebar">
-                <b><a class="index back_home" href="../../../index.php">Home</a></b><br/>
+                <b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
                 <b><a class="index top_up" href="#">Top</a></b><br/>
                 <a class="index" href="../../../general/html/project/about.html">About</a><br/>
                 <a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
@@ -38,7 +38,7 @@
                 <a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
                 <a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
                 <a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
-                <a class="index" href="../../../general/html/elevator/login.html">Login</a>
+                <a class="index" href="../../../general/html/requests/login.html">Login</a>
             </p>
         </div><br/>
 
@@ -80,7 +80,12 @@
         <li><a href="#week1">Week 1</a></li>
         <li><a href="#week2">Week 2</a></li>
         <li><a href="#week3">Week 3</a></li>
+        <li><a href="#week4">Week 4</a></li>
+        <li><a href="#week5">Week 5</a></li>
+        <li><a href="#week6">Week 6</a></li>
     </ul>
+
+    <hr>
 
     <h3 id="week1">Week 1</h3>
     <b>Main task:</b> Design the elevator finite state machine (FSM) architecture.
@@ -96,6 +101,8 @@
         </li>
     </ul>
 
+    <hr>
+
     <h3 id="week2">Week 2</h3>
     <ul>
         <li>
@@ -109,12 +116,41 @@
         </li>
     </ul>
 
+    <hr>
+
     <h3 id="week3">Week 3</h3>
     <ul>
         <li>Implemented safety features using multithreading to ensure comms is always available</li>
         <li>Implemented single-producer single-consumer atomic ring buffers to avoid mutex overhead</li>
         <li>Updated SC design document to reflect updated design criteria and new information</li>
     </ul>
+
+    <hr>
+
+    <h3 id="week4">Week 4</h3>
+    <ul>
+        <li>Implemented node to node heartbeat protocol</li>
+        <li>Uses a custom CAN protocol extension to verify liveliness of all nodes on network</li>
+        <li>Added additional in-code comments to assist future users familiarizing themselves with the codebase</li>
+    </ul>
+
+    <hr>
+
+    <h3 id="week5">Week 5</h3>
+    <ul>
+        <li>Student Success Week</li>
+    </ul>
+
+    <hr>
+
+    <h3 id="week6">Week 6</h3>
+    <ul>
+        <li>Implemented light and door command logic in the supervisory controller</li>
+        <li>Added a queuing system for the STM floor controllers to drain all messages from the bus at once</li>
+        <li>Updated SC design document to reflect updated design criteria and new information</li>
+    </ul>
+
+    <hr>
 
     <h2>Questions?</h2>
     <p>Click <a href="mailto:rpratt3415@conestogac.on.ca">here</a> to email me directly.</p>

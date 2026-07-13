@@ -58,12 +58,6 @@ a:active {
     color: var(--color-bright-cyan) !important;
 }
 
-#content {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
 h1, footer {
     margin-left: 0;
     text-align: center;
@@ -78,37 +72,26 @@ h1, h2, h3 {
     color: var(--color-cyan);
 }
 
-div#bar1 {
-    display: block;
-    border: 2px solid var(--color-blue);
-    width: 133px;
-    height: 310px;
-    margin-bottom: 0;
+fieldset.sidebar#bar1 { /*index menu*/
+    background-color: var(--color-black);
+
+    legend {
+        background-color: var(--color-cyan);
+    }
 }
 
-div#bar2 {
-    display: block;
-    border: 2px solid var(--color-blue);
-    width: 133px;
-    height: 200px;
-    margin-top: 0;
-    padding-top: 0;
+fieldset.sidebar#bar2 { /*logbook menu*/
+    background-color: var(--color-black);
+
+    legend {
+        background-color: var(--color-cyan);
+    }
+
+    height: fit-content(110%); !important; /*change background block height*/
 }
 
-div#sidebars {
-    float: left;
-    display: block;
-    position: fixed;
-    text-align: center;
-    width: 120px;
-    height: 275px;
-    margin-top: 5px;
-    margin-bottom: 30px;
-    z-index: 70;
-}
+.index { /*menu links*/
 
-#content {
-    margin-left: 150px;
 }
 
 #nigel_profile {
@@ -138,4 +121,8 @@ div#sidebars {
 
 .questions {
     text-align: center; 
+}
+
+ul {
+    text-align: left;
 }

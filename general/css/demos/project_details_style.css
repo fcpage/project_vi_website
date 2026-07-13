@@ -82,20 +82,9 @@ ol {
 
 table {
     border: 1px solid black;
+    margin: auto;
 }
 
 tr:hover {
    background-color: darksalmon;
-}
-
-p#copy {
-    font-size: 60%;
-}
-
-#content {
-    margin-left: 133px;
-}
-
-p#sidebar {
-    height: 215px;
 }

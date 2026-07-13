@@ -1,10 +1,13 @@
-var today = new Date();
-var hourNow = today.getHours();
-var greeting;
+let greeter = document.getElementById('greeting'); //Are ya reelin' in the yeeaarrrs?
 
-if (hourNow > 18) {
+
+let today = new Date();
+let hourNow = today.getHours();
+let greeting;
+
+if (hourNow >= 18) {
     greeting = 'Good evening';
-} else if (hourNow > 12) {
+} else if (hourNow >= 12) {
     greeting = 'Good afternoon';
 } else if (hourNow > 0) {
     greeting = 'Good morning';
@@ -12,4 +15,4 @@ if (hourNow > 18) {
     greeting = 'Welcome';
 }
 
-document.write('<h3>' + greeting + '</h3>')
+greeter.innerHTML = greeting; //why hello there
