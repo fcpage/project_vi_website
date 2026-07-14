@@ -1,5 +1,12 @@
 const elementNames = [
-    'REQUEST', 'CURRENT', 'DIRECTION', 'DOORS', 'CF3', 'CF2','CF1', 'F3D', 'F2U', 'F2D', 'F1U'
+    'REQUEST',
+    'CURRENT',
+    'DIRECTION',
+    'DOORS',
+    'CF3', 'CF2','CF1',
+    'F3D',
+    'F2U', 'F2D',
+    'F1U'
 ];
 
 const elementIDs = [
@@ -7,21 +14,24 @@ const elementIDs = [
     'Initializing - Please wait...',
     'Initializing - Please wait...',
     'Initializing - Please wait...',
-    '3', '2', '1', 'down', 'up', 'down', 'up'
+    '3', '2', '1',
+    'down',
+    'up', 'down',
+    'up'
 ];
 
 const initArray = [
-    {name: elementNames[0], state: null, id: null, handle: null},
-    {name: elementNames[1], state: null, id: null, handle: null},
-    {name: elementNames[2], state: null, id: null, handle: null},
-    {name: elementNames[3], state: null, id: null, handle: null},
-    {name: elementNames[4], state: null, id: null, handle: null},
-    {name: elementNames[5], state: null, id: null, handle: null},
-    {name: elementNames[6], state: null, id: null, handle: null},
-    {name: elementNames[7], state: null, id: null, handle: null},
-    {name: elementNames[8], state: null, id: null, handle: null},
-    {name: elementNames[9], state: null, id: null, handle: null},
-    {name: elementNames[10], state: null, id: null, handle: null}
+    {name: elementNames[0]},
+    {name: elementNames[1]},
+    {name: elementNames[2]},
+    {name: elementNames[3]},
+    {name: elementNames[4]},
+    {name: elementNames[5]},
+    {name: elementNames[6]},
+    {name: elementNames[7]},
+    {name: elementNames[8]},
+    {name: elementNames[9]},
+    {name: elementNames[10]}
 ];
 
 let elementHandles;
