@@ -98,8 +98,7 @@ class guiElement {
         this.name = name;   //the element name
         this.state = state;  //the state of the display
         this.id = id;     //the png identifier
-        this.handle = handle;
-
+        this.handle = handle;   //the handle for event listeners
         return null;
     }
 
@@ -121,9 +120,7 @@ class guiElement {
                 default:            //otherwise return error
                     state = "error";
                     break;
-            }
-
-            return state;  //report the state of the element of interest
+            } return state;  //report the state of the element of interest
         } else {    //if it is a text field, id is a message to display.
             switch (state) {
                 case null:          //initialize to unlit state
@@ -141,23 +138,22 @@ class guiElement {
                 default:            //otherwise return error
                     state = "error";
                     break;
-            }
-
-            return state;
+            } return state;
         }
     }
 }
 
 function initElements() {        //initialize all the elements
     console.log("GUI initializing");
-    elementHandles= initArray.map(data => new guiElement(data.name, data.state, data.id));
+    elementHandles= initArray.map(data => new guiElement(data.name, data.state, data.id));  //create a set of class objects
     for (let i = 0; i < elementHandles.length; i++) {//for each element
-        elementHandles[i].id = elementIDs[i];
-        elementHandles[i].handle = document.getElementById(elementHandles[i].name);
-        guiElement.display(elementHandles[i].name, elementHandles[i].state, elementHandles[i].id, elementHandles[i].handle);                //initialize the element's icon
+        elementHandles[i].id = elementIDs[i];   //set the id
+        elementHandles[i].handle = document.getElementById(elementHandles[i].name); //set the handle on gui.html
+        guiElement.display(elementHandles[i].name, elementHandles[i].state, elementHandles[i].id, elementHandles[i].handle);    //initialize the element's icon
         elementHandles[i].handle.addEventListener('load', (event) => {
-            guiElement.display(elementHandles[i].name, elementHandles[i].state, elementHandles[i].id, elementHandles[i].handle)});         //add a load listener
-        elementHandles[i].handle.addEventListener('click', (event) => {indicatorToggle(elementHandles[i])});        //add a click listener
+            guiElement.display(elementHandles[i].name, elementHandles[i].state, elementHandles[i].id, elementHandles[i].handle)});  //add a load listener
+        elementHandles[i].handle.addEventListener('click', (event) => {indicatorToggle(elementHandles[i], !elementHandles[i].state)});    //add a click listener
+        indicatorToggle(elementHandles[i], 1);
     }
 
     console.log("Initialization complete");
@@ -165,4 +161,3 @@ function initElements() {        //initialize all the elements
 }
 
 initElements();
-indicatorToggle(elementHandles[5], 1);
