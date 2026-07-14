@@ -44,41 +44,55 @@
 
         <div id="content">
             <article>
-                <fieldset>
-                    <legend>Elevator GUI</legend>
-                    <section>
-                        <p>Please select a floor to actuate the elevator car:</p>  <!-- some instructions -->
-                        <iframe id="gui" src="../../php/elevator/gui/gui.php" title="Control Panel" width="400" height="425"></iframe>
-                    </section>
-                </fieldset><br/>
+                <section>
+                    <fieldset>
+                        <legend>Elevator GUI</legend>
+                        <h3>Please select a floor to actuate the elevator car:</h3>  <!-- some instructions -->
+                        <p id="REQUEST">BINGO</p>
+                        <p id="CURRENT"></p>
+                        <p id="DIRECTION"></p>
+                        <p id="DOORS"></p>
+                    </fieldset><br/>
+                </section>
 
-                <fieldset>
-                    <legend>Car</legend>
-                    <section>
-                        <iframe id="car" src="../../php/elevator/gui/car.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
-                    </section>
-                </fieldset><br/>
+                <section>
+                    <fieldset>
+                        <legend>Car</legend>
+                        <section>
+                            <label id="CF3"></label><br/> <!-- 3, please -->
+                            <label id="CF2"></label><br/> <!-- 2, please -->
+                            <label id="CF1"></label><br/> <!-- 1, please -->
+                        </section>
+                    </fieldset><br/>
+                </section>
 
-                <fieldset>
-                    <legend>Floor 3</legend>
-                    <section>
-                        <iframe id="floor3" src="../../php/elevator/gui/floor3.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
-                    </section>
-                </fieldset><br/>
+                <section>
+                    <fieldset>
+                        <legend>Floor 3</legend>
+                        <section>
+                            <label id="F3D"></label><br/> <!-- down indicator -->
+                        </section>
+                    </fieldset><br/>
+                </section>
 
-                <fieldset>
+                <section>
+                    <fieldset>
                     <legend>Floor 2</legend>
                     <section>
-                        <iframe id="floor2" src="../../php/elevator/gui/floor2.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                        <label id="F2U"></label><br/>  <!-- up indicator -->
+                        <label id="F2D"></label><br/> <!-- down indicator -->
                     </section>
-                </fieldset><br/>
+                    </fieldset><br/>
+                </section>
 
-                <fieldset>
+                <section>
+                    <fieldset>
                     <legend>Floor 1</legend>
                     <section>
-                        <iframe id="floor1" src="../../php/elevator/gui/floor1.php" title="Control Panel" width="400" height="425"></iframe><br/><br/> <!-- embedded php gui -->
+                        <label id="F1U"></label><br/>  <!-- up indicator -->
                     </section>
-                </fieldset><br/>
+                    </fieldset><br/>
+                </section>
             </article>
         </div>
 
@@ -87,6 +101,7 @@
         </footer>
     </div>
 
+    <script src="../../js/elevator/guiDisplay.js"></script>
     <script src="../../js/demos/year.js"></script>
     <script type="module" src="../../js/project/verify.mjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
