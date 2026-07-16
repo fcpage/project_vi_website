@@ -43,57 +43,41 @@
         </nav>
 
         <div id="content">
-            <article>
-                <section>
-                    <fieldset>
-                        <legend>Elevator GUI</legend>
-                        <h3>Please select a floor to actuate the elevator car:</h3>  <!-- some instructions -->
-                        <p id="REQUEST">Initializing - Please wait...</p>
-                        <p id="CURRENT">Initializing - Please wait...</p>
-                        <p id="DIRECTION">Initializing - Please wait...</p>
-                        <p id="DOORS">Initializing - Please wait...</p>
-                    </fieldset><br/>
-                </section>
+            <div id="elevator_gui">
+                <h3>Please select a floor to actuate the elevator car:</h3><br/>  <!-- some instructions -->
+                <fieldset>
+                    <legend>Elevator Status</legend>
+                    <p>Request: <span id="REQUEST"></span></p>
+                    <p>Current: <span id="CURRENT"></span></p>
+                    <p>Direction: <span id="DIRECTION"></span></p>
+                    <p>Door Status: <span id="DOORS"></span></p>
+                </fieldset><br/>
+            </div>
 
-                <section>
-                    <fieldset>
-                        <legend>Car</legend>
-                        <section>
-                            <label><img id="CF3" src="../../resources/references/imgs/gui/3unlit.png" width="100" alt="Floor 3" title="Floor 3"/></label><br/> <!-- 3, please -->
-                            <label><img id="CF2" src="../../resources/references/imgs/gui/2unlit.png" width="100" alt="Floor 3" title="Floor 2"/></label><br/> <!-- 2, please -->
-                            <label><img id="CF1" src="../../resources/references/imgs/gui/1unlit.png" width="100" alt="Floor 3" title="Floor 1"/></label><br/> <!-- 1, please -->
-                        </section>
-                    </fieldset><br/>
-                </section>
+            <div id="strip_container">
+                <fieldset class="strip">
+                    <legend>Car</legend>
+                        <label><img id="CF3" src="../../resources/references/imgs/gui/3unlit.png" width="100" alt="Floor 3" title="Floor 3"/></label><br/> <!-- 3, please -->
+                        <label><img id="CF2" src="../../resources/references/imgs/gui/2unlit.png" width="100" alt="Floor 3" title="Floor 2"/></label><br/> <!-- 2, please -->
+                        <label><img id="CF1" src="../../resources/references/imgs/gui/1unlit.png" width="100" alt="Floor 3" title="Floor 1"/></label><br/> <!-- 1, please -->
+                </fieldset>
 
-                <section>
-                    <fieldset>
-                        <legend>Floor 3</legend>
-                        <section>
-                            <label><img id="F3D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
-                        </section>
-                    </fieldset><br/>
-                </section>
+                <fieldset class="strip">
+                    <legend>Floor 3</legend>
+                        <label><img id="F3D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                </fieldset>
 
-                <section>
-                    <fieldset>
-                    <legend>Floor 2</legend>
-                    <section>
-                        <label><img id="F2U" src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
-                        <label><img id="F2D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
-                    </section>
-                    </fieldset><br/>
-                </section>
+                <fieldset class="strip">
+                <legend>Floor 2</legend>
+                    <label><img id="F2U" src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                    <label><img id="F2D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                </fieldset>
 
-                <section>
-                    <fieldset>
-                    <legend>Floor 1</legend>
-                    <section>
-                        <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
-                    </section>
-                    </fieldset><br/>
-                </section>
-            </article>
+                <fieldset class="strip">
+                <legend>Floor 1</legend>
+                    <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                </fieldset>
+            </div>
         </div>
 
         <footer>
@@ -101,9 +85,10 @@
         </footer>
     </div>
 
-    <script src="../../js/elevator/guiDisplay.js" defer></script>
     <script src="../../js/demos/year.js"></script>
     <script type="module" src="../../js/security/verify.mjs"></script>
+    <script type="module" src="../../js/elevator/guiBrain.js"></script>
+    <script type="module" src="../../js/elevator/guiDisplay.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>

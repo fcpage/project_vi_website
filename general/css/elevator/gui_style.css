@@ -10,12 +10,25 @@
 }
 
 fieldset {
-    width: 450px;
-    height: 445px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 400px;
 }
 
 fieldset p{
     text-align: center;
+}
+
+#strip_container {
+    display: flex;
+    gap: 10px;
+}
+
+.strip {
+    display: inline-block;
+    width: 100px;
+    flex: 1;
 }
 
 div.UI{
@@ -28,7 +41,7 @@ header {
     margin-left: 133px;
 }
 
-div.UI{
+div.UI {
     display: block;
     align-content: center;
     text-align: center;
