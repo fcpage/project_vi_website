@@ -1608,7 +1608,7 @@ var CRS = {
 		return this.projection.unproject(untransformedPoint);
 	},
 
-	// @method project(latlng: LatLng): Point
+	// @method security(latlng: LatLng): Point
 	// Projects geographical coordinates into coordinates in units accepted for
 	// this CRS (e.g. meters for EPSG:3857, for passing it to WMS services).
 	project: function (latlng) {
@@ -1617,7 +1617,7 @@ var CRS = {
 
 	// @method unproject(point: Point): LatLng
 	// Given a projected coordinate returns the corresponding LatLng.
-	// The inverse of `project`.
+	// The inverse of `security`.
 	unproject: function (point) {
 		return this.projection.unproject(point);
 	},
@@ -4079,7 +4079,7 @@ var Map = Evented.extend({
 		return isNaN(zoom) ? Infinity : zoom;
 	},
 
-	// @method project(latlng: LatLng, zoom: Number): Point
+	// @method security(latlng: LatLng, zoom: Number): Point
 	// Projects a geographical coordinate `LatLng` according to the projection
 	// of the map's CRS, then scales it according to `zoom` and the CRS's
 	// `Transformation`. The result is pixel coordinate relative to
@@ -4090,7 +4090,7 @@ var Map = Evented.extend({
 	},
 
 	// @method unproject(point: Point, zoom: Number): LatLng
-	// Inverse of [`project`](#map-project).
+	// Inverse of [`security`](#map-security).
 	unproject: function (point, zoom) {
 		zoom = zoom === undefined ? this._zoom : zoom;
 		return this.options.crs.pointToLatLng(toPoint(point), zoom);
@@ -6684,12 +6684,12 @@ var Mercator = {
  * @property bounds: Bounds
  * The bounds (specified in CRS units) where the projection is valid
 
- * @method project(latlng: LatLng): Point
+ * @method security(latlng: LatLng): Point
  * Projects geographical coordinates into a 2D point.
  * Only accepts actual `L.LatLng` instances, not arrays.
 
  * @method unproject(point: Point): LatLng
- * The inverse of `project`. Projects a 2D point into a geographical location.
+ * The inverse of `security`. Projects a 2D point into a geographical location.
  * Only accepts actual `L.Point` instances, not arrays.
 
  * Note that the projection instances do not inherit from Leaflet's `Class` object,

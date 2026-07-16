@@ -1,5 +1,5 @@
-import {getCookie} from "./cookieFunctions.js";
-import {destroySession} from "./sessionFunctions.js";
+import {getCookie} from "../util/cookieFunctions.js";
+import {destroySession} from "../util/sessionFunctions.js";
 
 const message = document.getElementById("message");
 
