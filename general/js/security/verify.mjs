@@ -1,5 +1,5 @@
-import {startSession, destroySession, getSessionUser, getSessionAuth, getSessionLogin} from "./sessionFunctions.js";
-import {getCookie, setCookie} from "./cookieFunctions.js";
+import {startSession, destroySession, getSessionUser, getSessionAuth, getSessionLogin} from "../util/sessionFunctions.js";
+import {getCookie, setCookie} from "../util/cookieFunctions.js";
 
 startSession();
 getSessionUser();
@@ -17,7 +17,7 @@ if ((user !== String(false)) &&
     console.log("Auth: " + auth);
     console.log('Login: '+ login);
     verify.innerHTML = `Welcome, ${user}!<br/>` +
-        'Please <a href="../../../general/html/requests/logout.html">' +
+        'Please <a href="../../html/requests/logout.html">' +
         'LOG OUT</a> when you\'re finished.';
 } else if (login === String(false)) {
     destroySession();

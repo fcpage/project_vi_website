@@ -1,5 +1,5 @@
-import {destroySession} from "./sessionFunctions.js";
-import {getCookie, setCookie} from "./cookieFunctions.js";
+import {destroySession} from "../util/sessionFunctions.js";
+import {getCookie, setCookie} from "../util/cookieFunctions.js";
 
 destroySession();
 setCookie("login", String(false));
