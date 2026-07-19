@@ -138,35 +138,10 @@
 		</div>
 
 		<script src="../../js/demos/year.js"></script>
+		<script src="../../js/project/teamSlideshow.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		        crossorigin="anonymous"></script>
-		<script>
-			let index = 0;
-			let slides = document.getElementsByClassName('slide');
-
-			while(1)
-			{
-				show();
-			}
-
-			function show() {
-				let i;
-
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";
-				}
-
-				index++;
-
-				if (index > slides.length) {
-					index = 0;
-				}
-
-				slides[index - 1].style.display = "block";
-				setTimeout(show, 5000);
-			}
-		</script>
 	</body>
 </html>
 	

@@ -1,0 +1,103 @@
+#elevatorShaft {
+    display: flex;
+    width: 900px;
+    height: 623px;
+}
+
+#doorFrame {
+    display: flex;
+    padding: 0;
+    margin-top: 15px;
+    width: 450px;
+    height: 593px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 100;
+    overflow: hidden; !important;
+}
+
+#car {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    width: 450px;
+    height: 590px;
+}
+
+#leftDoor {
+    display: flex;
+    width: 250px;
+    height: 620px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 150;
+    overflow: hidden; !important;
+}
+
+#rightDoor {
+    display: flex;
+    width: 250px;
+    height: 620px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 150;
+    overflow: hidden; !important;
+}
+
+.open#leftDoor {
+    animation: leftDoorOpen 3s ease-in 0s forwards;
+}
+
+.open#rightDoor {
+    animation: rightDoorOpen 3s ease-in 0s forwards;
+}
+
+.closed#leftDoor {
+    animation: leftDoorClosed 3s ease-in 0s forwards;
+}
+
+.closed#rightDoor {
+    animation: rightDoorClosed 3s ease-in 0s forwards;
+}
+
+
+@keyframes leftDoorOpen {
+    from {
+        transform: translateX(93%);
+    }
+
+    to {
+        transform: translateX(2%);
+    }
+}
+
+@keyframes rightDoorOpen {
+    from {
+        transform: translateX(-93%);
+    }
+
+    to {
+        transform: translateX(-2%);
+    }
+}
+
+@keyframes leftDoorClosed {
+    from {
+        transform: translateX(2%);
+    }
+
+    to {
+        transform: translateX(93%);
+    }
+}
+
+@keyframes rightDoorClosed {
+    from {
+        transform: translateX(-2%);
+    }
+
+    to {
+        transform: translateX(-93%);
+    }
+}

@@ -9,11 +9,18 @@
     flex-direction: column;
 }
 
-fieldset {
+fieldset.controls{
     margin-left: auto;
     margin-right: auto;
     width: 500px;
     height: 400px;
+}
+
+fieldset#doorFrame{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 670px;
 }
 
 fieldset p{
@@ -45,4 +52,22 @@ div.UI {
     display: block;
     align-content: center;
     text-align: center;
+}
+
+iframe {
+    display: block;
+    margin-left: -276px;
+    margin-top: -40px;
+    width: 1000px;
+    height: 1000px;
+    padding: 0;
+}
+
+#clip_car {
+    margin-left: 15px;
+    width: 450px;
+    height: 590px;
+    border: black solid 1px;
+    border-radius: 10px;
+    overflow: hidden !important;
 }

@@ -43,12 +43,13 @@
         </nav>
 
         <div id="content">
-            <div id="elevator_gui">
+            <div class="controls" id="elevator_gui">
                 <h3>Please select a floor to actuate the elevator car:</h3><br/>  <!-- some instructions -->
-                <fieldset>
+                <fieldset class="controls">
                     <legend>Elevator Status</legend>
-                    <p>Request: <span id="REQUEST"></span></p>
+                    <p>Request: <span id="REQUEST">Hello</span></p>
                     <p>Current: <span id="CURRENT"></span></p>
+                    <p>Door Status: <span id="PREVIOUS"></span></p>
                     <p>Direction: <span id="DIRECTION"></span></p>
                     <p>Door Status: <span id="DOORS"></span></p>
                 </fieldset><br/>
@@ -77,20 +78,29 @@
                 <legend>Floor 1</legend>
                     <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
                 </fieldset>
+            </div><br/>
+
+            <div id="elevator_doors">
+                <fieldset id="doorFrame">
+                    <legend>Elevator Doors</legend>
+                    <div id="clip_car">
+                        <iframe id="doorMechanic" src="./door_mechanic.html" width="450" height="590"></iframe>
+                    </div>
+                </fieldset><br/>
             </div>
         </div>
 
         <footer>
-            <p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
+            <br/><p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
         </footer>
     </div>
 
     <script src="../../js/demos/year.js"></script>
     <script type="module" src="../../js/security/verify.mjs"></script>
-    <script type="module" src="../../js/elevator/guiBrain.js"></script>
-    <script type="module" src="../../js/elevator/guiDisplay.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+    <script type="module" src="../../js/elevator/guiDisplay.mjs" defer></script>
 </body>
 </html>
