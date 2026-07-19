@@ -9,6 +9,8 @@ function loginPrompt (){
         destroySession();
         return false;
     }
+
+
     return true;
 }
 
