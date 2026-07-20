@@ -10,7 +10,6 @@ function loginPrompt (){
         return false;
     }
 
-
     return true;
 }
 
