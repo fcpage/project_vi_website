@@ -1,131 +1,121 @@
-export class dbComThread {
-    constructor() { //make sure orders in each file all agree - db and C++ too
-        this.index = null;
-        this.date = null;
-        this.time = null;
-        this.sender = 0x1000;
-        this.receiver = 0x100;
-        this.currentFloor = null;
-        this.previousFloor = null;
-        this.requestFloor = null;
-        this.queued = 1;
-        this.served = 0;
-        this.doors = 0;
-        return this;
+export class dbComThread {  //database access object and associated methods
+    constructor() { //make sure all index orders agree - PHP, SQL and C++ too
+        this.index = null;          //not yet defined
+        this.date = null;           //not yet defined
+        this.time = null;           //not yet defined
+        this.sender = 0x1000;       //this node will always be the sender from its perspective
+        this.receiver = 0x100;      //this node only communicates with the supervisor
+        this.currentFloor = null;   //not yet defined
+        this.previousFloor = null;  //not yet defined
+        this.requestFloor = null;   //not yet defined
+        this.queued = 1;            //this node has lower priority than the rest of the system, so assume it gets queued
+        this.served = 0;            //assume that the request has not been served yet
+        this.doors = 0;             //assume that the doors on the are shut for this request
+        return this;                //return the database access object.
     }
 
-    init() {
-        fetch("../../php/elevator/dbInit.php", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"}})
+    init() {    //function to initialize the database
+        fetch("../../php/elevator/dbInit.php", {    //poke the php initializer
+            method: "POST"}) //post-it note
         .then(response => {
-            if (!response.ok) {
+            if (!response.ok) { //error checking
                 console.error("Error Status: " + response.status);
                 console.error("Error Message: " + response.statusText);
-                return false;
-            } else {
+            } else {    //if all good
                 console.log("Database loaded");}})
-        .catch(error => {
-            console.error("Error:", error)
-            return false;});
+        .catch(error => {console.error("Error:", error)});   //more error checking
     }
 
-    mostRecentIndex() {
-        fetch("../../php/elevator/mostRecentIndex.php", {
-            method: "POST",
-            body: JSON.stringify(this)})
+    mostRecentIndex() { //fetch the most recent index
+        fetch("../../php/elevator/mostRecentIndex.php", {   //poke the php counterpart
+            method: "POST", //use snail mail
+            body: JSON.stringify(this)})    //send this database access object to the php
         .then(response => {
-            if (!response.ok) {
+            if (!response.ok) { //error checking
                 console.error("Error Status: " + response.status);
                 console.error("Error Message: " + response.statusText);
-                return false;
-            } else {
-                console.log("Send Successed");}})
-        .then(data => {
-            console.log("Success:", data);
-            this.index = Number(data);})
-        .catch(error => {
-            console.error("Error:", error)
-            return false;});
-        return this.index;
+            } else {    //if all good
+                console.log("Send Successed");}}) //mmmmmm sushi
+        .then(data => { //do something with the data that the php sent back
+            console.log("Success:", data);  //report to the console
+            this.index = Number(data);})    //make sure that the data is a number, then store it in the index field of this database access object
+        .catch(error => {console.error("Error:", error)});  //more error checking
+        return this.index;  //return the index
     }
 
-    nextIndex() {
-        return Number(this.mostRecentIndex()) + 1;
+    nextIndex() {   //function to generate a new index
+        return Number(this.mostRecentIndex()) + 1;  //get the most recent index, add one, make sure it's a number, and return the index
+    }
+
+    priorIndex(n) {   //function to generate a new index
+        return Number(this.mostRecentIndex()) - n;  //get the most recent index, add one, make sure it's a number, and return the index
     }
 
     scan(index) {    //database is an entire object, not a string. commit makes changes if true
-        let queryObject = this;
-
-        if (index) {
+        let queryObject = new dbComThread(); //copy this database access object to a blank dummy object
+        
+        if (index) {    //if an index was supplied
             queryObject.index = index;  //scan a particular index if passed
-        } else {
+        } else {        //if no index was supplied
             queryObject.index = this.mostRecentIndex(); //else scan the most recent entry
         }
 
-        queryObject = this.receiveData(queryObject);
-        this.currentFloor = queryObject.currentFloor;
-        this.previousFloor = queryObject.previousFloor;
-        this.requestFloor = queryObject.requestFloor;
-        this.doors = queryObject.doors;
+        queryObject = this.receiveData(queryObject);        //fetch data from the database according to the query object's index
+        return queryObject;
     }
 
-    modify(index){
-        let editObject = dbComThread;
-        editObject.index = index;
-
+    modify(db, index, edit){    //function to edit one element of the database
+        let editObject = dbComThread;   //instantiate an editor object
+        editObject.index = index;       //choose the index to edit
+        //FINISH WRITING FUNCTION
     }
 
-    sendData(payload) {
-        let timestamp = new Date();
-        payload.date = timestamp.getFullYear().toString() + "/" + timestamp.getDate().toString() + "/" + timestamp.getDay().toString();
-        payload.time = timestamp.getHours().toString() + "/" + timestamp.getMinutes().toString() + "/" + timestamp.getSeconds().toString();
-        fetch("../../php/elevator/dbIn.php", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(payload)
-        })
-            .then(response => {
-                if (!response.ok) {
+    sendData(payload) { //function to send data into the database
+        let timestamp = new Date(); //generate time object
+        payload.date = timestamp.getFullYear().toString() + "/" + timestamp.getDate().toString() + "/" + timestamp.getDay().toString(); //generate date
+        payload.time = timestamp.getHours().toString() + "/" + timestamp.getMinutes().toString() + "/" + timestamp.getSeconds().toString(); //generate timestamp
+        fetch("../../php/elevator/dbIn.php", {  //send the line to the database
+            method: "POST", //using post
+            body: JSON.stringify(payload)})   //and put it in a JSON string
+            .then(response => { //response
+                if (!response.ok) { //error handling
                     console.error("Error Status: " + response.status);
                     console.error("Error Message: " + response.statusText);
-                    return false;
-                } else {
-                    console.log("Send Successed");
-                }
-            })
-            .then(data => {
-                console.log("Success:", data);
-            })
-            .catch(error => {
-                console.error("Error:", error)
-                return false;
-            });
+                } else {    //You bet your ass it worked, Marty!
+                    console.log("Send Successed");}})
+            .catch(error => {   //more error handling
+                console.error("Error:", error)});
     }
 
-    receiveData(database) {
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "../../php/elevator/dbOut.php", true);
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                const packet = xhr.responseText;
-                if (packet !== (String(false)) || 'undefined') {
-                    let data = JSON.parse(packet, (key, value) => {
-                        (Array.isArray(value) && value.every(Array.isArray)) ? new Map(value) : value = null;});
-                    for (let i = 0; i < database.indices.length; i++) {
-                        this.indices[i] = data[i];
+    receiveData(database) { //function to retrieve data from the base
+        if (database) {    //if a particular database access object was supplied, do nothing, use that object
+        } else {        //if no database access object was supplied
+            database = this; //use this database access object
+        }
+
+        const xhr = new XMLHttpRequest();   //lettuce do an XHR this time
+        xhr.open("POST", "../../php/elevator/dbOut.php", true); //ground control to php database reader
+        xhr.onload = function () {  //so this is how it's gonna go when it loads
+            if (xhr.status === 200) {   //It works! I finally built something that works!!
+                const packet = xhr.responseText;    //capture the data package
+                if (packet !== (String(false)) || 'undefined') {    //AND THERE IS EVEN STUFF IN THE PACKET
+                    let data = JSON.parse(packet, (key, value) => { //parse it!
+                        (Array.isArray(value) && value.every(Array.isArray)) ? new Map(value) : value = null;});    //if it's an array of arrays (typical Jason move)
+                    for (let i = 0; i < database.indices.length; i++) { //iterate through however many indices there are in the database
+                        this.indices[i] = data[i];  //and assign the data to this database access object, at the same index
                     }
-                } else {
+                } else {    //error handling
                     console.error("Error Status: " + xhr.status);
                     console.error("Error Message: " + xhr.statusText);
                     return false;
                 }
-            } else {
+            } else {    //even more error handling
                 console.error("Error validating session. Error: ", xhr.status);
+                console.error("Error Message: " + xhr.statusText);
                 return false;
             }
         }
-        xhr.send();
-        return database;
+        xhr.send(); //send the request
+        return database;    //It works! I finally built something that works!!
     }
 }
