@@ -13,7 +13,7 @@ fieldset.controls{
     margin-left: auto;
     margin-right: auto;
     width: 500px;
-    height: 400px;
+    height: 300px;
 }
 
 fieldset#doorFrame{
@@ -29,13 +29,22 @@ fieldset p{
 
 #strip_container {
     display: flex;
+    width: 500px;
+    height: 390px;
     gap: 10px;
 }
 
-.strip {
-    display: inline-block;
-    width: 100px;
-    flex: 1;
+.strip div {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: min(100px);
+    height: 270px;
+}
+
+div.floor {
+    margin-top: 80px;
 }
 
 div.UI{

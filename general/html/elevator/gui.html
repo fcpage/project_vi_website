@@ -47,36 +47,44 @@
                 <h3>Please select a floor to actuate the elevator car:</h3><br/>  <!-- some instructions -->
                 <fieldset class="controls">
                     <legend>Elevator Status</legend>
-                    <p>Request: <span id="REQUEST">Hello</span></p>
-                    <p>Current: <span id="CURRENT"></span></p>
-                    <p>Door Status: <span id="PREVIOUS"></span></p>
-                    <p>Direction: <span id="DIRECTION"></span></p>
-                    <p>Door Status: <span id="DOORS"></span></p>
+                    <p>Request: <span id="REQUEST">request?</span></p>
+                    <p>Current: <span id="CURRENT">current?</span></p>
+                    <p>Door Status: <span id="PREVIOUS">previous?</span></p>
+                    <p>Direction: <span id="DIRECTION">direction?</span></p>
+                    <p>Door Status: <span id="DOORS">doors?</span></p>
                 </fieldset><br/>
             </div>
 
             <div id="strip_container">
                 <fieldset class="strip">
                     <legend>Car</legend>
+                    <div>
                         <label><img id="CF3" src="../../resources/references/imgs/gui/3unlit.png" width="100" alt="Floor 3" title="Floor 3"/></label><br/> <!-- 3, please -->
                         <label><img id="CF2" src="../../resources/references/imgs/gui/2unlit.png" width="100" alt="Floor 3" title="Floor 2"/></label><br/> <!-- 2, please -->
                         <label><img id="CF1" src="../../resources/references/imgs/gui/1unlit.png" width="100" alt="Floor 3" title="Floor 1"/></label><br/> <!-- 1, please -->
+                    </div>
                 </fieldset>
 
                 <fieldset class="strip">
                     <legend>Floor 3</legend>
+                    <div class="floor">
                         <label><img id="F3D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                    </div>
                 </fieldset>
 
                 <fieldset class="strip">
-                <legend>Floor 2</legend>
-                    <label><img id="F2U" src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
-                    <label><img id="F2D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                    <legend>Floor 2</legend>
+                    <div class="floor">
+                        <label><img id="F2U" src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                        <label><img id="F2D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                    </div>
                 </fieldset>
 
                 <fieldset class="strip">
-                <legend>Floor 1</legend>
-                    <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                    <legend>Floor 1</legend>
+                    <div class="floor">
+                        <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                    </div>
                 </fieldset>
             </div><br/>
 
@@ -96,11 +104,11 @@
     </div>
 
     <script src="../../js/demos/year.js"></script>
+    <script type="module" src="../../js/elevator/gui.mjs"></script>
     <script type="module" src="../../js/security/verify.mjs"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-    <script type="module" src="../../js/elevator/guiDisplay.mjs" defer></script>
+    <script type="module" src="../../js/elevator/guiDisplay.js" defer></script>
 </body>
 </html>
