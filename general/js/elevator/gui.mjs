@@ -4,11 +4,14 @@ import {ele, initElements} from "./guiDisplay.js";
 //initialization
 let elements = initElements();           //initialize the gui elements
 let queueLength = 10;                //how far back do we go?
-let db = new dbComThread;       //instantiate a database access object
-let edit = new dbComThread;     //AND ANOTHER ONE
-db.init();                                   //initialize the database connection
+let doors = new dbComThread();  //instantiate a database access object
+let calls = new dbComThread();     //AND ANOTHER ONE
+doors.init('doors');                                   //initialize the database connection
+doors.init('calls');                                   //initialize the database connection
+setTimeout(doorMonitor, 1000);
 
 /*while(1) {  //the database monitor loop
+
     let queryObj = db.scan(db.mostRecentIndex());  //check the most recent row of the database
     edit = queryObj;
     if (db !== queryObj) {      //if the db is not up to date with the most recent row
@@ -28,12 +31,15 @@ db.init();                                   //initialize the database connectio
     }
 }*/
 
+function doorMonitor (){
+
+}
+
 function doorLogger() {
+    //doorLogger
     edit.doors = elements[ele['LEFT']].classList.value; //record the door state in the database access object
     edit.modify(edit, edit.index, edit.doors);          //change it in the database
     console.log("Door State: " + edit.doors);           //report on the console
-}
 
-function doorChecker() {
-
+    //door
 }

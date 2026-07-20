@@ -14,9 +14,10 @@ export class dbComThread {  //database access object and associated methods
         return this;                //return the database access object.
     }
 
-    init() {    //function to initialize the database
+    init(name) {    //function to initialize the database
         fetch("../../php/elevator/dbInit.php", {    //poke the php initializer
-            method: "POST"}) //post-it note
+            method: "POST", //post-it note
+            body: JSON.stringify({name: name})})
         .then(response => {
             if (!response.ok) { //error checking
                 console.error("Error Status: " + response.status);
