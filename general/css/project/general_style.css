@@ -56,7 +56,7 @@ nav {
     }
 
     fieldset.sidebar#bar2 { /*logbook menu block*/
-        height: 285px; /*change background block height*/
+        height: 310px; /*change background block height*/
         margin-top: 365px; /*change vertical offset of logbook sidebar*/
     }
 
