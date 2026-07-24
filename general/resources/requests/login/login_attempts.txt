@@ -136,3 +136,33 @@ Username: fergus_page
 Authentication: valid
 Authorization: dev
 
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: invalid
+
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: invalid
+
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: invalid
+
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: admin
+
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: admin
+
+Date:2026-07-24
+Username: maintenance
+Authentication: valid
+Authorization: admin
+

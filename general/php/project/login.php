@@ -20,6 +20,8 @@ if (str_contains($contents, "-auth:dev")){ //if auth key is dev
     $authorization = "prof"; //assign authorization key if found
 } elseif (str_contains($contents, "-auth:run")){ //else if auth key is run
     $authorization = "run"; //assign authorization key if found
+} elseif (str_contains($contents, "-auth:admin")){ //else if auth key is run
+    $authorization = "admin"; //assign authorization key if found
 } else {$authorization = null;} //else if no authorization, invalid authorization key
 
 //Logging
@@ -48,6 +50,8 @@ if ($authentication && $authorization) {    //if authentication is valid and the
         header("Location: ../../html/elevator/elevator_menu.html"); //redirect to elevator menu
     } elseif ($authorization == "run") { //if authorization is "run",
         header("Location: ../../html/elevator/elevator_doors.html"); //redirect to doors display
+    } elseif ($authorization == "admin") {
+        header("Location: ../../html/elevator/maintenance.html"); //redirect to admin display
     } else {session_destroy();
         header("Location: ../../html/requests/lockout.html");} //if authorization is invalid, redirect to lockout page
 } else {session_destroy();

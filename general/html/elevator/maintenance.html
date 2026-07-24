@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <title>Maintenance GUI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="description" content="This is the gui page for our project" />
+    <meta http-equiv="author" content="Fergus Page" />
+    <meta name="robots" content="noindex nofollow" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
+    <link rel="stylesheet" href="../../css/elevator/maintenance_style.css" type="text/css">
+</head>
+
+<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
+
+<body>
+<p id="verify"></p>
+<div id="page" class="container">
+    <header>
+        <h1 id="#">Maintenance GUI</h1>   <!-- title -->
+    </header>
+
+    <nav>
+        <fieldset id="bar1" class="sidebar">
+            <legend>Index</legend>
+            <b><a class="index back_home" href="../../../index.html">Home</a></b><br/>
+            <b><a class="index top_up" href="#">Top</a></b><br/>
+            <a class="index" href="../../../general/html/project/about.html">About</a><br/>
+            <a class="index" href="../../../general/html/project/project_plan.html">Project Plan</a><br/>
+            <a class="index" href="../../../general/html/demos/project_details.html">Project Details</a><br/>
+            <a class="index" href="../../../general/html/project/logbooks.html">Logbooks</a><br/>
+            <a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
+            <a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
+            <a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
+            <a class="index" href="../../../general/html/requests/login.html">Login</a>
+        </fieldset><br/>
+    </nav>
+
+    <div id="content">
+        <div class="controls" id="elevator_gui">
+            <h3>Please select a floor to actuate the elevator car:</h3><br/>  <!-- some instructions -->
+            <fieldset class="controls">
+                <legend>Elevator Status</legend>
+                <p>Request: <span id="REQUEST">request?</span></p>
+                <p>Current: <span id="CURRENT">current?</span></p>
+                <p>Door Status: <span id="PREVIOUS">previous?</span></p>
+                <p>Direction: <span id="DIRECTION">direction?</span></p>
+                <p>Door Status: <span id="DOORS">doors?</span></p>
+            </fieldset><br/>
+        </div>
+
+        <div class="controls" id="maintenance-panel">
+            <fieldset class="maintenance">
+                <legend>Maintenance Controls</legend>
+                <p>Remote Override: <span id="OVERRIDE">INACTIVE</span></p>
+                <p>Sabbath Mode: <span id="SABBATH">INACTIVE</span></p>
+            </fieldset><br/>
+        </div>
+
+        <div id="strip_container">
+            <fieldset class="strip">
+                <legend>Car</legend>
+                <div>
+                    <label><img id="CF3" src="../../resources/references/imgs/gui/3unlit.png" width="100" alt="Floor 3" title="Floor 3"/></label><br/> <!-- 3, please -->
+                    <label><img id="CF2" src="../../resources/references/imgs/gui/2unlit.png" width="100" alt="Floor 3" title="Floor 2"/></label><br/> <!-- 2, please -->
+                    <label><img id="CF1" src="../../resources/references/imgs/gui/1unlit.png" width="100" alt="Floor 3" title="Floor 1"/></label><br/> <!-- 1, please -->
+                </div>
+            </fieldset>
+
+            <fieldset class="strip">
+                <legend>Floor 3</legend>
+                <div class="floor">
+                    <label><img id="F3D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                </div>
+            </fieldset>
+
+            <fieldset class="strip">
+                <legend>Floor 2</legend>
+                <div class="floor">
+                    <label><img id="F2U" src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                    <label><img id="F2D" src="../../resources/references/imgs/gui/downunlit.png" width="100" alt="Going Down" title="Going Down"/></label><br/> <!-- down indicator -->
+                </div>
+            </fieldset>
+
+            <fieldset class="strip">
+                <legend>Floor 1</legend>
+                <div class="floor">
+                    <label><img id="F1U"  src="../../resources/references/imgs/gui/upunlit.png" width="100" alt="Going Up" title="Going Up"/></label><br/>  <!-- up indicator -->
+                </div>
+            </fieldset>
+        </div><br/>
+
+        <div id="elevator_doors">
+            <fieldset id="doorFrame">
+                <legend>Elevator Doors</legend>
+                <div id="clip_car">
+                    <iframe id="doorMechanic" src="./door_mechanic.html" width="450" height="590"></iframe>
+                </div>
+            </fieldset><br/>
+        </div>
+    </div>
+
+    <footer>
+        <br/><p id="copy" >Copyright &copy <span id="year"></span> Fergus Page</p>
+    </footer>
+</div>
+
+<script type="module" src="../../js/security/verify.mjs" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="../../js/demos/year.js"></script>
+<script src="../../js/elevator/maintenance.js"></script>
+<script type="module" src="../../js/elevator/gui.mjs" defer></script>
+
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
