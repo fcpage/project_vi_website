@@ -1,5 +1,5 @@
 import {destroySession} from "../util/sessionFunctions.js";
-import {eatCookies, getCookie, setCookie} from "../util/cookieFunctions.js";
+import {eatCookies, getCookie, setCookie} from "../util/cookieFunctions.mjs";
 
 destroySession();
 setCookie("login", String(false));
@@ -18,7 +18,6 @@ fetch("../../php/elevator/dbClose.php")
 
 if (login !== String(true)){
     console.log("login: " + login);
-
     message.innerHTML = 'You have successfully logged out.';
 } else {
     console.log("login: " + login);

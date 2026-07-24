@@ -6,9 +6,9 @@ let elements = initElements();           //initialize the gui elements
 let queueLength = 10;                //how far back do we go?
 let doors = new dbComThread();  //instantiate a database access object
 let calls = new dbComThread();     //AND ANOTHER ONE
-doors.init('doors');                                   //initialize the database connection
-doors.init('calls');                                   //initialize the database connection
-setTimeout(doorMonitor, 1000);
+//doors.init('doors');                                   //initialize the database connection
+//doors.init('calls');                                   //initialize the database connection
+//setTimeout(doorMonitor, 1000);
 
 /*while(1) {  //the database monitor loop
 

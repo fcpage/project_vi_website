@@ -1,4 +1,4 @@
-function getCookies() {
+export function getCookies() {
     return document.cookie.split(';');
 }
 export function getCookie(cookieName) {
