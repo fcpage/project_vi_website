@@ -22,9 +22,15 @@ if ((user !== "undefined") &&
     verify.innerHTML = `Welcome, ${getCookie("user")}!<br/>` +
         'Please <a href="../../html/requests/logout.html">' +
         'LOG OUT</a> when you\'re finished.';     //a nice, personalized welcome message
+
     if (verify.innerHTML.includes("undefined") || verify.innerHTML.includes("false")){  //check if the script jumped the gun and needs to check again
         page.innerHTML = "";
+        verify.innerHTML = "";
         window.location.reload();   //reload
+    } else {
+        verify.innerHTML = `Welcome, ${getCookie("user")}!<br/>` +
+            'Please <a href="../../html/requests/logout.html">' +
+            'LOG OUT</a> when you\'re finished.';     //a nice, personalized welcome message
     }
 } else {
     destroySession();   //kill the session
