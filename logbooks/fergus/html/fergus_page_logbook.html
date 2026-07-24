@@ -47,6 +47,7 @@
 						<a class="index" href="#week6">Week 6</a><br/>
 						<a class="index" href="#week7">Week 7</a><br/>
 						<a class="index" href="#week8">Week 8</a><br/>
+						<a class="index" href="#week9">Week 9</a><br/>
 					</fieldset>
 			</nav>
 
@@ -394,6 +395,36 @@
 							<li>Refactored door management and initialization functions.</li>
 							<li>Finished JS refactoring.</li>
 							<li>Outlined database interaction loop.</li>
+						</ul>
+					</section>
+				</article><br/>
+
+				<article id="week9">
+					<h3 class="week">Week 9</h3>
+					<section>
+						<h6>Thursday, July 23rd, 2026</h6>
+						<ul>
+							<li>Fixed issue with login validation where cookies used for validation
+								lagged the displayed page by one refresh, and undefined users could
+								access restricted pages.</li>
+							<ul>
+								<li>Undefined or unverified users could sometimes access restricted pages
+									due to faulty logic in the validation check. Rewrote it in a stricter,
+									less elegant manner that ensures that these access attempts are rejected.</li>
+								<li>The cookies used to display current users and determine login status/credentials
+									are contained in the incoming header, prior to the JS functions that determine
+									which access attempts should be allowed or rejected. To solve this issue, all page
+									content is removed from the HTML page until a valid session is verified, which requires
+									a page reload and re-verification. Content removed until verified to prohibit single-load
+									unauthorized accesses.</li>
+							</ul>
+							<li>Created Maintenance user profile and Maintenance GUI page (HTML & CSS) with JS handler for
+								maintenance options such as remote override and sabbath mode. These features are only available
+								to the maintenance user. Thus, a successful login to the maintenance profile constitutes the activation
+								of "maintenance mode". The database entries for this profile will automatically include the maintenance flag
+								so that the supervisor application can differentiate between a maintenance request and a regular request. This
+								permits the maintenance user to submit both standard and overriding requests. Sabbath mode will activate on selection
+								and be deactivated by any subsequent call from the maintenance user.</li>
 						</ul>
 					</section>
 				</article><br/>
