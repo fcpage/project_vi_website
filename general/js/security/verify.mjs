@@ -2,23 +2,28 @@ import {startSession, destroySession, getSessionUser, getSessionAuth, getSession
 import {getCookie, setCookie} from "../util/cookieFunctions.mjs";
 
 const verify = document.getElementById("verify");   //grab the login verification display field in HTML
+const page = document.getElementById("page");
 
 startSession();     //make sure there is a session
 getSessionUser();   //make a JS cookie for the session user
 getSessionAuth();   //make a JS cookie for the session authorization
 getSessionLogin();  //make a JS cookie for the login state
+let user = getCookie("user");
+let auth = getCookie("auth");
+let login = getCookie("login");
 
-if ((getCookie("user") !== "undefined") &&
-    (getCookie("user") !== "false") &&
-    (getCookie("auth") !== "undefined" ) &&
-    (getCookie("user") !== "false") &&
-    (getCookie("login") !== "undefined") &&
-    (getCookie("login") !== "false")) {    //if both the user and auth credentials are valid
+if ((user !== "undefined") &&
+    (user !== "false") &&
+    (auth !== "undefined" ) &&
+    (auth !== "false") &&
+    (login !== "undefined") &&
+    (login !== "false")) {    //if both the user and auth credentials are valid
 
     verify.innerHTML = `Welcome, ${getCookie("user")}!<br/>` +
         'Please <a href="../../html/requests/logout.html">' +
         'LOG OUT</a> when you\'re finished.';     //a nice, personalized welcome message
     if (verify.innerHTML.includes("undefined") || verify.innerHTML.includes("false")){  //check if the script jumped the gun and needs to check again
+        page.innerHTML = "";
         window.location.reload();   //reload
     }
 } else {
