@@ -402,6 +402,19 @@
 				<article id="week9">
 					<h3 class="week">Week 9</h3>
 					<section>
+						<h6>Monday, July 20th, 2026</h6>
+						<ul>
+							<li>Worked out scheme for passing data between the GUI and the supervisor. Will use two
+								one-way databases to provide reliable system snapshots and logging, and separate
+								supervisor-bound requests from the system stati. Also allows for the GUI to track 
+								door state changes and articulate the digital doors concurrently with system changes.</li>
+							<li>Identified GUI's need for event-listener-based interactions with GUI-bound table, to prevent
+								the browser from hanging up. Supervisor database thread mayhaps use polling. Will look into options.</li>
+							<li>Refactored existing database table fields to suit our new approach.</li>
+						</ul>
+					</section>
+
+					<section>
 						<h6>Thursday, July 23rd, 2026</h6>
 						<ul>
 							<li>Fixed issue with login validation where cookies used for validation
