@@ -1,4 +1,4 @@
-import {getCookie, setCookie} from "../util/cookieFunctions.js";
+import {getCookie, setCookie} from "../util/cookieFunctions.mjs";
 
 const prefix = "../../resources/references/imgs/gui/";    //base relative url prefix
 const lit = "lit.png";  //illuminated suffix

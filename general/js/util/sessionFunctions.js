@@ -1,4 +1,4 @@
-import {setCookie, eatCookie, eatCookies} from './cookieFunctions.js';
+import {setCookie, eatCookie, eatCookies} from './cookieFunctions.mjs';
 export function startSession(){
     fetch("../../php/requests/session_start.php")
         .then(response => {
