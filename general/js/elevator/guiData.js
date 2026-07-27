@@ -48,24 +48,33 @@ export class dbComThread {  //database access object and associated methods
         return this;                //return the database access object.
     }
 
-    scan(index) {    //database is an entire object, not a string. commit makes changes if true
-        let queryObject = new dbComThread();   //copy this database access object to a blank dummy object
-        if (index) {queryObject.index = index;              //if an index was supplied, scan a particular index if passed
-        } else {queryObject.index = null;}                  //if no index was supplied, scan the most recent entry
-        queryObject = this.receiveData(queryObject);        //fetch data from the database according to the query object's index
-        return queryObject;
+    scan(index = 0, limit = 1) {    //database is an entire object, not a string. commit makes changes if true
+        this.index = index;              //if an index was supplied, scan a particular index
+        this.limit = limit;              //if a limit was supplied, scan back a particular number of rows
+        return this.receiveData(index);  //fetch data from the database according to the query object's index
     }
 
-    modify(db, index, edit){    //function to edit one element of the database
-        let editObject = dbComThread;   //instantiate an editor object
-        editObject.index = index;       //choose the index to edit
-        //FINISH WRITING FUNCTION
+    modify(index, target, data){    //function to edit one element of the database
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function() {
+            if (xhr.status === 200) {console.log("Entry modified.");}    //You bet your ass it worked, Marty!
+            else { console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;}
+            xhr.send(JSON.stringify({
+                action: "modify",
+                table: this.table,
+                index: index,
+                target: target,
+                data: data}));} //put it in a JSON string and send the line to the database
     }
 
-    sendData(payload, table) { //function to send data into the database
+    sendData() { //function to send data into the database
         let timestamp = new Date(); //generate time object
-        payload.date = timestamp.getFullYear().toString() + "/" + timestamp.getDate().toString() + "/" + timestamp.getDay().toString(); //generate date
-        payload.time = timestamp.getHours().toString() + "/" + timestamp.getMinutes().toString() + "/" + timestamp.getSeconds().toString(); //generate timestamp
+        this.date = timestamp.getFullYear().toString() + "/" + timestamp.getDate().toString() + "/" + timestamp.getDay().toString(); //generate date
+        this.time = timestamp.getHours().toString() + "/" + timestamp.getMinutes().toString() + "/" + timestamp.getSeconds().toString(); //generate timestamp
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "../../php/databaseHandler.php", true);
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -76,11 +85,11 @@ export class dbComThread {  //database access object and associated methods
                 return false;}
             xhr.send(JSON.stringify({
                 action: "write",
-                table: table,
-                data: payload}));} //put it in a JSON string and send the line to the database
+                table: this.table,
+                data: this}));} //put it in a JSON string and send the line to the database
     }
 
-    receiveData() { //function to retrieve data from the base
+    receiveData(index = 0, limit = 1) { //function to retrieve data from the base
         const xhr = new XMLHttpRequest();   //lettuce do an XHR
         xhr.open("POST", "../../php/databaseHandler.php", true); //ground control to php database reader
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -103,7 +112,9 @@ export class dbComThread {  //database access object and associated methods
         }
         xhr.send(JSON.stringify({
             action: "read",
-            table: this.table,})); //send the request
+            table: this.table,
+            index: index,
+            limit: limit})); //send the request
         return this;    //It works! I finally built something that works!!
     }
 }

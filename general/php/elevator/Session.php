@@ -21,13 +21,14 @@ class Session {
 
     public function __destruct(){}
 
-    public function jsHandler($action, $target = null, $input = null) : string {
-        $report = null;
-        
+    public function jsHandler($action, $input = null) : string {
         switch ($action) {
             case 'start':
                 Session::__construct();
                 $report = "SESSION OK";
+                break;
+            case 'user':
+                $report = $this->getUser();
                 break;
             case 'auth':
                 $report = $this->getAuth();
@@ -35,17 +36,14 @@ class Session {
             case 'login':
                 $report = $this->getLogin();
                 break;
-            case 'user':
-                $report = $this->getUser();
-                break;
             case 'reset':
                 $report = $this->resetSession();
                 break;
-            case 'set':
-                $report = $this->setSession($target, $input);
-                break;
             case 'get':
-                $report = $this->getSession($target);
+                $report = $this->getSession($input['target']);
+                break;
+            case 'set':
+                $report = $this->setSession($input['target'], $input['value']);
                 break;
             default:
                 $this->destroy();

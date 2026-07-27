@@ -34,18 +34,16 @@ class Database {
 
     public function __destruct(){}
 
-    public function jsHandler($action, $data = null, $index = null) : string {
-        $report = null;
-
+    public function jsHandler($action, $input = null) : string {
         switch ($action) {
             case 'read':
-                $report = $this->readEntry();
+                $report = $this->readEntry($input);
                 break;
             case 'write':
-                $report = $this->writeEntry($data);
+                $report = $this->writeEntry($input);
                 break;
             case 'modify':
-                $report = $this->modifyEntry($data, $index);
+                $report = $this->modifyEntry($input);
                 break;
             default:
                 $this->__destruct();
@@ -53,34 +51,33 @@ class Database {
                 break;
         }
 
-        return $report;
+        return json_encode($report);
     }
 
-    public function readEntry(int $limit = 1) : string {
-        $jsInput = json_decode(file_get_contents('php://input'), true);
-        $index = $jsInput['index'];
-
-        if ($index == null) {($limit != $jsInput['limit']) ?? ($limit = $jsInput['limit']);
-            $sql = "SELECT * FROM $this->table ORDER BY $index DESC LIMIT $limit;";
-        } else { $sql = "SELECT * FROM $this->table ORDER BY $index;";}
-        return Database::reader($sql);
+    public function readEntry(array $input, int $index = 0, int $limit = 1) : string {
+        if ($input['index'] > 0) {$index = $input['index'];
+            $sql = "SELECT * FROM $this->table WHERE index = $index;";
+        } elseif ($input['limit'] > 1) {$limit = $input['limit'];
+            $sql = "SELECT * FROM $this->table ORDER BY index DESC LIMIT $limit;";
+        } else { $sql = "SELECT * FROM $this->table ORDER BY index DESC LIMIT 1;";
+        } return Database::reader($sql);
     }
 
-    public function writeEntry() :  int {
-        $jsInput = json_decode(file_get_contents('php://input'), true);
-        $date = $jsInput['date'];
-        $time = $jsInput['time'];
-        $floor = $jsInput['floor'];
-        (isset($jsInput['remote'])) ?? ($this->remote = $jsInput['remote']);
-        $sql = "INSERT INTO $this->table (date, time, floor, remote) VALUES ('$date', '$time', '$floor', '$this->remote')";
+    public function writeEntry(array $input) :  string {
+        $date = $input['date'];
+        $time = $input['time'];
+        $floor = $input['floor'];
+        (isset($input['remote'])) ?? ($this->remote = $input['remote']);
+        $sql = "INSERT INTO $this->table (date, time, floor, remote)
+                VALUES ('$date', '$time', '$floor', '$this->remote')";
         return Database::writer($sql);
     }
 
-    public function modifyEntry() : string {
-        $jsInput = json_decode(file_get_contents('php://input'), true);
-        $index = $jsInput['index'];
-        $doors = $jsInput['doors'];
-        $sql = "UPDATE $this->table SET doors = $doors WHERE index = $index;";
+    public function modifyEntry(array $input) : string {
+        $index = $input['index'];
+        $target = $input['target'];
+        $data = $input['data'];
+        $sql = "UPDATE $this->table SET $target = $data WHERE index = $index;";
         return Database::writer($sql);
     }
 
@@ -93,9 +90,7 @@ class Database {
                 while ($row = $data->fetch_assoc()) {
                     foreach ($this->requestFields as $field) {
                         if (isset($row[$field])) {
-                            $dataOut[$field] = $row[$field];
-                        }
-                    }
+                            $dataOut[$field] = $row[$field];}}
                 } echo "Successfully read from " . $this->table . ".";
                 return $dataOut;
             } else {
@@ -104,7 +99,7 @@ class Database {
         } elseif ($this->con->connect_error) {
             echo "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
             return "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
-        }  echo "Failed to read from " . $this->table . ".";
+        } echo "Failed to read from " . $this->table . ".";
         return "Failed to read from " . $this->table . ".";
     }
 
@@ -115,7 +110,7 @@ class Database {
         } elseif ($this->con->connect_error) {
             echo "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
             return "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
-        }  echo "Failed to write data to " . $this->table . ".";
+        } echo "Failed to write data to " . $this->table . ".";
         return "Failed to write data to " . $this->table . ".";
     }
 }
