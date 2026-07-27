@@ -445,6 +445,11 @@
                         <h6>Friday, July 24th, 2026</h6>
                         <ul>
                             <li>Added tables for logging access attempts to the GUI and to store the valid login and authorization data.</li>
+							<li>Refactored all session-related and database-related php code into classes for object-oriented programming.</li>
+							<li>Fixed user verification glitches (erroneous logins and undefined credentials due to outdated cookies), and
+								optimized login refresh for updated credentials (no more strobing - 10ms delay fixed it).</li>
+							<li>Established interaction between GUI programs and the database.</li>
+							<li>Migrated login credentials and login attempt logging into the database rather than using text files.</li>
                         </ul>
                     </section>
 				</article><br/>
