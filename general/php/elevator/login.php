@@ -8,7 +8,7 @@ $username = $_POST["username"]; //get supposed "username"
 $password = $_POST["password"]; //what is the password?
 
 //Authentication
-$file = fopen("../resources/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
+$file = fopen("../../resources/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
 while(!feof($file) && !$authentication) {   //while not at the end of the login credential register and no match has been found
     $contents = fgets($file); //check each line until the file is through or the login is verified
     str_contains($contents, "username:$username-password:$password") ? ($authentication = "valid") : ($result = null);}//if the authentication key found, make $authentication valid, or else null
@@ -46,15 +46,15 @@ if ($authentication && $authorization) {    //if authentication is valid and the
         'samesite' => 'Lax']);
 
     if ($session->getAuth() == "dev") { //if authorization is "dev",
-        header("Location: ../html/elevator/gui.html"); //redirect to gui
+        header("Location: ../../html/elevator/gui.html"); //redirect to gui
     } elseif ($session->getAuth() == "prof") { //if authorization is "prof",
-        header("Location: ../html/elevator/elevator_menu.html"); //redirect to elevator menu
+        header("Location: ../../html/elevator/elevator_menu.html"); //redirect to elevator menu
     } elseif ($session->getAuth() == "run") { //if authorization is "run",
-        header("Location: ../html/elevator/elevator_doors.html"); //redirect to doors display
+        header("Location: ../../html/elevator/elevator_doors.html"); //redirect to doors display
     } elseif ($session->getAuth() == "admin") {
-        header("Location: ../html/elevator/maintenance.html"); //redirect to admin display
+        header("Location: ../../html/elevator/maintenance.html"); //redirect to admin display
     } else {$session->__destruct();
-        header("Location: ../html/requests/lockout.html");} //if authorization is invalid, redirect to lockout page
+        header("Location: ../../html/requests/lockout.html");} //if authorization is invalid, redirect to lockout page
 } else {session_destroy();
-    header("Location: ../html/requests/lockout.html"); //if authorization is invalid, redirect to lockout page
+    header("Location: ../../html/requests/lockout.html"); //if authorization is invalid, redirect to lockout page
 } exit; //quit running the page

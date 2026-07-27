@@ -1,7 +1,7 @@
 import {destroySession} from "../util/sessionFunctions.js";
 import {eatCookies, getCookie, setCookie} from "../util/cookieFunctions.mjs";
 
-destroySession();
+await destroySession();
 setCookie("login", String(false));
 const login = getCookie("login");
 const message = document.getElementById("message");
