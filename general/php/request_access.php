@@ -34,11 +34,11 @@ file_put_contents("../resources/requests/access/access_request_{$date}_{$time}.t
     <meta name="robots" content="noindex nofollow" />
     <meta http-equiv="pragma" content="no-cache" />
 
-    <link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/project/general_style.css" type="text/css">
 </head>
 
 <body>
-    <a href="../../../index.html">Home</a><br/>
+    <a href="../../index.html">Home</a><br/>
     <h1>Access Form Handler Page</h1>   <!-- this bit is the onscreen review -->
     <p>Your request has been submitted for consideration.<br/>Please review the details of your request below.</p>  <!-- some small talk -->
 

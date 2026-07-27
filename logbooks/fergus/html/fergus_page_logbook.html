@@ -406,7 +406,7 @@
 						<ul>
 							<li>Worked out scheme for passing data between the GUI and the supervisor. Will use two
 								one-way databases to provide reliable system snapshots and logging, and separate
-								supervisor-bound requests from the system stati. Also allows for the GUI to track 
+								supervisor-bound requests from the system stati. Also allows for the GUI to track
 								door state changes and articulate the digital doors concurrently with system changes.</li>
 							<li>Identified GUI's need for event-listener-based interactions with GUI-bound table, to prevent
 								the browser from hanging up. Supervisor database thread mayhaps use polling. Will look into options.</li>
@@ -440,6 +440,13 @@
 								and be deactivated by any subsequent call from the maintenance user.</li>
 						</ul>
 					</section>
+
+                    <section>
+                        <h6>Friday, July 24th, 2026</h6>
+                        <ul>
+                            <li>Added tables for logging access attempts to the GUI and to store the valid login and authorization data.</li>
+                        </ul>
+                    </section>
 				</article><br/>
 			</div>
 				<footer>
