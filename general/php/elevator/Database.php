@@ -3,12 +3,43 @@ class Database {
     private string $table;
     private int $remote = 0;
     private mysqli $con;
+    public array $tables = [
+        "elevatorNetwork",
+        "guiRequests",
+        "accessAttempts",
+        "loginRegistry"
+    ];
     private array $names = [
         "dbServer" => "localhost",
         "dbUser" => "pi",
         "dbPW" => "ese",
         "dbDB" => "elevatorg1"
     ];
+
+    private array $loginFields = [
+        'username',
+        'password',
+        'authorization'
+    ];
+
+    private array $accessFields = [
+        'index',	/*access attempt index*/
+        'date',	/*access date*/
+        'time',	/*snapshot package time*/
+        'user',
+        'authorization',
+        'authentication',
+        'accepted'
+    ];
+
+    private array $guiFields = [
+        'index',	/*database access index*/
+        'date',	/*snapshot package time*/
+        'time',	/*snapshot package date*/
+        'floor',	/*gui floor request*/
+        'remote'
+    ];
+
     private array $requestFields = [
         "index",
         "date",
@@ -23,8 +54,7 @@ class Database {
         "doors"
     ];
     public function __construct(string $table) {
-        $this->con = new mysqli($this->names[0], $this->names[1], $this->names[2], $this->names[3]);
-
+        $this->con = new mysqli("localhost", "pi", "ese", "elevatorg1");
         if  ($this->con->connect_error) {
             echo "Connection to database failed: " . $this->con->connect_error;
         } else { echo "Connected to database successfully";
@@ -32,7 +62,29 @@ class Database {
         }
     }
 
-    public function __destruct(){}
+    public function __destruct(){
+        $this->con->close();
+    }
+    private function tableSelect() : array {
+        switch ($this->table) {
+            case "elevatorNetwork":
+                $send = $this->requestFields;
+                break;
+            case "guiRequests":
+                $send = $this->guiFields;
+                break;
+            case "accessAttempts":
+                $send = $this->accessFields;
+                break;
+            case "loginRegistry":
+                $send = $this->loginFields;
+                break;
+            default:
+                $send = null;
+                break;
+        }
+        return $send;
+    }
 
     public function jsHandler($action, $input = null) : string {
         switch ($action) {
@@ -54,12 +106,17 @@ class Database {
         return json_encode($report);
     }
 
-    public function readEntry(array $input, int $index = 0, int $limit = 1) : string {
-        if ($input['index'] > 0) {$index = $input['index'];
+    public function readEntry(array | null $input, int $index = 0, int $limit = 1) : string | array
+    {
+        if ($index == -1) {
+            $sql = "SELECT * FROM $this->table;";
+        } elseif ($input['index'] > 0) {$index = $input['index'];
             $sql = "SELECT * FROM $this->table WHERE index = $index;";
         } elseif ($input['limit'] > 1) {$limit = $input['limit'];
             $sql = "SELECT * FROM $this->table ORDER BY index DESC LIMIT $limit;";
-        } else { $sql = "SELECT * FROM $this->table ORDER BY index DESC LIMIT 1;";
+        } else {
+            $sql = "SELECT * FROM $this->table ORDER BY index DESC LIMIT 1;";
+
         } return Database::reader($sql);
     }
 
@@ -81,26 +138,28 @@ class Database {
         return Database::writer($sql);
     }
 
-    private function reader (int $input) : string | array {
-        $dataOut["table"] = $this->table;
-        $data = $this->con->query($input);
-
-        if ($this->con->query($input) === TRUE) {
-            if ($data->num_rows > 0) {
-                while ($row = $data->fetch_assoc()) {
-                    foreach ($this->requestFields as $field) {
-                        if (isset($row[$field])) {
-                            $dataOut[$field] = $row[$field];}}
-                } echo "Successfully read from " . $this->table . ".";
-                return $dataOut;
-            } else {
-                echo "Failed to read from " . $this->table . ".";
+    private function reader (string $sql) : string | array | Database {
+        $data = $this->con->query($sql);
+        $fields = $this->tableSelect();
+        $output= null;
+        if ($this->con->query($sql) !== FALSE) {
+            if ($data->num_rows > 0) { $i = 0;
+                while (($row = $data->fetch_assoc())) {
+                    foreach ($fields as $field) {
+                        $output[$field] = $row[$field];
+                    } $entries = json_encode($output);
+                    echo $entries;
+                }
+                echo "Successfully read from " . $this->table . ".";
+                return $entries;
+            } else { echo "Failed to read from " . $this->table . ".";
                 return "Failed to read from " . $this->table . ".";}
         } elseif ($this->con->connect_error) {
             echo "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
             return "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
-        } echo "Failed to read from " . $this->table . ".";
-        return "Failed to read from " . $this->table . ".";
+        } else { echo "Failed to read from " . $this->table . ".";
+        echo "borp";
+        return "Failed to read from " . $this->table . ".";}
     }
 
     private function writer(string $input) : string {
@@ -114,3 +173,8 @@ class Database {
         return "Failed to write data to " . $this->table . ".";
     }
 }
+
+/*foreach ($fields as $field) {
+
+                        if (isset($row[$field])) {
+                            }}*/
