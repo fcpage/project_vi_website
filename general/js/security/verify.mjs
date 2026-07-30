@@ -1,49 +1,30 @@
 import {startSession, destroySession, getSessionUser, getSessionAuth, getSessionLogin} from "../util/sessionFunctions.js";
 import {getCookie, setCookie} from "../util/cookieFunctions.mjs";
-import {wait} from "../util/pageDelay.js";
 
 const verify = document.getElementById("verify");   //grab the login verification display field in HTML
-const page = document.getElementById("page");       //grab all the page contents
-const saver = page.innerHTML;   //save the page contents
-page.innerHTML = "";    //wipe the page
 
-await startSession();     //make sure there is a session
-await getSessionUser();   //make a JS cookie for the session user
-await getSessionAuth();   //make a JS cookie for the session authorization
-await getSessionLogin();  //make a JS cookie for the login state
-let user = getCookie("user");   //grab a cookie
-let auth = getCookie("auth");   //grab a cookie
-let login = getCookie("login"); //grab a cookie
+startSession();     //make sure there is a session
+getSessionUser();   //make a JS cookie for the session user
+getSessionAuth();   //make a JS cookie for the session authorization
+getSessionLogin();  //make a JS cookie for the login state
 
-if ((user !== "undefined") && (user !== "false") &&
-    (auth !== "undefined" ) && (auth !== "false") &&
-    (login !== "undefined") && (login !== "false")) {    //if each of the user, auth credentials, and login status are valid
+if ((getCookie("user") !== "undefined") &&
+    (getCookie("user") !== "false") &&
+    (getCookie("auth") !== "undefined" ) &&
+    (getCookie("user") !== "false") &&
+    (getCookie("login") !== "undefined") &&
+    (getCookie("login") !== "false")) {    //if both the user and auth credentials are valid
 
-    greet();    //put er there
-
+    verify.innerHTML = `Welcome, ${getCookie("user")}!<br/>` +
+        'Please <a href="../../html/requests/logout.html">' +
+        'LOG OUT</a> when you\'re finished.';     //a nice, personalized welcome message
     if (verify.innerHTML.includes("undefined") || verify.innerHTML.includes("false")){  //check if the script jumped the gun and needs to check again
-        shun(); //wipe the page
-        await wait(10); //wait 10ms
         window.location.reload();   //reload
-    } else { page.innerHTML = saver;    //put it back
-        greet();    //say hello
     }
-
 } else {
-    await destroySession();   //kill the session
+    destroySession();   //kill the session
     setCookie("login", String(false));  //make sure that the login cookie is false after it gets wiped by the session close
     console.log("User: " + getCookie("user"));   //report to console
     console.log('Login: '+ getCookie("login"));   //report to console
     window.location.replace("../../html/requests/login.html");  //redirect to the login page
-}
-
-function greet(){
-    verify.innerHTML = `Welcome, ${getCookie("user")}!<br/>` +
-        'Please <a href="../../html/requests/logout.html">' +
-        'LOG OUT</a> when you\'re finished.';     //a nice, personalized welcome message
-}
-
-function shun(){
-    page.innerHTML = "";
-    verify.innerHTML = "";
 }
