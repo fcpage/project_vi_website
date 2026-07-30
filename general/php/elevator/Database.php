@@ -16,13 +16,13 @@ class Database {
         "dbDB" => "elevatorg1"
     ];
 
-    private array $loginFields = [
+    public array $loginFields = [
         'username',
         'password',
         'authorization'
     ];
 
-    private array $accessFields = [
+    public array $accessFields = [
         'index',	/*access attempt index*/
         'date',	/*access date*/
         'time',	/*snapshot package time*/
@@ -32,7 +32,7 @@ class Database {
         'accepted'
     ];
 
-    private array $guiFields = [
+    public array $guiFields = [
         'index',	/*database access index*/
         'date',	/*snapshot package time*/
         'time',	/*snapshot package date*/
@@ -40,7 +40,7 @@ class Database {
         'remote'
     ];
 
-    private array $requestFields = [
+    public array $requestFields = [
         "index",
         "date",
         "time",
@@ -141,24 +141,42 @@ class Database {
     private function reader (string $sql) : string | array | Database {
         $data = $this->con->query($sql);
         $fields = $this->tableSelect();
-        $output= null;
+        $output = null;
         if ($this->con->query($sql) !== FALSE) {
-            if ($data->num_rows > 0) { $i = 0;
-                while (($row = $data->fetch_assoc())) {
+
+            /*if ($data->num_rows > 0) { $i = 0;
+                while ($row = $data->fetch_assoc()) {
                     foreach ($fields as $field) {
                         $output[$field] = $row[$field];
                     } $entries = json_encode($output);
                     echo $entries;
                 }
-                echo "Successfully read from " . $this->table . ".";
+
                 return $entries;
-            } else { echo "Failed to read from " . $this->table . ".";
+            }*/
+
+            if ($data->num_rows > 0) { $i = 0;
+                while ($row = $data->fetch_assoc()) {
+                    foreach ($fields as $field) {
+                        $output[$i][$field] = $row[$field];
+                    } $i++;
+                } echo "Successfully read from " . $this->table . ".";
+
+                /*for ($i = 0; $i < 3; $i++) {
+                    for ($j = 0; $j < 3; $j++) {
+                        echo $sql[$i][$logins->loginFields[$j]] . "\n";
+                    }
+                }*/
+                
+                return $output;
+            }
+
+            else { echo "Failed to read from " . $this->table . ".";
                 return "Failed to read from " . $this->table . ".";}
         } elseif ($this->con->connect_error) {
             echo "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
             return "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
         } else { echo "Failed to read from " . $this->table . ".";
-        echo "borp";
         return "Failed to read from " . $this->table . ".";}
     }
 
@@ -173,8 +191,3 @@ class Database {
         return "Failed to write data to " . $this->table . ".";
     }
 }
-
-/*foreach ($fields as $field) {
-
-                        if (isset($row[$field])) {
-                            }}*/

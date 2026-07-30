@@ -27,33 +27,34 @@ if (str_contains($contents, "-auth:dev")){ //if auth key is dev
     $authorization = "admin"; //assign authorization key if found
 } else {$authorization = null;} //else if no authorization, invalid authorization key*/
 
-$logins = new Database("loginRegistry");
-$sql[] = json_decode($logins->readEntry(null, -1));
-echo $sql[1];
+$login = new Database("loginRegistry");
+$sql = $login->readEntry(null, -1);
+
 foreach ($sql as $entry) {
     if (($entry["username"] == $username) && ($entry["password"] == $password)) {
-        echo $entry["username"];
-        $this->authorization = $row["authorization"];
-        $this->username = $row["username"];
-        $this->password = $row["password"];
-        $this->authentication = "valid";
+        $login->authorization = $entry["authorization"];
+        $login->username = $entry["username"];
+        $login->password = $entry["password"];
+        $login->authentication = "valid";
+        echo $login->authorization;
         break;
     }
 }
 
 //Logging
 $log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s");  //log the login attempt date and time
-$log .= "\nUsername: " . $this->username . "\n" ; //log the entered username
-($this->authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
-($this->authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $this->authorization . "\n\n"); //log authorization credentials
+$log .= "\nUsername: " . $login->username . "\n" ; //log the entered username
+($login->authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
+($login->authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $login->authorization . "\n\n"); //log authorization credentials
 file_put_contents("../../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
 
 //Redirection
-if ($this->authentication && $this->authorization) {    //if authentication is valid and there is a valid authorization key
+if ($login->authentication && $login->authorization) {    //if authentication is valid and there is a valid authorization key
     $session = new Session();
     $session->setSession("login", "true");
-    $session->setSession("username", $this->username);
-    $session->setSession("authorization", $this->authorization);
+    $session->setSession("username", $login->username);
+    $session->setSession("authorization", $login->authorization);
+
     setcookie("login", "true", [
         'expires' => "86400",
         'path' => "/",
