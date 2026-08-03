@@ -1,16 +1,48 @@
 export class dbComThread {  //database access object and associated methods
-    constructor() { //make sure all index orders agree - PHP, SQL and C++ too
-        this.index = null;          //not yet defined
-        this.date = null;           //not yet defined
-        this.time = null;           //not yet defined
-        this.sender = 0x1000;       //this node will always be the sender from its perspective
-        this.receiver = 0x100;      //this node only communicates with the supervisor
-        this.currentFloor = null;   //not yet defined
-        this.previousFloor = null;  //not yet defined
-        this.requestFloor = null;   //not yet defined
-        this.queued = 1;            //this node has lower priority than the rest of the system, so assume it gets queued
-        this.served = 0;            //assume that the request has not been served yet
-        this.doors = 0;             //assume that the doors on the are shut for this request
+    constructor(name) { //make sure all index orders agree - PHP, SQL and C++ too
+        switch (name) { //variable constructor depending on which table is selected
+            case "elevatorNetwork":
+                this.index = null;
+                this.date = null;
+                this.time = null;
+                this.currentFloor = null;
+                this.floorRequest1 = null;
+                this.floorRequest2 = null;
+                this.floorRequest3 = null;
+                this.carRequestFloor1 = null;
+                this.carRequestFloor2 = null;
+                this.carRequestFloor3 = null;
+                this.doors = "closed";          //default
+                this.table = name;              //default
+                break;
+            case "guiRequests":
+                this.date = null;
+                this.time = null;
+                this.floor = null;
+                this.remote = 0;    //default
+                this.table = name;  //default
+                break;
+            case "accessAttempts":
+                this.index = null;
+                this.date = null;
+                this.time = null;
+                this.user = null;
+                this.authorization = null;
+                this.authentication = null;
+                this.table = name;              //default
+                break;
+            case "loginRegistry":
+                this.index = null;
+                this.username = null;
+                this.password = null;
+                this.authorization = false; //default
+                this.accepted = false;      //default
+                this.table = name;          //default
+                break;
+            default:
+                break;
+        }
+
         return this;                //return the database access object.
     }
 
