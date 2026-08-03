@@ -1,60 +1,41 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 require_once __DIR__ . "/Session.php";
 require_once __DIR__ . "/Database.php";
-$row[1] = 1;
-$log = null; //initialize a null variable for attempt logging
-$contents = null; //initialize null file contents variable (global)
-$authentication = null; //initialize null authentication variable, default to lockout (global)
-$authorization = null; //initialize null authorization variable, default to lockout (global)
+$login = new Database("loginRegistry");
+$log = new Database("accessAttempts");
+$authentication = "invalid"; //initialize null authentication variable, default to lockout (global)
+$authorization = "none"; //initialize null authorization variable, default to lockout (global)
 $username = $_POST["username"]; //get supposed "username"
 $password = $_POST["password"]; //what is the password?
 
 //Authentication
-/*$file = fopen("../../resources/requests/login/logins.txt", "r",FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES); //open valid login list
-while(!feof($file) && !$authentication) {   //while not at the end of the login credential register and no match has been found
-    $contents = fgets($file); //check each line until the file is through or the login is verified
-    str_contains($contents, "username:$username-password:$password") ? ($authentication = "valid") : ($result = null);}//if the authentication key found, make $authentication valid, or else null
-fclose($file); //close the file
-
-//Authorization
-if (str_contains($contents, "-auth:dev")){ //if auth key is dev
-    $authorization = "dev";  //assign authorization key if found
-} elseif (str_contains($contents, "-auth:prof")){ //else if auth key is prof
-    $authorization = "prof"; //assign authorization key if found
-} elseif (str_contains($contents, "-auth:run")){ //else if auth key is run
-    $authorization = "run"; //assign authorization key if found
-} elseif (str_contains($contents, "-auth:admin")){ //else if auth key is run
-    $authorization = "admin"; //assign authorization key if found
-} else {$authorization = null;} //else if no authorization, invalid authorization key*/
-
-$login = new Database("loginRegistry");
-$sql = $login->readEntry(null, -1);
-
-foreach ($sql as $entry) {
+foreach ($login->readEntry(null, -1) as $entry) {
     if (($entry["username"] == $username) && ($entry["password"] == $password)) {
-        $login->authorization = $entry["authorization"];
+        $authentication = "valid";
         $login->username = $entry["username"];
         $login->password = $entry["password"];
-        $login->authentication = "valid";
-        echo $login->authorization;
+        $login->authorization = $entry["authorization"];
+        echo "Login Accepted.";
         break;
     }
 }
 
+echo "hey";
 //Logging
-$log = "Date:" . date("Y-m-d");", Time:" . date("H:i:s");  //log the login attempt date and time
-$log .= "\nUsername: " . $login->username . "\n" ; //log the entered username
-($login->authentication != "valid") ? ($log .= "Authentication: " . "invalid" . "\n") : ($log .= "Authentication: " . "valid" . "\n"); //log authentication status
-($login->authorization == null) ? ($log .= "Authorization: " . "invalid" . "\n\n") : ($log .= "Authorization: " . $login->authorization . "\n\n"); //log authorization credentials
-file_put_contents("../../resources/requests/login/login_attempts.txt", $log, FILE_APPEND); //log the login attempt
+$log->logger($login->username, $login->authorization, $authentication);
+echo "hey";
+echo $login->authorization;
+echo $authentication;
 
-//Redirection
-if ($login->authentication && $login->authorization) {    //if authentication is valid and there is a valid authorization key
+//LET ME IIIINNNNNNNN!!!!!
+if (($authentication !== "invalid") && (in_array($login->authorization, $login->authList,true))) {    //if authentication is valid and there is a valid authorization key
+    //Session begins
     $session = new Session();
     $session->setSession("login", "true");
     $session->setSession("username", $login->username);
     $session->setSession("authorization", $login->authorization);
-
     setcookie("login", "true", [
         'expires' => "86400",
         'path' => "/",
@@ -62,6 +43,7 @@ if ($login->authentication && $login->authorization) {    //if authentication is
         'httponly' => false,
         'samesite' => 'Lax']);
 
+    //Redirection
     if ($session->getAuth() == "dev") { //if authorization is "dev",
         header("Location: ../../html/elevator/gui.html"); //redirect to gui
     } elseif ($session->getAuth() == "prof") { //if authorization is "prof",

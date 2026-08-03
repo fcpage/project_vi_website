@@ -1,4 +1,4 @@
-<?php
+<?php date_default_timezone_set('America/Toronto');
 $date = date("Y-m-d"); //What day is it???
 $time = date("H:i:s"); //Do you have the time, to listen to me whine?
 $key = [0=>"."];    //initialize the key array, non-null

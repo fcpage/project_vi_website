@@ -1,12 +1,10 @@
-import {eatCookie, setCookie} from "../util/cookieFunctions.mjs";
-
 export class dbComThread {  //database access object and associated methods
     constructor(name) { //make sure all index orders agree - PHP, SQL and C++ too
-        switch (name) {
+        switch (name) { //variable constructor depending on which table is selected
             case "elevatorNetwork":
                 this.index = null;
-                this.date = null;           //not yet defined
-                this.time = null;           //not yet defined
+                this.date = null;
+                this.time = null;
                 this.currentFloor = null;
                 this.floorRequest1 = null;
                 this.floorRequest2 = null;
@@ -14,32 +12,32 @@ export class dbComThread {  //database access object and associated methods
                 this.carRequestFloor1 = null;
                 this.carRequestFloor2 = null;
                 this.carRequestFloor3 = null;
-                this.doors = "closed";
-                this.table = name;
+                this.doors = "closed";          //default
+                this.table = name;              //default
                 break;
             case "guiRequests":
-                this.date = null;           //not yet defined
-                this.time = null;           //not yet defined
+                this.date = null;
+                this.time = null;
                 this.floor = null;
-                this.remote = 0;
-                this.table = name;
+                this.remote = 0;    //default
+                this.table = name;  //default
                 break;
             case "accessAttempts":
                 this.index = null;
-                this.date = null;           //not yet defined
-                this.time = null;           //not yet defined
+                this.date = null;
+                this.time = null;
                 this.user = null;
                 this.authorization = null;
                 this.authentication = null;
-                this.table = name;
+                this.table = name;              //default
                 break;
             case "loginRegistry":
                 this.index = null;
                 this.username = null;
                 this.password = null;
-                this.authorization = false;
-                this.accepted = false;
-                this.table = name;
+                this.authorization = false; //default
+                this.accepted = false;      //default
+                this.table = name;          //default
                 break;
             default:
                 break;

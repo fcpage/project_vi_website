@@ -1,4 +1,4 @@
-<?php
+<?php date_default_timezone_set('America/Toronto');
 class Session {
     private array $names = [
         "dbServer" => "localhost",
@@ -80,7 +80,7 @@ class Session {
     public function getUser() : string {
         if(isset($_SESSION["username"])) {
             $username = explode("_", $_SESSION["username"]);
-            $report = $username[0];
+            $report = ucfirst($username[0]);
         } else { $report = "false";
         } return $report;
     }

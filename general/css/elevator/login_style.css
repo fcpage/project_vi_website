@@ -28,7 +28,7 @@ fieldset#login_window {
     }
 
     #user {
-        background-image: url("../../resources/references/imgs/login/user.png");
+        background-image: url("../../resources/imgs/login/user.png");
         background-repeat: no-repeat;
         background-position: 3px;
         background-position-y: center;
@@ -36,7 +36,7 @@ fieldset#login_window {
     }
 
     #pass {
-        background-image: url("../../resources/references/imgs/login/password.png");
+        background-image: url("../../resources/imgs/login/password.png");
         background-repeat: no-repeat;
         background-position: 3px;
         background-position-y: center;
@@ -48,21 +48,21 @@ fieldset#login_window {
         text-decoration: none;
         width: 300px;
         height: 75px;
-        background-image: url("../../resources/references/imgs/access/AccessButtonY.png");
+        background-image: url("../../resources/imgs/access/AccessButtonY.png");
         background-size: cover;
         border-radius: 37px;
         clip-path: border-box;
     }
 
     .ra:hover {
-        background-image: url("../../resources/references/imgs/access/AccessButtonB.png");
+        background-image: url("../../resources/imgs/access/AccessButtonB.png");
         width: 300px;
 
     }
 
     .ra:active {
         transition-delay: 2s;
-        background-image: url("../../resources/references/imgs/access/AccessButtonG.png");
+        background-image: url("../../resources/imgs/access/AccessButtonG.png");
         width: 300px;
     }
 }
