@@ -25,7 +25,6 @@ foreach ($login->readEntry(null, -1) as $entry) {
 echo "hey";
 //Logging
 $log->logger($login->username, $login->authorization, $authentication);
-echo "hey";
 echo $login->authorization;
 echo $authentication;
 
@@ -46,13 +45,11 @@ if (($authentication !== "invalid") && (in_array($login->authorization, $login->
     //Redirection
     if ($session->getAuth() == "dev") { //if authorization is "dev",
         header("Location: ../../html/elevator/gui.html"); //redirect to gui
-    } elseif ($session->getAuth() == "prof") { //if authorization is "prof",
+    } elseif ($authorization == "prof") { //if authorization is "prof",
         header("Location: ../../html/elevator/elevator_menu.html"); //redirect to elevator menu
-    } elseif ($session->getAuth() == "run") { //if authorization is "run",
+    } elseif ($authorization == "run") { //if authorization is "run",
         header("Location: ../../html/elevator/elevator_doors.html"); //redirect to doors display
-    } elseif ($session->getAuth() == "admin") {
-        header("Location: ../../html/elevator/maintenance.html"); //redirect to admin display
-    } else {$session->__destruct();
+    } else {session_destroy();
         header("Location: ../../html/requests/lockout.html");} //if authorization is invalid, redirect to lockout page
 } else {session_destroy();
     header("Location: ../../html/requests/lockout.html"); //if authorization is invalid, redirect to lockout page
