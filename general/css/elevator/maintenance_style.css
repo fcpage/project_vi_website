@@ -13,7 +13,14 @@ fieldset.controls{
     margin-left: auto;
     margin-right: auto;
     width: 500px;
-    height: 230px;
+    height: 300px;
+}
+
+fieldset.maintenance{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 150px;
 }
 
 fieldset#doorFrame{

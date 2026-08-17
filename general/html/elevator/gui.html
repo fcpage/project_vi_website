@@ -20,9 +20,9 @@
 <!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 
 <body>
+    <p id="verify"></p>
     <div id="page" class="container">
         <header>
-            <p id="verify"></p>
             <h1 id="#">Elevator GUI</h1>   <!-- title -->
         </header>
 
@@ -38,7 +38,7 @@
                 <a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
                 <a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
                 <a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
-                <a class="index" href="../../../general/html/requests/login.html">Login</a>
+                <a class="index" href="../../../general/html/elevator/diagnostics.html">Diagnostics</a>
             </fieldset><br/>
         </nav>
 
@@ -47,11 +47,10 @@
                 <h3>Please select a floor to actuate the elevator car:</h3><br/>  <!-- some instructions -->
                 <fieldset class="controls">
                     <legend>Elevator Status</legend>
-                    <p>Request: <span id="REQUEST">request?</span></p>
+                    <p>Date: <span id="DATE">date?</span></p>
+                    <p>Time: <span id="TIME">time?</span></p>
                     <p>Current: <span id="CURRENT">current?</span></p>
-                    <p>Door Status: <span id="PREVIOUS">previous?</span></p>
-                    <p>Direction: <span id="DIRECTION">direction?</span></p>
-                    <p>Door Status: <span id="DOORS">doors?</span></p>
+                    <p>Request: <span id="REQUESTS">request?</span></p>
                 </fieldset><br/>
             </div>
 
@@ -103,13 +102,12 @@
         </footer>
     </div>
 
-    <script type="module" src="../../js/security/verify.mjs" defer></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
     <script src="../../js/demos/year.js"></script>
-
-    <script type="module" src="../../js/elevator/gui.mjs" defer></script>
-
+    <script type="module" src="../../js/elevator/guiDisplay.mjs" defer></script>
+    <script type="module" src="../../js/security/verify.mjs" defer></script>
 </body>
 </html>

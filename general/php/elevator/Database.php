@@ -1,8 +1,9 @@
 <?php date_default_timezone_set('America/Toronto');
 class Database {
+    public array $values = [];
 
     private string $table;
-    private int $remote = 0;
+
     private mysqli $con;
 
     public array $loginFields = [
@@ -12,33 +13,56 @@ class Database {
     ];
 
     public array $accessFields = [
-        'date',	/*access date*/
-        'time',	/*snapshot package time*/
-        'username',
-        'authorization',
-        'authentication'
+        'date' => null,	/*access date*/
+        'time' => null,	/*snapshot package time*/
+        'username' => null,
+        'authorization' => null,
+        'authentication' => null
     ];
 
     public array $guiFields = [
-        'index',	/*database access index*/
-        'date',	/*snapshot package time*/
-        'time',	/*snapshot package date*/
-        'floor',	/*gui floor request*/
-        'remote'
+        'date' => null,	/*snapshot package time*/
+        'time' => null,	/*snapshot package date*/
+        'floor' => null,	/*gui floor request*/
+        'remote' => null
     ];
 
     public array $requestFields = [
-        "index",
-        "date",
-        "time",
-        "currentFloor",
-        "floorRequest1",
-        "floorRequest2",
-        "floorRequest3",
-        "carRequestFloor1",
-        "carRequestFloor2",
-        "carRequestFloor3",
-        "doors"
+        "date" => null,
+        "time" => null,
+        "currentFloor" => null,
+        "floorRequest1" => null,
+        "floorRequest2" => null,
+        "floorRequest3" => null,
+        "carRequestFloor1" => null,
+        "carRequestFloor2" => null,
+        "carRequestFloor3" => null,
+        "doors" => null
+    ];
+
+    public array $historyFields = [
+        "date" => null,
+        "time" => null,
+        "currentFloor" => null,
+        "floorRequest1" => null,
+        "floorRequest2" => null,
+        "floorRequest3" => null,
+        "doors" => null,
+        "remote" => null
+    ];
+
+    public array $pleaFields = [
+        "date" => null,
+        "time" => null,
+        "firstname" => null,
+        "lastname" => null,
+        "email" => null,
+        "person" => null,
+        "involvement" => null,
+        "reason" => null,
+        "details" => null,
+        "good_job" => null,
+        "granted" => null
     ];
 
     public array $authList = [
@@ -49,11 +73,11 @@ class Database {
     ];
 
     public function __construct(string $table) {
-        $this->con = new mysqli("localhost", "pi", "ese", "elevatorg1");
-        if  ($this->con->connect_error) {
-            echo "Connection to database failed: " . $this->con->connect_error;
-        } else { echo "Connected to database successfully";
-            $this->table = $table;
+        $this->con = new mysqli("localhost", "gui", "ese", "elevatorg1");
+        if  ($this->con->connect_error) { return "Connection to database failed: " . $this->con->connect_error;
+        } else {$this->table = $table;
+            $this->values = $this->tableSelector();
+            return "Connected to database successfully";
         }
     }
 
@@ -61,65 +85,74 @@ class Database {
         $this->con->close();
     }
 
-    public function jsHandler($action, $input = null) : string {
+    public function jsHandler($action) : string {
         switch ($action) {
             case 'read':
-                return json_encode($this->readEntry($input));
+                $report = $this->readEntry();
+                break;
             case 'write':
-                return json_encode($this->writeEntry($input));
+                $report = $this->writeEntry();
+                break;
             case 'modify':
-                return json_encode($this->modifyEntry($input));
+                $report = $this->modifyEntry();
+                break;
+            case 'delete':
+                $report = $this->deleteEntry();
+                break;
             default:
+                $report = "DATABASE DESTROYED.";
                 $this->__destruct();
-                return json_encode("DATABASE DESTROYED.");
+                break;
+        } return json_encode($report);
+    }
+
+    public function readEntry(int $index = 0, int $limit = 1) : array {
+        if ($index == -1) { //read the whole table
+            return $this->reader("SELECT * FROM $this->table;");
+        } elseif ($index > 0) {    //read a specific index
+            return $this->reader("SELECT * FROM $this->table WHERE `index` = $index;");
+        } elseif ($index == 0) {                            //read the last entry
+            return $this->reader("SELECT * FROM $this->table ORDER BY `index` DESC LIMIT $limit;");
+        } else {return Array("false");
         }
     }
 
-    public function readEntry(array | null $input, int $index = 0, int $limit = 1) : string | array
-    {
-        if ($index == -1) {return $this->reader("SELECT * FROM $this->table;");
-        } elseif ($input['index'] > 0) {$index = $input['index'];
-            return $this->reader("SELECT * FROM $this->table WHERE index = $index;");
-        } elseif ($input['limit'] > 1) {$limit = $input['limit'];
-            return $this->reader("SELECT * FROM $this->table ORDER BY index DESC LIMIT $limit;");
-        } else {return $this->reader("SELECT * FROM $this->table ORDER BY index DESC LIMIT 1;");}
-    }
-
-    public function writeEntry(array $input) :  string {
-        $date = $input['date'];
-        $time = $input['time'];
-        $floor = $input['floor'];
-        (isset($input['remote'])) ?? ($this->remote = $input['remote']);
+    public function writeEntry() :  string {
         $columns = $this->queryStingCompiler("columns");
         $values = $this->queryStingCompiler("values");
         $sql = "INSERT INTO $this->table ($columns) VALUES ($values);";
-        return Database::writer($sql);
+        return $this->writer($sql);
     }
 
-    public function modifyEntry(array $input) : string {
-        $index = $input['index'];
-        $target = $input['target'];
-        $data = $input['data'];
+    public function modifyEntry() : string {
+        $index = $this->values["index"];
+        $target = $this->values['target'];
+        $data = $this->values['data'];
         $sql = "UPDATE $this->table SET $target = $data WHERE index = $index;";
         return Database::writer($sql);
     }
 
-    private function reader (string $sql) : string | array | Database {
+    public function deleteEntry() : string {
+        $index = $this->values['index'];
+        $sql = "DELETE FROM $this->table WHERE index = $index;";
+        return Database::writer($sql);
+    }
+
+    private function reader (string $sql) : array {
+        $output = [];
         $data = $this->con->query($sql);
-        $fields = $this->tableSelector($this->table);
-        $output = null;
         if ($this->con->query($sql) !== FALSE) {
-            if ($data->num_rows > 0) { $i = 0;
-                while ($row = $data->fetch_assoc()) {
-                    foreach ($fields as $field) {
-                        $output[$i][$field] = $row[$field];
-                    } $i++;
-                } echo "Successfully read from " . $this->table . ".";
-                return $output;}
-            else { return "Failed to read from " . $this->table . ".";}
+            if ($data->num_rows > 0) {
+                $lump = $data->fetch_all(MYSQLI_ASSOC);
+                foreach ($lump as $key => $value) {
+                    $output[$key] = $value;
+                } return $output;
+            } else { return Array("Failed to read from " . $this->table . ".");}
         } elseif ($this->con->connect_error) {
-            return "Connection to " . $this->table . " failed: " . $this->con->connect_error . ".";
-        } else { return "Failed to read from " . $this->table . ".";}
+            return Array("Connection to " . $this->table . " failed: " . $this->con->connect_error . ".");
+        } else {
+            return Array("Failed to read from " . $this->table . ".");
+        }
     }
 
     private function writer(string $sql = "") : string {
@@ -136,42 +169,35 @@ class Database {
         } return "Failed to write data to " . $this->table . ".";
     }
 
-    public function logger(string $username, string $authorization, string $authentication) : string {
-        $this->date = date("Y-m-d");
-        $this->time = date("H:i:s");
-        $this->username = $username;
-        $this->authorization = $authorization;
-        $this->authentication = $authentication;
+    public function logger() : string {
+        $this->values['date'] = date("Y-m-d");
+        $this->values['time'] = date("H:i:s");
         $this->writer();
         return "Access attempt logged.";
     }
 
     private function queryStingCompiler(string $prompt) : string {
         $output = null;
-        $array = $this->tableSelector($this->table);
 
-        foreach($array as $key) {
+        foreach(array_slice($this->values,0, count($this->tableSelector())) as $key => $value) {
             if ($prompt === "columns") {
-                $output = $output . $key;
+                $output = $output . $key . ", ";
             }  elseif ($prompt === "values") {
-                $output = $output . "'" . $this->$key . "'";
-            }
-
-            if ($key !== end($array)) {
-                $output = $output . ", ";
+                $output = $output . "'" . $value. "'" . ", ";
             }
         }
 
-        return $output;
+        return substr($output, 0, -2);
     }
 
-    private function tableSelector(string $table) : array {
-        return match ($table) {
+    private function tableSelector() : array {
+        return match ($this->table) {
             "elevatorNetwork" => $this->requestFields,
             "guiRequests" => $this->guiFields,
             "accessAttempts" => $this->accessFields,
             "loginRegistry" => $this->loginFields,
-            default => null,
+            "stateHistory" => $this->historyFields,
+            "accessRequests" => $this->pleaFields
         };
     }
 }

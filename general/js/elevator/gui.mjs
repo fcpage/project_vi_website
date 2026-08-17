@@ -1,5 +1,5 @@
 import {dbComThread} from "./guiData.js";
-import {ele, initElements} from "./guiDisplay.js";
+import {ele, initElements} from "./guiDisplay.mjs";
 
 //initialization
 let elements = initElements();           //initialize the gui elements
