@@ -25,17 +25,15 @@ input#text, textarea#details {
     height: 75px;
 }
 
-fieldset {
+fieldset.form {
     display: block;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 340px;
     color: black;
     font-weight: bold;
     background-color: rgb(255 132 39 / 0.42);
     border: 1px solid black;
     border-radius: 5px;
-
     padding: 10px;
     /*margin: 20px;*/
 }
@@ -161,8 +159,4 @@ textarea#details {
     background-position: 3px;
     background-position-y: center;
     text-indent: 5px;
-}
-
-p#sidebar {
-    height: 275px;
 }

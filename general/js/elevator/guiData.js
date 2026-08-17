@@ -1,43 +1,21 @@
+import {eatCookie, getCookie, setCookie} from "../util/cookieFunctions.mjs";
+
 export class dbComThread {  //database access object and associated methods
     constructor(name) { //make sure all index orders agree - PHP, SQL and C++ too
-        switch (name) { //variable constructor depending on which table is selected
-            case "elevatorNetwork":
-                this.index = null;
-                this.date = null;
-                this.time = null;
-                this.currentFloor = null;
-                this.floorRequest1 = null;
-                this.floorRequest2 = null;
-                this.floorRequest3 = null;
-                this.carRequestFloor1 = null;
-                this.carRequestFloor2 = null;
-                this.carRequestFloor3 = null;
-                this.doors = "closed";          //default
-                this.table = name;              //default
+        this.name = name;
+        switch (name) {
+            case 'elevatorNetwork':
+                this.name = name;
+                this.table = "elevatorNetwork";             //default
                 break;
-            case "guiRequests":
-                this.date = null;
-                this.time = null;
-                this.floor = null;
+            case 'guiRequests':
+                this.name = name;
                 this.remote = 0;    //default
-                this.table = name;  //default
+                this.table = "guiRequests";  //default
                 break;
-            case "accessAttempts":
-                this.index = null;
-                this.date = null;
-                this.time = null;
-                this.user = null;
-                this.authorization = null;
-                this.authentication = null;
-                this.table = name;              //default
-                break;
-            case "loginRegistry":
-                this.index = null;
-                this.username = null;
-                this.password = null;
-                this.authorization = false; //default
-                this.accepted = false;      //default
-                this.table = name;          //default
+            case 'stateHistory':
+                this.name = name;
+                this.table = "stateHistory";             //default
                 break;
             default:
                 break;
@@ -46,97 +24,131 @@ export class dbComThread {  //database access object and associated methods
         return this;                //return the database access object.
     }
 
-    init(name) {    //function to initialize the database
-        fetch("../../php/elevator/dbInit.php", {    //poke the php initializer
-            method: "POST", //post-it note
-            body: JSON.stringify({name: name})})
-        .then(response => {
-            if (!response.ok) { //error checking
-                console.error("Error Status: " + response.status);
-                console.error("Error Message: " + response.statusText);
-            } else {    //if all good
-                console.log("Database loaded");}})
-        .catch(error => {console.error("Error:", error)});   //more error checking
+    scan(index = 0, limit = 1) {    //database is an entire object, not a string. commit makes changes if true
+        this.index = index;              //if an index was supplied, scan a particular index
+        this.limit = limit;              //if a limit was supplied, scan back a particular number of rows
+        return this.receiveData(index);  //fetch data from the database according to the query object's index
     }
 
-    mostRecentIndex() { //fetch the most recent index
-        fetch("../../php/elevator/mostRecentIndex.php", {   //poke the php counterpart
-            method: "POST", //use snail mail
-            body: JSON.stringify(this)})    //send this database access object to the php
-        .then(response => {
-            if (!response.ok) { //error checking
-                console.error("Error Status: " + response.status);
-                console.error("Error Message: " + response.statusText);
-            } else {    //if all good
-                console.log("Send Successed");}}) //mmmmmm sushi
-        .then(data => { //do something with the data that the php sent back
-            console.log("Success:", data);  //report to the console
-            this.index = Number(data);})    //make sure that the data is a number, then store it in the index field of this database access object
-        .catch(error => {console.error("Error:", error)});  //more error checking
-        return this.index;  //return the index
+    modify(index, target, data) {    //function to edit one element of the database
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("Entry modified.");
+            }    //You bet your ass it worked, Marty!
+            else {
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;
+            }
+            xhr.send(JSON.stringify([
+                ["action", "modify"],
+                ["table", this.table],
+                ["index", index],
+                ["target", target],
+                ["data", data]
+            ]));
+        } //put it in a JSON string and send the line to the database
     }
 
-    nextIndex() {   //function to generate a new index
-        return Number(this.mostRecentIndex()) + 1;  //get the most recent index, add one, make sure it's a number, and return the index
+    delete(index) {    //function to delete one row of the database
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("Row deleted.");
+            }    //You bet your ass it worked, Marty!
+            else {
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;
+            }
+            xhr.send(JSON.stringify({
+                action: "delete",
+                table: this.table,
+                index: index,
+            }));
+        } //put it in a JSON string and send the line to the database
     }
 
-    priorIndex(n) {   //function to generate a new index
-        return Number(this.mostRecentIndex()) - n;  //get the most recent index, add one, make sure it's a number, and return the index
-    }
-
-    scan(index) {    //database is an entire object, not a string. commit makes changes if true
-        let queryObject = new dbComThread(); //copy this database access object to a blank dummy object
-        
-        if (index) {    //if an index was supplied
-            queryObject.index = index;  //scan a particular index if passed
-        } else {        //if no index was supplied
-            queryObject.index = this.mostRecentIndex(); //else scan the most recent entry
-        }
-
-        queryObject = this.receiveData(queryObject);        //fetch data from the database according to the query object's index
-        return queryObject;
-    }
-
-    modify(db, index, edit){    //function to edit one element of the database
-        let editObject = dbComThread;   //instantiate an editor object
-        editObject.index = index;       //choose the index to edit
-        //FINISH WRITING FUNCTION
-    }
-
-    sendData(payload) { //function to send data into the database
+    sendData(floor) { //function to send data into the database
         let timestamp = new Date(); //generate time object
-        payload.date = timestamp.getFullYear().toString() + "/" + timestamp.getDate().toString() + "/" + timestamp.getDay().toString(); //generate date
-        payload.time = timestamp.getHours().toString() + "/" + timestamp.getMinutes().toString() + "/" + timestamp.getSeconds().toString(); //generate timestamp
-        fetch("../../php/elevator/dbIn.php", {  //send the line to the database
-            method: "POST", //using post
-            body: JSON.stringify(payload)})   //and put it in a JSON string
-            .then(response => { //response
-                if (!response.ok) { //error handling
-                    console.error("Error Status: " + response.status);
-                    console.error("Error Message: " + response.statusText);
-                } else {    //You bet your ass it worked, Marty!
-                    console.log("Send Successed");}})
-            .catch(error => {   //more error handling
-                console.error("Error:", error)});
-    }
+        this.date = timestamp.getFullYear().toString() + "-" + (timestamp.getMonth() + 1).toString() + "-" + timestamp.getDate().toString(); //generate date
+        this.time = timestamp.getHours().toString() + ":" + timestamp.getMinutes().toString() + ":" + timestamp.getSeconds().toString(); //generate timestamp
+        this.floor = floor;
 
-    receiveData(database) { //function to retrieve data from the base
-        if (database) {    //if a particular database access object was supplied, do nothing, use that object
-        } else {        //if no database access object was supplied
-            database = this; //use this database access object
+        if (getCookie("username") === "Maintenance") {
+            const mode = getCookie("mode");
+            if (mode === "OVERRIDE") {
+                this.remote = "2";
+            } else if (mode === "SABBATH") {
+                this.remote = "3";
+            } else {
+                this.remote = "1";
+            }
+        } else {
+            this.remote = "0";
         }
 
-        const xhr = new XMLHttpRequest();   //lettuce do an XHR this time
-        xhr.open("POST", "../../php/elevator/dbOut.php", true); //ground control to php database reader
+        let payload = JSON.stringify({
+            action: "write",
+            table: this.table,
+            date: this.date,
+            time: this.time,
+            floor: this.floor,
+            remote: this.remote
+        });
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/elevator/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("Send Successed");   //You bet your ass it worked, Marty! SUSHI!!!!
+                const packet = xhr.responseText;
+                if (packet !== (String(false)) || 'undefined') {
+                    console.log(xhr.responseText);
+                }   //AND THERE IS EVEN STUFF IN THE PACKET
+                else {    //error handling
+                    console.error("Error Status: " + xhr.status);
+                    console.error("Error Message: " + xhr.statusText);
+                }
+            } else {
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;
+            }
+        }
+        xhr.send(payload);//put it in a JSON string and send the line to the database
+    }
+
+    async receiveData(index = 0, limit = 1) { //function to retrieve data from the base
+        const xhr = new XMLHttpRequest();   //lettuce do an XHR
+        xhr.open("POST", "../../php/elevator/databaseHandler.php", true); //ground control to php database reader
+        xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function () {  //so this is how it's gonna go when it loads
-            if (xhr.status === 200) {   //It works! I finally built something that works!!
-                const packet = xhr.responseText;    //capture the data package
+            if (xhr.status === 200 && xhr.status < 300) {   //It works! I finally built something that works!!
+                const packet = JSON.parse(xhr.responseText);    //capture the data package
                 if (packet !== (String(false)) || 'undefined') {    //AND THERE IS EVEN STUFF IN THE PACKET
-                    let data = JSON.parse(packet, (key, value) => { //parse it!
-                        (Array.isArray(value) && value.every(Array.isArray)) ? new Map(value) : value = null;});    //if it's an array of arrays (typical Jason move)
-                    for (let i = 0; i < database.indices.length; i++) { //iterate through however many indices there are in the database
-                        this.indices[i] = data[i];  //and assign the data to this database access object, at the same index
-                    }
+                    const snap = packet[0]; //and assign the data to this database access object, at the same index
+
+                    setCookie("DATE", snap.date);
+                    setCookie("TIME", snap.time);
+                    setCookie("CURRENT", snap.currentFloor);
+                    setCookie("FLOOR1", !!(snap.carRequestFloor1 || snap.floorRequest1));
+                    setCookie("FLOOR2", !!(snap.carRequestFloor2 || snap.floorRequest2));
+                    setCookie("FLOOR3", !!(snap.carRequestFloor3 || snap.floorRequest3));
+                    setCookie("REQUESTS", [getCookie("FLOOR1"),
+                        getCookie("FLOOR2"), getCookie("FLOOR3")]);
+                    if (snap.doors === '1') {
+                        setCookie("DOORS", "open");
+                    } else {
+                        setCookie("DOORS", "closed");
+                    } return snap;
+
                 } else {    //error handling
                     console.error("Error Status: " + xhr.status);
                     console.error("Error Message: " + xhr.statusText);
@@ -148,7 +160,97 @@ export class dbComThread {  //database access object and associated methods
                 return false;
             }
         }
-        xhr.send(); //send the request
-        return database;    //It works! I finally built something that works!!
+        xhr.send(JSON.stringify({
+            action: "read",
+            table: this.table,
+            index: index,
+            limit: limit
+        })); //send the request
+
+        return this;    //It works! I finally built something that works!!
+    }
+
+    log() {
+        if (getCookie("username") === "Maintenance") {
+            const mode = getCookie("mode");
+            if (mode === "OVERRIDE") { this.remote = "2";
+            } else if (mode === "SABBATH") { this.remote = "3";
+            } else {this.remote = "1";}
+        } else {this.remote = "0";}
+
+        let f = [];
+        for (let i = 0; i < 3; i++) {
+            if (getCookie("FLOOR" + (i +1)) === "true") {
+                f[i] = 1;
+            } else if (getCookie("FLOOR" + (i +1)) !== "true") {
+                f[i] = 0;
+            }
+        }
+
+        let payload = JSON.stringify({
+            action: "write",
+            table: "stateHistory",
+            date: getCookie("DATE"),
+            time: getCookie("TIME"),
+            currentFloor: getCookie("CURRENT"),
+            floorRequest1: f[0],
+            floorRequest2: f[1],
+            floorRequest3: f[2],
+            doors: getCookie("DOORS"),
+            remote: this.remote
+        });
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/elevator/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("State Logged");   //You bet your ass it worked, Marty! SUSHI!!!!
+                if (xhr.responseText !== (String(false)) || 'undefined') {
+                    //console.log(xhr.responseText);
+                }   //AND THERE IS EVEN STUFF IN THE PACKET
+                else {    //error handling
+                    console.error("Error Status: " + xhr.status);
+                    console.error("Error Message: " + xhr.statusText);
+                }
+            } else {
+                console.log("Don't worry, it's just a duplicate time entry -FP")
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;
+            }
+        }
+        xhr.send(payload);//put it in a JSON string and send the line to the database
+    }
+    register(username, auth) {
+        let payload = JSON.stringify({
+            action: "write",
+            table: "loginRegistry",
+            username: username,
+            password: "12345678",
+            authorization: auth
+        });
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "../../php/elevator/databaseHandler.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                console.log("New user registered");   //You bet your ass it worked, Marty! SUSHI!!!!
+                if (xhr.responseText !== (String(false)) || 'undefined') {
+                    //console.log(xhr.responseText);
+                }   //AND THERE IS EVEN STUFF IN THE PACKET
+                else {    //error handling
+                    console.error("Error Status: " + xhr.status);
+                    console.error("Error Message: " + xhr.statusText);
+                }
+            } else {
+                console.log("Don't worry, it's just a duplicate time entry -FP")
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;
+            }
+        }
+        xhr.send(payload);//put it in a JSON string and send the line to the database
     }
 }

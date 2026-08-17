@@ -24,13 +24,13 @@ class Session {
     public function jsHandler($action, $input = null) : string {
         switch ($action) {
             case 'start':
-                Session::__construct();
+                $this->__construct();
                 $report = "SESSION OK";
                 break;
-            case 'user':
+            case 'username':
                 $report = $this->getUser();
                 break;
-            case 'auth':
+            case 'authorization':
                 $report = $this->getAuth();
                 break;
             case 'login':
@@ -38,6 +38,9 @@ class Session {
                 break;
             case 'reset':
                 $report = $this->resetSession();
+                break;
+            case 'grant':
+                $report = $this->grantAccess();
                 break;
             case 'get':
                 $report = $this->getSession($input['target']);
@@ -85,13 +88,23 @@ class Session {
         } return $report;
     }
 
+    public function grantAccess() : string | array {
+        if ($_SESSION["grantsWaiting"] == 0) {
+            return "false";
+        } else { $requests[0] = $_SESSION["grantsWaiting"];
+            for ($i = 0; $i < $_SESSION["grantsWaiting"]; $i++) {
+                $requests[($i + 1)] = $_SESSION["toGrant" . $i];
+            } return $requests;
+        }
+    }
+
     public function resetSession() : int {
         foreach ($this->names as $name => $value) {
                 $_SESSION[$name] = $value;
         } return "Session reset.";
     }
 
-    public function setSession(string $variable, string $value) : string {
+    public function setSession(string | array $variable, string | array $value) : string |array {
         $_SESSION[$variable] = $value;
         return $_SESSION[$variable];
     }

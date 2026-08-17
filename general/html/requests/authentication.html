@@ -15,15 +15,15 @@
 		      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 		      crossorigin="anonymous" rel="stylesheet">
 		<link rel="stylesheet" href="../../css/project/general_style.css" type="text/css">
-		<link rel="stylesheet" href="../../css/elevator/login_style.css" type="text/css">
+		<link rel="stylesheet" href="../../css/elevator/authentication_style.css" type="text/css">
 	</head>
 
 	<!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 
 	<body>
+	<p id="message"></p>
 		<div id="page" class="container">
 			<header>
-				<p id="message"></p>
 				<h1 id="#">Login:</h1>	<!-- title -->
 			</header>
 
@@ -39,7 +39,7 @@
 					<a class="index" href="../../../general/html/project/documentation.html">Media and Documentation</a><br/><br/>
 					<a class="index" href="../../../general/html/project/links.html">External Links</a><br/>
 					<a class="index" href="../../../general/html/demos/demos.html">Demos</a><br/>
-					<a class="index" href="../../../general/html/requests/login.html">Login</a>
+					<a class="index" href="../../../general/html/requests/authentication.html">Login</a>
 				</fieldset><br/>
 			</nav>
 
@@ -48,7 +48,7 @@
 					<section>
 						<fieldset id="login_window">
 							<legend>Elevator Access</legend>
-							<form action="../../php/project/login.php" method="post" id="login"><br/>	<!-- the login fields -->
+							<form action="../../php/elevator/authentication.php" method="post" id="login"><br/>	<!-- the login fields -->
 								<div class="in"><label for="user" class="text_label">Username: </label><input class="text_input" id="user" type="text" minlength="7" name="username" required/></div>
 								<div class="in"><label for="pass" class="text_label" >Password: </label><input class="text_input" id="pass" type="password" minlength="7" name="password" required/></div><br/>
 								<div id="log"><input id="li" type="submit" value="Log In"/></div>	<!-- click now or pay late fees -->

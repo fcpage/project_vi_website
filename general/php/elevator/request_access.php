@@ -1,30 +1,31 @@
 <?php date_default_timezone_set('America/Toronto');
-$date = date("Y-m-d"); //What day is it???
-$time = date("H:i:s"); //Do you have the time, to listen to me whine?
+require_once __DIR__ . "/Session.php";  //require the session class
+require_once __DIR__ . "/Database.php"; //require the database class
+
+$request = new Database('accessRequests');
+$request->values['date'] = date("Y-m-d"); //What day is it???
+$request->values['time'] = date("H:i:s"); //Do you have the time, to listen to me whine?
 $key = [0=>"."];    //initialize the key array, non-null
 $desc = [0=>"."];   //initialize the description array, non-null
 array_push($key,'firstname', 'lastname', 'email', 'url', 'person', 'reason', 'details', 'deadline', 'good_job');    //load the keys
 array_push($desc, "First Name: ", "Last Name: ", "Email: ", "Website: ", "Person: ", "Reason: ", "Details: ", "Deadline: ", "Feedback: ", "Involvement: "); //load the descriptions
-$contents = "Access Request:\nDate: " . $date . "\nTime: " . $time . "\n\n";  //build the request header
-$contents .= $desc[8];  //involvement description
 
 foreach (array_filter($_POST['involvement']) as $i) { //for every checked element
-    $contents = $contents .= $i;    //add it to the data conglomerate
+    $request->values['involvement'] =  $request->values['involvement'] .= $i;
+}
+for($i=1; $i < 8; $i++) {  //for every key
+    $request->values[$key[$i]] = $_POST[$key[$i]];
 }
 
-$contents .= "\n";  //new line!
-
-for($i=1; $i < 10; $i++) {  //for every key
-    $contents = $contents .= $desc[$i] .= $_POST[$key[$i]] .= "\n"; //append the descriptions and values
-}
-
-file_put_contents("../resources/requests/access/access_request_{$date}_{$time}.txt", $contents);    //write the log file and give it a unique file name
+$request->values['good_job'] = $_POST['good_job'];
+$request->values['granted'] = 0;
+$request->writeEntry();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>S
+<head>
     <title>Review Access Request</title>
 
     <meta charset="UTF-8">

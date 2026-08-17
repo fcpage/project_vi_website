@@ -1,75 +1,111 @@
-import {setCookie, eatCookie, eatCookies} from './cookieFunctions.mjs';
-export function startSession(){
-    fetch("../../php/requests/session_start.php")
-        .then(response => {
-            if (!response.ok) {eatCookies();
-                console.error("Error Status: " + response.status);
-                console.error("Error Message: " + response.statusText);}
-            else {console.log('Session started successfully.');}})
-        .catch(error => {eatCookies();
-            console.error('Error verifying session:', error);
-            return false;});
-}
-
-export function destroySession() {
-    fetch("../../php/requests/session_destroy.php")
-        .then(response => {
-            if (!response.ok) {eatCookies();
-                console.error("Error Status: " + response.status);
-                console.error("Error Message: " + response.statusText);}
-            else {eatCookies();
-                console.log('Session destroyed successfully.');}})
-        .catch(error => {eatCookies();
-            console.error('Error ending session:', error);
-            return false;});
-}
-
-export function getSessionUser() {
+import {setCookie, eatCookie, eatCookies, getCookie} from './cookieFunctions.mjs';
+export async function startSession() {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../php/requests/get_session_user.php", true);
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const report = xhr.responseText;
+            console.log(report);
+            console.log('Session started successfully.');}
+        else {
+            console.error("Error Status: " + xhr.status);
+            console.error("Error Message: " + xhr.statusText);
+            return false;
+        }
+    }
+    xhr.send(JSON.stringify({action: "start"}));
+}
+
+export async function destroySession() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            eatCookies();
+            console.log('Session destroyed successfully.');}
+        else {
+            eatCookies();
+            console.error("Error Status: " + xhr.status);
+            console.error("Error Message: " + xhr.statusText);
+            return false;
+        }
+    }
+    xhr.send(JSON.stringify({action: null}));
+}
+
+export async function getSessionUser() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
     if (xhr.status === 200) {
         const user = xhr.responseText;
         if (user !== (String(false)) || 'undefined') {
-            setCookie('user', user);}
+            setCookie('username', user.replace(/["']/g, ""));}
         else {eatCookie(user);
             console.error("Error Status: " + xhr.status);
             console.error("Error Message: " + xhr.statusText);
-            return false;}}
+            return "false";}}
     else {console.error("Error validating session. Error: ", xhr.status);}}
-    xhr.send();
+    xhr.send(JSON.stringify({action: "username"}));
 }
 
-export function getSessionAuth() {
+export async function getSessionAuth() {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../php/requests/get_session_auth.php", true);
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
     if (xhr.status === 200) {
         const auth = xhr.responseText;
         if (auth !== (String(false)) || 'undefined') {
-            setCookie('auth', auth);}
-        else {eatCookie(auth);
+            setCookie('authorization', auth.replace(/["']/g, ""));}
+        else {eatCookie("authorization");
             console.error("Error Status: " + xhr.status);
             console.error("Error Message: " + xhr.statusText);
             return false;}}
     else {console.error("Error validating session. Error: ", xhr.status);
         return false;}}
-    xhr.send();
+    xhr.send(JSON.stringify({action: "authorization"}));
 }
 
-export function getSessionLogin() {
+export async function getSessionLogin() {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../php/requests/get_session_login.php", true);
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
     if (xhr.status === 200) {
         const login = xhr.responseText;
         if (login !== (String(false)) || 'undefined') {
-            setCookie('login', login);}
+            setCookie('login', login.replace(/["']/g, ""));}
         else {eatCookie(login);
             console.error("Error Status: " + xhr.status);
             console.error("Error Message: " + xhr.statusText);
             return false;}}
     else {console.error("Error validating session. Error: ", xhr.status);
         return false;}}
-    xhr.send();
+    xhr.send(JSON.stringify({action: "login"}));
+}
+
+export async function getGrants() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../php/elevator/sessionHandler.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            let requests = xhr.responseText;
+            if (requests !== (String(false)) || 'undefined') {
+                setCookie("toGrant", requests);
+            }
+            else {let i = 0;
+                while(getCookie("toGrant_" + i) !== null) {
+                    eatCookie("toGrant_" + i);
+                    i++;}
+                console.error("Error Status: " + xhr.status);
+                console.error("Error Message: " + xhr.statusText);
+                return false;}}
+        else {console.error("Error validating session. Error: ", xhr.status);
+            return false;}}
+    xhr.send(JSON.stringify({action: "grant"}));
 }

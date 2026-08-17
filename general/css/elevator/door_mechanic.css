@@ -25,7 +25,7 @@
     height: 590px;
 }
 
-#leftDoor {
+#LEFT {
     display: flex;
     width: 250px;
     height: 620px;
@@ -35,7 +35,7 @@
     overflow: hidden; !important;
 }
 
-#rightDoor {
+#RIGHT {
     display: flex;
     width: 250px;
     height: 620px;
@@ -45,19 +45,19 @@
     overflow: hidden; !important;
 }
 
-.open#leftDoor {
+.open#LEFT{
     animation: leftDoorOpen 3s ease-in 0s forwards;
 }
 
-.open#rightDoor {
+.open#RIGHT {
     animation: rightDoorOpen 3s ease-in 0s forwards;
 }
 
-.closed#leftDoor {
+.closed#LEFT {
     animation: leftDoorClosed 3s ease-in 0s forwards;
 }
 
-.closed#rightDoor {
+.closed#RIGHT {
     animation: rightDoorClosed 3s ease-in 0s forwards;
 }
 
